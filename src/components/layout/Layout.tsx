@@ -1,4 +1,4 @@
-import { type ComponentProps, Suspense } from "react";
+import { type ComponentProps, Suspense, forwardRef } from "react";
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
@@ -15,25 +15,34 @@ export type NavLinkItem = {
 };
 
 const globalNavLinks: NavLinkItem[] = [
-  { label: "home", href: "/" }
+  { label: "home", href: "/" },
+  { label: "about", href: "/about" },
+  { label: "products", href: "/products" },
+  { label: "contact", href: "/contact" }
 ];
 
-export function Layout({ className, ref, ...props }: ComponentProps<"div">) {
-  return (
-    <div ref={ref} className={cn("flex min-h-screen flex-col", className)} {...props}>
-      <ScrollToTop />
-      <Navbar links={globalNavLinks} />
+export const Layout = forwardRef<HTMLDivElement, ComponentProps<"div">>(
+  ({ className, ...props }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn("flex min-h-screen flex-col bg-gray-50 text-gray-900 font-sans", className)}
+        {...props}
+      >
+        <ScrollToTop />
+        <Navbar links={globalNavLinks} />
 
-      <main className="grow relative">
-        <Breadcrumbs />
-        <Suspense fallback={<Loading />}>
-          <Outlet />
-        </Suspense>
-      </main>
+        <main className="grow relative">
+          <Breadcrumbs />
+          <Suspense fallback={<Loading />}>
+            <Outlet />
+          </Suspense>
+        </main>
 
-      <BackToTop />
-      <CookieBanner />
-      <Footer links={globalNavLinks} />
-    </div>
-  );
-}
+        <BackToTop />
+        <CookieBanner />
+        <Footer links={globalNavLinks} />
+      </div>
+    );
+  }
+);

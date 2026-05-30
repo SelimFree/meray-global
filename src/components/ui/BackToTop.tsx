@@ -8,7 +8,7 @@ export function BackToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 600) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -29,17 +29,17 @@ export function BackToTop() {
   return (
     <div 
       className={cn(
-        "fixed bottom-8 right-8 z-50 transition-all duration-300",
+        "fixed bottom-10 right-6 md:right-8 z-40 transition-all duration-300",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
       )}
     >
       <Button 
         onClick={scrollToTop}
         size="sm"
-        className="h-12 w-12 rounded-full shadow-2xl bg-white/80 text-primary hover:bg-white border border-primary/20"
+        className="h-10 w-10 rounded-none bg-primary-900 text-white shadow-sm border border-transparent transition-all duration-300 hover:bg-secondary hover:text-primary-950 p-0 flex items-center justify-center"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="h-6 w-6" />
+        <ArrowUp className="h-5 w-5" strokeWidth={2.5} />
       </Button>
     </div>
   );

@@ -1,6 +1,9 @@
 {
   "navbar": {
-    "home": "Home"
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "contact": "Contact"
   },
 
   "footer": {
