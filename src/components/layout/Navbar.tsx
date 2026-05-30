@@ -18,42 +18,49 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
 
   const navItemClasses = ({ isActive }: { isActive: boolean }) =>
     cn(
-      "relative px-3 py-2 text-2xl font-bold uppercase transition-colors duration-300 text-white",
-      "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:bg-white after:-translate-x-1/2 after:transition-all after:duration-300",
-      isActive
-        ? "after:w-[calc(100%-1.5rem)]"
-        : "after:w-0 hover:after:w-[calc(100%-1.5rem)] hover:text-gray-200"
+      "relative py-2 text-xs font-bold tracking-widest uppercase transition-colors duration-300",
+      isActive ? "text-white" : "text-white/80 hover:text-white"
     );
 
   const mobileNavItemClasses = ({ isActive }: { isActive: boolean }) =>
     cn(
-      "relative block w-fit px-3 py-2 text-base font-bold uppercase transition-colors duration-300 text-white",
-      "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:bg-white after:-translate-x-1/2 after:transition-all after:duration-300",
+      "block w-full px-4 py-3 text-sm font-bold tracking-widest uppercase transition-all duration-300",
       isActive
-        ? "after:w-[calc(100%-1.5rem)]"
-        : "after:w-0 hover:after:w-[calc(100%-1.5rem)] hover:text-gray-200"
+        ? "bg-primary-900 text-secondary border-l-2 border-secondary"
+        : "text-white/80 border-l-2 border-transparent hover:bg-primary-800 hover:text-white"
     );
 
   return (
     <header
       ref={ref}
-      className={cn("sticky top-0 z-50 w-full bg-primary", className)}
+      className={cn(
+        "sticky top-0 z-50 w-full bg-primary/85 backdrop-blur-md transition-all h-18 md:h-22.5",
+        className
+      )}
       {...props}
     >
-      <div className="flex items-center gap-8 justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-3 cursor-pointer outline-none py-3 group">
-          <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
-            <Image
-              src="/android-chrome-512x512.png"
-              aspectRatio="auto"
-              alt={t("navbar.logoAlt")}
-              className="h-20 md:h-25 object-contain"
-              containerClassName="bg-transparent"
-            />
-          </div>
-        </Link>
+      <div className="flex h-full w-full items-center justify-between">
+        
+        <div className="relative h-full flex items-center w-55">
+          <div className="absolute inset-0 bg-white [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] shadow-[4px_0_15px_rgba(0,0,0,0.1)]" />
+          
+          <Link
+            to="/"
+            className="relative z-10 flex h-full w-full items-center px-4 sm:px-6 md:px-8 outline-none group"
+          >
+            <div className="shrink-0 transition-opacity duration-300 group-hover:opacity-80">
+              <Image
+                src="/android-chrome-512x512.png"
+                aspectRatio="auto"
+                alt={t("navbar.logoAlt")}
+                className="h-20 object-contain md:h-22"
+                containerClassName="bg-transparent"
+              />
+            </div>
+          </Link>
+        </div>
 
-        <nav className="ml-auto hidden md:flex gap-1">
+        <nav className="hidden flex-1 items-center justify-end gap-6 px-4 md:flex lg:gap-8 lg:px-8">
           {links.map((link) => (
             <NavLink key={link.href} to={link.href} className={navItemClasses}>
               {t(`navbar.${link.label}`)}
@@ -61,15 +68,16 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-4">
+        <div className="ml-auto flex h-full items-center gap-4 pr-4 sm:pr-6 md:ml-0 md:pl-6 lg:pr-8">
           <LanguageSwitcher />
 
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden px-2"
+            className="px-2 hover:bg-white/10 md:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
+            aria-label="Toggle navigation menu"
           >
             {isOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
           </Button>
@@ -78,22 +86,24 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
 
       <div
         className={cn(
-          "md:hidden transition-all duration-300 ease-in-out bg-primary border-b border-gray-200 shadow-sm overflow-y-auto",
-          isOpen ? "max-h-screen opacity-100 py-4" : "max-h-0 opacity-0 border-transparent py-0"
+          "absolute left-0 top-18 w-full grid bg-primary-900/98 backdrop-blur-md transition-all duration-300 ease-in-out md:hidden",
+          isOpen ? "grid-rows-[1fr] border-b border-white/10 opacity-100 shadow-xl" : "grid-rows-[0fr] opacity-0"
         )}
       >
-        <nav className="flex flex-col space-y-1 px-4 sm:px-6">
-          {links.map((link) => (
-            <NavLink
-              key={link.href}
-              to={link.href}
-              onClick={() => setIsOpen(false)}
-              className={mobileNavItemClasses}
-            >
-              {t(`navbar.${link.label}`)}
-            </NavLink>
-          ))}
-        </nav>
+        <div className="overflow-hidden">
+          <nav className="flex flex-col space-y-1 px-4 py-4 sm:px-6">
+            {links.map((link) => (
+              <NavLink
+                key={link.href}
+                to={link.href}
+                onClick={() => setIsOpen(false)}
+                className={mobileNavItemClasses}
+              >
+                {t(`navbar.${link.label}`)}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );

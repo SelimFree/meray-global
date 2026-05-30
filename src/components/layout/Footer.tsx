@@ -8,7 +8,6 @@ import { Image } from "../ui/Image";
 import { useTranslation } from "react-i18next";
 import { useAppContext } from "../../context/AppContext";
 
-
 export interface FooterProps extends ComponentProps<"footer"> {
   links: NavLinkItem[];
 }
@@ -20,36 +19,44 @@ export function Footer({ links, className, ref, ...props }: FooterProps) {
   return (
     <footer
       ref={ref}
-      className={cn("bg-primary border-t border-gray-200", className)}
+      className={cn("bg-primary border-t border-white/10", className)}
       {...props}
     >
-      <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 lg:gap-8">
 
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-3 cursor-pointer outline-none py-3 group">
-              <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <Link to="/" className="group flex cursor-pointer items-center gap-3 py-2 outline-none">
+              <div className="shrink-0 transition-opacity duration-300 group-hover:opacity-90">
                 <Image
                   src="/android-chrome-512x512.png"
                   aspectRatio="auto"
                   alt={t("navbar.logoAlt")}
-                  className="h-20 md:h-25 object-contain"
+                  className="h-16 object-contain md:h-20 brightness-0 invert"
                   containerClassName="bg-transparent"
                 />
               </div>
             </Link>
-            <Text variant="muted" className="mt-4 text-white md:text-lg">
+            <Text 
+              variant="muted" 
+              className="mt-6 max-w-sm text-sm leading-relaxed text-white/70"
+            >
               {t("footer.slogan")}
             </Text>
           </div>
 
-          <div className="md:col-start-4 md:text-right uppercase">
-            <Text className="mb-4 font-semibold text-white md:text-xl">{t("footer.quickLinks")}</Text>
+          <div className="md:col-start-4 md:text-right">
+            <Text className="mb-6 text-xs font-bold tracking-widest text-white/90 uppercase">
+              {t("footer.quickLinks")}
+            </Text>
 
-            <List className="grid grid-cols-1 gap-x-8 gap-y-3 space-y-0">
+            <List className="grid grid-cols-1 gap-y-4 space-y-0">
               {links.map((link) => (
                 <ListItem key={link.href} icon={null} className="p-0 md:justify-end">
-                  <Link to={link.href} className="text-white/60 text-md hover:text-white transition-colors inline-block w-full md:text-lg">
+                  <Link 
+                    to={link.href} 
+                    className="inline-block w-full text-sm font-medium text-white/60 transition-colors duration-300 hover:text-white"
+                  >
                     {t(`navbar.${link.label}`)}
                   </Link>
                 </ListItem>
@@ -57,25 +64,46 @@ export function Footer({ links, className, ref, ...props }: FooterProps) {
             </List>
           </div>
 
-          <div className="md:text-right uppercase">
-            <Text className="mb-4 font-semibold text-white md:text-xl">{t("footer.legal")}</Text>
-            <List className="space-y-3">
+          <div className="md:text-right">
+            <Text className="mb-6 text-xs font-bold tracking-widest text-white/90 uppercase">
+              {t("footer.legal")}
+            </Text>
+            
+            <List className="space-y-4">
               <ListItem icon={null} className="p-0 md:justify-end">
-                <Link to="/privacy" className="text-white/60 text-md hover:text-white md:text-lg">{t("footer.privacy")}</Link>
+                <Link 
+                  to="/privacy" 
+                  className="inline-block w-full text-sm font-medium text-white/60 transition-colors duration-300 hover:text-white"
+                >
+                  {t("footer.privacy")}
+                </Link>
               </ListItem>
               <ListItem icon={null} className="p-0 md:justify-end">
-                <Link to="/terms" className="text-white/60 text-md hover:text-white md:text-lg">{t("footer.terms")}</Link>
+                <Link 
+                  to="/terms" 
+                  className="inline-block w-full text-sm font-medium text-white/60 transition-colors duration-300 hover:text-white"
+                >
+                  {t("footer.terms")}
+                </Link>
               </ListItem>
               <ListItem icon={null} className="p-0 md:justify-end">
-                <Link to="/cookies" className="text-white/60 text-md hover:text-white md:text-lg">{t("footer.cookie")}</Link>
+                <Link 
+                  to="/cookies" 
+                  className="inline-block w-full text-sm font-medium text-white/60 transition-colors duration-300 hover:text-white"
+                >
+                  {t("footer.cookie")}
+                </Link>
               </ListItem>
             </List>
           </div>
 
         </div>
 
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 pt-8">
-          <Text variant="muted" className="text-sm uppercase">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
+          <Text 
+            variant="muted" 
+            className="text-xs font-medium tracking-wider text-white/40 uppercase"
+          >
             {t("footer.rights", { year: new Date().getFullYear(), company: companyName })}
           </Text>
         </div>

@@ -9,17 +9,25 @@ interface LegalPageProps {
 }
 
 export default function LegalPage({ title, lastUpdated, content }: LegalPageProps) {
-  const {t} = useTranslation("legal");
+  const { t } = useTranslation("legal");
 
   return (
-    <div className="bg-white py-24">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
-        <Heading level={1} className="mb-4 font-semibold text-primary uppercase">{title}</Heading>
-        <Text variant="muted" className="mb-12">{t("custom.lastUpdatedLabel")} {lastUpdated}</Text>
+    <div className="min-h-screen bg-gray-50 pt-32 pb-24 md:pt-40 md:pb-32">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         
-        <div className="prose prose-gray max-w-none space-y-8">
+        <div className="mb-12 border-b-2 border-primary-900 pb-8">
+          <Heading level={1} className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-primary-900">
+            {title}
+          </Heading>
+          <Text className="mt-6 text-xs font-bold tracking-widest text-gray-500 uppercase">
+            {t("custom.lastUpdatedLabel")} {lastUpdated}
+          </Text>
+        </div>
+
+        <div className="bg-white p-6 sm:p-10 md:p-16 border border-gray-200 shadow-sm">
           {content}
         </div>
+
       </div>
     </div>
   );

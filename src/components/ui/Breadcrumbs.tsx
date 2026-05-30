@@ -14,17 +14,17 @@ export function Breadcrumbs({ className }: { className?: string }) {
     return (
         <nav
             aria-label="Breadcrumb"
-            className={cn("absolute z-10 w-full py-4 sm:py-6 pointer-events-none", className)}
+            className={cn("absolute z-10 w-full py-6 pointer-events-none", className)}
         >
-            <div className="w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-                <ol className="inline-flex items-center space-x-2 text-sm sm:text-base text-gray-600 bg-white/80 backdrop-blur-md px-5 py-2.5 rounded-full shadow-sm border border-white/50 pointer-events-auto transition-all">
+            <div className="w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <ol className="inline-flex items-center space-x-2 text-xs font-bold tracking-widest uppercase text-gray-500 pointer-events-auto">
 
                     <li>
                         <Link
                             to="/"
-                            className="flex items-center hover:text-primary transition-colors duration-200"
+                            className="flex items-center hover:text-primary-800 transition-colors duration-200"
                         >
-                            <Home className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
+                            <Home className="h-4 w-4" aria-hidden="true" />
                             <span className="sr-only">{t("navbar.home", "Home")}</span>
                         </Link>
                     </li>
@@ -38,15 +38,15 @@ export function Breadcrumbs({ className }: { className?: string }) {
 
                         return (
                             <li key={to} className="flex items-center space-x-2">
-                                <ChevronRight className="h-4 w-4 text-gray-400 shrink-0" aria-hidden="true" />
+                                <ChevronRight className="h-4 w-4 text-gray-300 shrink-0" aria-hidden="true" />
                                 {isLast ? (
-                                    <span className="font-semibold text-gray-900 md:text-lg" aria-current="page">
+                                    <span className="text-primary-900" aria-current="page">
                                         {label}
                                     </span>
                                 ) : (
                                     <Link
                                         to={to}
-                                        className="hover:text-primary transition-colors duration-200"
+                                        className="hover:text-primary-800 transition-colors duration-200"
                                     >
                                         {label}
                                     </Link>

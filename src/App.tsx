@@ -26,6 +26,7 @@ const router = createBrowserRouter([
 ]);
 
 export default function App(appProps: AppProps) {
+  
   return (
     <AppContext.Provider value={appProps}>
       <RouterProvider router={router} />
