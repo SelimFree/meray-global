@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { cn } from '../../lib/utils';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
+import { Image } from '../ui/Image';
 
 interface InnerPageHeroProps {
     title: string;
@@ -48,14 +49,13 @@ export const InnerPageHeroBlock = ({ title, description, image }: InnerPageHeroP
             ref={sectionRef}
             className="relative w-full h-[45vh] min-h-90 max-h-125 overflow-hidden bg-primary-900 border-b border-secondary/20"
         >
-            <div className="absolute inset-0 z-0">
-                <img
-                    ref={imgRef}
-                    src={image}
-                    alt={title}
-                    className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
-                />
-            </div>
+            <Image
+                ref={imgRef}
+                src={image}
+                alt={title}
+                containerClassName="absolute inset-0 z-0 bg-primary-950"
+                className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
+            />
 
             <div className="absolute inset-0 z-10 bg-primary-950/85 md:bg-transparent md:bg-linear-to-r md:from-primary-950 md:via-primary-950/80 md:to-transparent" />
             <div className="absolute inset-0 z-10 mix-blend-multiply bg-black/40 md:bg-transparent md:bg-linear-to-r md:from-black/80 md:via-black/20 md:to-transparent" />

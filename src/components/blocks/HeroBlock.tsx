@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, FlaskConical, Leaf, Droplet } from "lucide-r
 import { cn } from "../../lib/utils";
 import { Heading } from "../ui/Heading";
 import { Text } from "../ui/Text";
+import { Image } from "../ui/Image";
 import SliderImg1 from "../../assets/slider/slider_img_1.png";
 import SliderImg2 from "../../assets/slider/slider_img_2.png";
 import SliderImg3 from "../../assets/slider/slider_img_3.png";
@@ -119,10 +120,11 @@ export const HeroBlock = () => {
           return (
             <div key={slide.id} className="relative w-full h-full shrink-0">
 
-              <img
+              <Image
                 ref={(el) => { imgRefs.current[index] = el; }}
                 src={slide.image}
                 alt={slide.title}
+                containerClassName="absolute inset-0 z-0 bg-primary-950"
                 className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
               />
 
