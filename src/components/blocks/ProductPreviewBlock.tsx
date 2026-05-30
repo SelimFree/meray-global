@@ -2,32 +2,33 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
+import Product1 from "../../assets/products/product_1.png"
+import Product2 from "../../assets/products/product_2.png"
+import Product3 from "../../assets/products/product_3.png"
 
 export const ProductPreviewBlock = () => {
   const products = [
     {
-      id: 'crude',
-      title: 'Crude Oil',
-      description: 'Global sourcing, blending, and supply of various crude grades to major refiners and industrial consumers.',
-      image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1200&auto=format&fit=crop',
-      tag: 'High Volume'
+      id: 'petroleum-products',
+      title: 'Diesel',
+      description: 'Supplying ultra-low sulfur and premium industrial diesel grades, ensuring uninterrupted power and transport operations across global markets.',
+      image: Product1,
+      tag: 'Petroleum Product'
     },
     {
-      id: 'refined',
-      title: 'Refined Products',
-      description: 'Gasoline, middle distillates, and fuel oil distribution across strategic global industrial hubs.',
-      // Complex industrial piping and infrastructure
-      image: 'https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      tag: 'Strategic'
+      id: 'fertilizers',
+      title: 'Carbamide (Urea)',
+      description: 'High-purity agricultural and industrial-grade nitrogen fertilizers, optimized to support large-scale farming yields and chemical manufacturing processes.',
+      image: Product2,
+      tag: 'Fertilizer'
     },
     {
-      id: 'lng',
-      title: 'Natural Gas & LNG',
-      description: 'Bridging the energy transition with reliable, highly efficient global gas supply chains and maritime transport.',
-      // Massive maritime shipping container vessel
-      image: 'https://images.pexels.com/photos/799091/pexels-photo-799091.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      tag: 'Transition'
-    }
+      id: 'chemicals',
+      title: 'Polyethylene',
+      description: 'Premium thermoplastic polymer grades engineered for high-durability injection molding, pipe extrusion, and advanced industrial packaging solutions.',
+      image: Product3,
+      tag: 'Chemical'
+    },
   ];
 
   return (

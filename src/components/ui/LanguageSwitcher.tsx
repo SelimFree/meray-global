@@ -6,6 +6,7 @@ import { Text } from "../ui/Text";
 
 const languages = [
     { code: "en", label: "EN" },
+    { code: "ru", label: "RU" },
 ];
 
 export function LanguageSwitcher() {
@@ -49,7 +50,6 @@ export function LanguageSwitcher() {
                 ></div>
             )}
 
-            {/* Dropdown Menu */}
             {isOpen && (
                 <div
                     className="absolute right-0 z-50 mt-2 w-24 origin-top-right border border-gray-200 bg-white shadow-sm focus:outline-none"
