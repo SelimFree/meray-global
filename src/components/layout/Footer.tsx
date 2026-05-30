@@ -39,7 +39,7 @@ export function Footer({ links, className, ref, ...props }: FooterProps) {
             </Link>
             <Text 
               variant="muted" 
-              className="max-w-sm text-sm leading-relaxed text-white/70"
+              className="max-w-sm text-sm leading-relaxed text-white/70 text-justify"
             >
               {t("footer.slogan")}
             </Text>

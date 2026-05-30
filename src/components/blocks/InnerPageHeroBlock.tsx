@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { cn } from '../../lib/utils';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 
@@ -9,8 +10,16 @@ interface InnerPageHeroProps {
 }
 
 export const InnerPageHeroBlock = ({ title, description, image }: InnerPageHeroProps) => {
+    const [isMounted, setIsMounted] = useState(false);
     const imgRef = useRef<HTMLImageElement>(null);
     const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsMounted(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -63,11 +72,19 @@ export const InnerPageHeroBlock = ({ title, description, image }: InnerPageHeroP
                 <div className="max-w-3xl">
                     <Heading
                         level={1}
-                        className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4 drop-shadow-md"
+                        className={cn(
+                            "text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4 drop-shadow-md transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]",
+                            isMounted ? "opacity-100 translate-x-0 delay-300" : "opacity-0 -translate-x-12"
+                        )}
                     >
                         {title}
                     </Heading>
-                    <Text className="text-white/80 text-base md:text-lg max-w-2xl leading-relaxed drop-shadow-sm font-medium">
+                    <Text 
+                        className={cn(
+                            "text-white/80 text-base md:text-lg max-w-2xl leading-relaxed drop-shadow-sm font-medium text-justify transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]",
+                            isMounted ? "opacity-100 translate-x-0 delay-500" : "opacity-0 -translate-x-12"
+                        )}
+                    >
                         {description}
                     </Text>
                 </div>

@@ -1,9 +1,7 @@
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { Image } from '../ui/Image';
-
-
-const MissionImage = 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=900&q=80';
+import AboutBanner from "../../assets/about/about_banner.png";
 
 interface MissionStat {
   value: string;
@@ -13,7 +11,7 @@ interface MissionStat {
 const stats: MissionStat[] = [
   { value: '15+', label: 'Years Active' },
   { value: '40+', label: 'Countries Served' },
-  { value: '4', label: 'Global Hubs' },
+  { value: '2k+', label: 'Products Shipped' },
 ];
 
 export const MissionBlock = () => {
@@ -42,13 +40,13 @@ export const MissionBlock = () => {
             </Heading>
 
             <div className="flex flex-col gap-6">
-              <Text className="text-gray-600 text-base leading-relaxed">
+              <Text className="text-gray-600 text-base leading-relaxed text-justify">
                 Founded on the principles of precision, risk management, and operational
                 excellence, Meray Global operates at the critical intersection of producers
                 and industrial consumers. We manage physical supply chains with zero
                 tolerance for inefficiency.
               </Text>
-              <Text className="text-gray-600 text-base leading-relaxed">
+              <Text className="text-gray-600 text-base leading-relaxed text-justify">
                 By integrating proprietary market intelligence with vast logistical
                 capabilities—including maritime chartering, rail networks, and strategic
                 storage—we guarantee supply continuity regardless of geopolitical
@@ -60,20 +58,17 @@ export const MissionBlock = () => {
           <div className="lg:col-span-5 relative overflow-hidden bg-primary-900 min-h-105 flex flex-col justify-end">
 
             <Image
-              src={MissionImage}
+              src={AboutBanner}
               alt="Industrial port at dusk"
               aspectRatio="auto"
               containerClassName="absolute inset-0 w-full h-full"
               className="w-full h-full object-cover opacity-35"
             />
 
-            {/* Gradient vignette — darkens bottom where text lives */}
             <div className="absolute inset-0 bg-linear-to-t from-primary-900/95 via-primary-900/40 to-primary-900/10 pointer-events-none" />
 
-            {/* Corner bracket — top left */}
             <div className="absolute top-6 left-6 w-5 h-5 border-t border-l border-white/20 pointer-events-none" />
 
-            {/* Founding year watermark — top right */}
             <div className="absolute top-6 right-6 flex flex-col items-end gap-0.5 pointer-events-none select-none">
               <span className="text-[9px] font-bold tracking-[0.22em] text-white/30 uppercase">
                 Est.
@@ -82,7 +77,7 @@ export const MissionBlock = () => {
                 className="font-extrabold text-white/[0.07] leading-none tracking-tight"
                 style={{ fontSize: 'clamp(48px, 6vw, 64px)' }}
               >
-                2009
+                2015
               </span>
             </div>
 

@@ -1,6 +1,9 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { InnerPageHeroBlock } from "../components/blocks/InnerPageHeroBlock";
 import { ProductsNavBlock } from "../components/blocks/ProductsNavBlock";
 import { ProductCategoryBlock } from "../components/blocks/ProductCategoryBlock";
+import ProductsHeading from "../assets/products/products_heading.png";
 
 const chemicalProductsData = [
     { name: "Methanol", grade: "99.85% IMPCA", packaging: "Bulk Vessel / Iso-Tank", spec: "GLOBAL-01" },
@@ -26,28 +29,37 @@ const rawMaterialsData = [
 ];
 
 export default function ProductsPage() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const timer = setTimeout(() => {
+                const id = location.hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) {
+                    const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            }, 100);
+            return () => clearTimeout(timer);
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [location]);
+
     return (
         <main className="flex flex-col w-full bg-white relative">
             <InnerPageHeroBlock
                 title="Commodities Portfolio"
                 description="Global sourcing and distribution of petrochemicals, thermoplastics, and vital raw materials. We provide our partners with uninterrupted supply chain stability and precise quality control."
-                image="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=2000"
+                image={ProductsHeading}
             />
 
             <ProductsNavBlock />
 
             <ProductCategoryBlock
-                id="chemicals"
-                category="Chemicals"
-                title="Aromatics & Solvents"
-                description="Sourcing high-purity industrial chemicals for manufacturing, agricultural, and refining sectors globally. Our bulk liquid logistics network ensures zero-contamination transit."
-                image="https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=1200" // Chemical Piping/Refinery
-                products={chemicalProductsData}
-            />
-
-            <ProductCategoryBlock
-                id="plastics"
-                category="Plastics"
+                id="petroleum-products"
+                category="Petroleum products"
                 title="Thermoplastic Resins"
                 description="Supplying premium polymer grades optimized for injection molding, extrusion, and advanced packaging solutions. We maintain strategic buffer stock at major global hubs."
                 image="https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -56,11 +68,20 @@ export default function ProductsPage() {
             />
 
             <ProductCategoryBlock
-                id="materials"
-                category="Raw Materials"
+                id="chemicals"
+                category="Chemicals"
+                title="Aromatics & Solvents"
+                description="Sourcing high-purity industrial chemicals for manufacturing, agricultural, and refining sectors globally. Our bulk liquid logistics network ensures zero-contamination transit."
+                image="https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                products={chemicalProductsData}
+            />
+
+            <ProductCategoryBlock
+                id="fertilizers"
+                category="Fertilizers"
                 title="Agricultural & Base Materials"
                 description="Delivering essential foundational materials to support large-scale industrial and agricultural infrastructure, managed via highly optimized dry bulk freight operations."
-                image="https://images.pexels.com/photos/2101147/pexels-photo-2101147.jpeg?auto=compress&cs=tinysrgb&w=1200" // Heavy machinery / Dry Bulk Mining
+                image="https://images.pexels.com/photos/2101147/pexels-photo-2101147.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 products={rawMaterialsData}
             />
         </main>

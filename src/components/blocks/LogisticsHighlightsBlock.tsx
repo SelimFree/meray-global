@@ -73,7 +73,7 @@ export const LogisticsHighlightsBlock = () => {
               <span className="text-gray-400">Precision Delivery.</span>
             </Heading>
 
-            <Text className="text-gray-600 text-sm md:text-base leading-relaxed mb-12 max-w-lg">
+            <Text className="text-gray-600 text-sm md:text-base leading-relaxed mb-12 max-w-lg text-justify">
               Our integrated logistics network bridges the gap between producers and consumers.
               We manage complex physical movements across oceans, rails, and pipelines with
               absolute terminal precision.
@@ -94,7 +94,7 @@ export const LogisticsHighlightsBlock = () => {
                       <Heading level={3} className="text-sm font-bold text-primary-900 uppercase tracking-widest mb-2">
                         {cap.title}
                       </Heading>
-                      <Text className="text-sm text-gray-600 leading-relaxed max-w-md">
+                      <Text className="text-sm text-gray-600 leading-relaxed max-w-md text-justify">
                         {cap.description}
                       </Text>
                     </div>
@@ -105,7 +105,7 @@ export const LogisticsHighlightsBlock = () => {
 
           </div>
 
-          <div className="relative w-full overflow-hidden flex flex-col min-h-60 lg:min-h-100">
+          <div className="relative scale-110 lg:scale-150 w-full overflow-hidden flex flex-col min-h-49 lg:min-h-82">
             <div className="relative flex-1 overflow-hidden">
 
               <div className="absolute inset-0 w-full h-full pointer-events-none">
