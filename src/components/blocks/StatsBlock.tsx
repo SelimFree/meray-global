@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { cn } from '../../lib/utils';
 
 const stats = [
-  { id: 1, prefix: "", value: 450, suffix: "+", decimals: 0, description: "Institutional Partners" },
-  { id: 2, prefix: "", value: 12.5, suffix: "k+", decimals: 1, description: "Annual Trade Executions" },
-  { id: 3, prefix: "", value: 99.8, suffix: "%", decimals: 1, description: "Fulfillment Rate" },
-  { id: 4, prefix: "", value: 65, suffix: "+", decimals: 0, description: "Operating Jurisdictions" }
+  { id: 1, prefix: "", value: 450, suffix: "+", decimals: 0, tKey: "partners" },
+  { id: 2, prefix: "", value: 12.5, suffix: "k+", decimals: 1, tKey: "executions" },
+  { id: 3, prefix: "", value: 99.8, suffix: "%", decimals: 1, tKey: "fulfillment" },
+  { id: 4, prefix: "", value: 65, suffix: "+", decimals: 0, tKey: "jurisdictions" }
 ];
 
 function useCountUp(end: number, decimals: number = 0, duration: number = 2000) {
@@ -55,7 +56,7 @@ function useCountUp(end: number, decimals: number = 0, duration: number = 2000) 
   return { count: count.toFixed(decimals), ref };
 }
 
-const StatItem = ({ stat, index }: { stat: typeof stats[0], index: number }) => {
+const StatItem = ({ stat, index, description }: { stat: typeof stats[0], index: number, description: string }) => {
   const { count, ref } = useCountUp(stat.value, stat.decimals, 2500 + (index * 200));
 
   return (
@@ -78,13 +79,15 @@ const StatItem = ({ stat, index }: { stat: typeof stats[0], index: number }) => 
       </div>
 
       <Text className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">
-        {stat.description}
+        {description}
       </Text>
     </div>
   );
 };
 
 export const StatsBlock = () => {
+  const { t } = useTranslation("home");
+
   return (
     <section className="w-full bg-white relative z-10 border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,13 +95,18 @@ export const StatsBlock = () => {
         <div className="flex items-center gap-4 py-6 border-b border-gray-100">
           <div className="h-1.5 w-1.5 bg-secondary shrink-0" />
           <Text className="text-[10px] font-bold tracking-[0.3em] text-gray-400 uppercase">
-            Global Infrastructure Metrics
+            {t("statsBlock.title")}
           </Text>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
-            <StatItem key={stat.id} stat={stat} index={index} />
+            <StatItem 
+              key={stat.id} 
+              stat={stat} 
+              index={index} 
+              description={t(`statsBlock.items.${stat.tKey}`)} 
+            />
           ))}
         </div>
 

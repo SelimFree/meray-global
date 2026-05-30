@@ -1,0 +1,76 @@
+{
+  "heroBlock": {
+    "title": "Corporate Overview",
+    "description": "Meray Global is a premier independent commodity trading house. We navigate complex global markets to secure and deliver vital energy resources."
+  },
+  "missionBlock": {
+    "subtitle": "Our Mission",
+    "titleLine1": "We do not just trade markets.",
+    "titleLine2": "We optimize the physical flow of global energy.",
+    "paragraph1": "Founded on the principles of precision, risk management, and operational excellence, Meray Global operates at the critical intersection of producers and industrial consumers. We manage physical supply chains with zero tolerance for inefficiency.",
+    "paragraph2": "By integrating proprietary market intelligence with vast logistical capabilities—including maritime chartering, rail networks, and strategic storage—we guarantee supply continuity regardless of geopolitical volatility.",
+    "imageAlt": "Industrial port at dusk",
+    "established": "Est.",
+    "establishedYear": "2015",
+    "foundingSubtitle": "Founding Principle",
+    "foundingQuote": "\"Where complexity meets the market, we build the bridge.\"",
+    "stats": {
+      "years": {
+        "value": "10+",
+        "label": "Years Active"
+      },
+      "countries": {
+        "value": "40+",
+        "label": "Countries Served"
+      },
+      "products": {
+        "value": "2k+",
+        "label": "Products Shipped"
+      }
+    }
+  },
+  "timelineBlock": {
+    "title": "Corporate Evolution",
+    "events": {
+      "y2015": {
+        "year": "2015",
+        "title": "Foundation & Regional Inception",
+        "description": "Established initial operations with a targeted focus on the Turkmenistan commodity markets, building foundational competence in localized physical trade and supply chain execution."
+      },
+      "y2021": {
+        "year": "2021",
+        "title": "International Market Entry",
+        "description": "Inaugurated our primary global trading hub in Dubai, rapidly scaling physical volumes and executing institutional-grade contracts across the broader EMEA sector."
+      },
+      "y2024": {
+        "year": "2024",
+        "title": "Infrastructure & Logistics Integration",
+        "description": "Capitalizing on accelerated regional growth, we solidified our physical supply chain by securing dedicated maritime chartering networks and strategic storage capabilities."
+      },
+      "y2026": {
+        "year": "2026",
+        "title": "Intercontinental Scaling",
+        "description": "Executing advanced expansion protocols into prime European and Asian logistical hubs, ensuring uninterrupted global coverage and multi-jurisdictional supply chain stability."
+      }
+    }
+  },
+  "riskAndStrategyBlock": {
+    "subtitle": "Corporate Security",
+    "title": "Risk Management",
+    "description": "Global trade is inherently volatile. We secure our supply chains and protect our partners through rigorous financial, operational, and legal risk mitigation protocols.",
+    "strategies": {
+      "intelligence": {
+        "title": "Market Intelligence",
+        "description": "Leveraging proprietary analytics and real-time terminal data to identify global arbitrage opportunities and optimize physical trading routes before market shifts occur."
+      },
+      "hedging": {
+        "title": "Financial Hedging",
+        "description": "Protecting physical cargoes against severe price volatility using sophisticated derivative structures, backed by robust institutional credit facilities."
+      },
+      "compliance": {
+        "title": "Regulatory Compliance",
+        "description": "Navigating complex international trade jurisdictions, maritime laws, and global customs requirements with an uncompromising, zero-tolerance legal framework."
+      }
+    }
+  }
+}

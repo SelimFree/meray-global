@@ -1,0 +1,40 @@
+{
+  "heroBlock": {
+    "title": "Kurumsal İletişim",
+    "description": "Uzman lojistik ekiplerimiz ve kurumsal ticaret masalarımızla doğrudan iletişime geçin. Tüm büyük denizcilik ve finansal saat dilimlerinde sürekli operasyonel hazırlığı sürdürüyoruz."
+  },
+  "contactBlock": {
+    "subtitle": "Kurumsal İletişim",
+    "title": "Ticari Talep Başlatın",
+    "description": "Lütfen tedarik zinciri gereksinimlerinizle ilgili belirli ayrıntıları sağlayın. Fiziksel emtialar, deniz taşımacılığı ve terminal lojistiği ile ilgili talepler doğrudan ilgili bölgesel ticaret masasına yönlendirilecektir.",
+    "securityTitle": "Güvenli İletim",
+    "securityDescription": "Gönderilen tüm veriler şifrelenir ve uluslararası kurumsal gizlilik standartlarına sıkı sıkıya bağlı kalınarak işlenir. Doğrulanmamış üçüncü taraf brokerlerle çalışmıyoruz.",
+    "form": {
+      "firstNameLabel": "Ad",
+      "firstNamePlaceholder": "John",
+      "lastNameLabel": "Soyad",
+      "lastNamePlaceholder": "Doe",
+      "companyLabel": "Kurumsal Kimlik (Şirket)",
+      "companyPlaceholder": "örn. Global Energy Corp",
+      "emailLabel": "Kurumsal E-posta",
+      "emailPlaceholder": "john.doe@company.com",
+      "departmentLabel": "Yönlendirme Hedefi",
+      "departmentOptions": {
+        "default": "Departman Seçin...",
+        "trading": "Emtia Ticaret Masası",
+        "logistics": "Denizcilik ve Terminal Lojistiği",
+        "compliance": "Risk ve Mevzuata Uyum",
+        "media": "Basın ve Medya İlişkileri"
+      },
+      "messageLabel": "Talep Detayları",
+      "messagePlaceholder": "Hedef emtiaları, gerekli hacimleri veya varış limanlarını belirtin..."
+    },
+    "errorMessage": "Mesaj gönderilemedi",
+    "errorTitle": "İletim Hatası",
+    "buttonSending": "İletiliyor...",
+    "buttonSubmit": "Talebi İlet",
+    "successTitle": "İletim Başarılı",
+    "successMessage": "Talebiniz ilgili küresel masaya güvenli bir şekilde yönlendirildi. Bir temsilcimiz kısa süre içinde sizinle iletişime geçecektir.",
+    "successButton": "Yeni Bir Talep Başlat"
+  }
+}

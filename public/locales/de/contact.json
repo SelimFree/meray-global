@@ -1,0 +1,40 @@
+{
+  "heroBlock": {
+    "title": "Unternehmenskommunikation",
+    "description": "Treten Sie direkt mit unseren spezialisierten Logistikteams und Unternehmenshandelsabteilungen in Verbindung. Wir gewährleisten kontinuierliche Einsatzbereitschaft über alle wichtigen maritimen und finanziellen Zeitzonen hinweg."
+  },
+  "contactBlock": {
+    "subtitle": "Unternehmenskommunikation",
+    "title": "Handelsanfrage initiieren",
+    "description": "Bitte geben Sie spezifische Details zu Ihren Anforderungen an die Lieferkette an. Anfragen zu physischen Rohstoffen, maritimer Befrachtung und Terminallogistik werden direkt an die zuständige regionale Handelsabteilung weitergeleitet.",
+    "securityTitle": "Sichere Übertragung",
+    "securityDescription": "Alle übermittelten Daten werden verschlüsselt und unter strikter Einhaltung internationaler unternehmensinterner Datenschutzstandards verarbeitet. Wir arbeiten nicht mit unbestätigten Drittmaklern zusammen.",
+    "form": {
+      "firstNameLabel": "Vorname",
+      "firstNamePlaceholder": "John",
+      "lastNameLabel": "Nachname",
+      "lastNamePlaceholder": "Doe",
+      "companyLabel": "Unternehmenseinheit",
+      "companyPlaceholder": "z. B. Global Energy Corp",
+      "emailLabel": "Geschäftliche E-Mail",
+      "emailPlaceholder": "john.doe@company.com",
+      "departmentLabel": "Weiterleitungsziel",
+      "departmentOptions": {
+        "default": "Abteilung auswählen...",
+        "trading": "Rohstoffhandelsabteilung",
+        "logistics": "See- & Terminallogistik",
+        "compliance": "Risiko & Compliance",
+        "media": "Presse- & Medienarbeit"
+      },
+      "messageLabel": "Details zur Anfrage",
+      "messagePlaceholder": "Geben Sie Zielrohstoffe, benötigte Volumina oder Zielhäfen an..."
+    },
+    "errorMessage": "Nachricht konnte nicht gesendet werden",
+    "errorTitle": "Übertragungsfehler",
+    "buttonSending": "Wird übertragen...",
+    "buttonSubmit": "Anfrage übermitteln",
+    "successTitle": "Übertragung erfolgreich",
+    "successMessage": "Ihre Anfrage wurde sicher an die zuständige globale Abteilung weitergeleitet. Ein Vertreter wird sich in Kürze mit Ihnen in Verbindung setzen.",
+    "successButton": "Weitere Anfrage initiieren"
+  }
+}

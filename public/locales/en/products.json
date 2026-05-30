@@ -1,0 +1,210 @@
+{
+  "heroBlock": {
+    "title": "Commodities Portfolio",
+    "description": "Global sourcing and distribution of petrochemicals, thermoplastics, and vital raw materials. We provide our partners with uninterrupted supply chain stability and precise quality control."
+  },
+  "categories": {
+    "petroleumFuels": {
+      "category": "Petroleum products",
+      "title": "Refined Fuels & Distillates",
+      "description": "Reliable distribution of high-demand refined petroleum products, including Ultra-Low Sulfur Diesel, Gasoil, and Aviation Jet Fuel. We secure consistent energy supply chains for industrial centers across Eurasia and the MENA region.",
+      "items": {
+        "ulsd": {
+          "name": "Ultra-Low Sulfur Diesel",
+          "grade": "ULSD 10ppm (EN 590)",
+          "packaging": "Bulk Vessel / Rail Tanker",
+          "spec": "EN-590"
+        },
+        "diesel": {
+          "name": "Diesel",
+          "grade": "Automotive / Industrial Grade",
+          "packaging": "Bulk Vessel / Pipeline",
+          "spec": "D-2 / GOST"
+        },
+        "jetFuel": {
+          "name": "Jet Fuel (A1)",
+          "grade": "Aviation Grade",
+          "packaging": "Pipeline / Bulk Vessel",
+          "spec": "DEF STAN 91-091"
+        },
+        "gasoil": {
+          "name": "Gasoil",
+          "grade": "0.1% Sulphur",
+          "packaging": "Bulk Vessel",
+          "spec": "GAS-01"
+        }
+      }
+    },
+    "petroleumHeavy": {
+      "category": "Petroleum products",
+      "title": "Heavy Feedstocks & Residues",
+      "description": "Sourcing and maritime transport of downstream heavy residues, including Fuel Oil and Bitumen, engineered to support heavy civil infrastructure, marine bunkering, and specialized industrial manufacturing.",
+      "items": {
+        "mazut": {
+          "name": "Fuel Oil (Mazut)",
+          "grade": "CST 180 / 380",
+          "packaging": "Bulk Vessel",
+          "spec": "GOST-10585"
+        },
+        "bitumen": {
+          "name": "Bitumen",
+          "grade": "Penetration 60/70",
+          "packaging": "Bulk Vessel / Drums",
+          "spec": "BIT-6070"
+        },
+        "petcoke": {
+          "name": "Petroleum Coke",
+          "grade": "Fuel Grade / Calcined",
+          "packaging": "Bulk Vessel",
+          "spec": "PETCOKE-F"
+        }
+      }
+    },
+    "chemicalPolymers": {
+      "category": "Chemicals",
+      "title": "Polymers & Industrial Plastics",
+      "description": "Supplying high-quality resins including Polyethylene (PE) and Polypropylene (PP) for advanced industrial and consumer manufacturing. We maintain strategic buffer stock to navigate volatile market demands and ensure seamless production.",
+      "items": {
+        "pp": {
+          "name": "Polypropylene (PP)",
+          "grade": "Homopolymer / Copolymer",
+          "packaging": "25kg Bags / Jumbo",
+          "spec": "PP-H / PP-C"
+        },
+        "peStd": {
+          "name": "Poleethilen",
+          "grade": "Standard Thermoplastic",
+          "packaging": "25kg Bags / Octabins",
+          "spec": "PE-STD"
+        },
+        "hdpe": {
+          "name": "High-Density PE (HDPE)",
+          "grade": "Blow Molding / Extrusion",
+          "packaging": "25kg Bags / Bulk",
+          "spec": "PE-HD"
+        },
+        "ldpe": {
+          "name": "Low-Density PE (LDPE)",
+          "grade": "Film Grade",
+          "packaging": "25kg Bags",
+          "spec": "PE-LD"
+        },
+        "pvc": {
+          "name": "Polyvinyl Chloride (PVC)",
+          "grade": "Suspension Grade (K67)",
+          "packaging": "25kg Bags / Jumbo",
+          "spec": "PVC-S"
+        },
+        "pet": {
+          "name": "PET Resin",
+          "grade": "Bottle Grade (IV 0.80)",
+          "packaging": "Jumbo Bags",
+          "spec": "PET-BG"
+        }
+      }
+    },
+    "chemicalAromatics": {
+      "category": "Chemicals",
+      "title": "Aromatics & Solvents",
+      "description": "Sourcing high-purity industrial chemicals for global agricultural and chemical synthesis sectors. Our specialized bulk liquid logistics network ensures zero-contamination transit from terminal to destination.",
+      "items": {
+        "methanol": {
+          "name": "Methanol",
+          "grade": "99.85% IMPCA",
+          "packaging": "Bulk Vessel / Iso-Tank",
+          "spec": "METH-99"
+        },
+        "toluene": {
+          "name": "Toluene",
+          "grade": "Nitration Grade",
+          "packaging": "Bulk Vessel",
+          "spec": "TOL-NG"
+        },
+        "xylene": {
+          "name": "Xylene (Mixed)",
+          "grade": "Isomer Grade",
+          "packaging": "Bulk Vessel",
+          "spec": "XYL-MIX"
+        },
+        "styrene": {
+          "name": "Styrene Monomer",
+          "grade": "99.8% Min",
+          "packaging": "Bulk Vessel",
+          "spec": "SM-998"
+        },
+        "meg": {
+          "name": "Monoethylene Glycol",
+          "grade": "Fiber Grade",
+          "packaging": "Bulk / Drums",
+          "spec": "MEG-FG"
+        }
+      }
+    },
+    "fertilizerNitrogen": {
+      "category": "Fertilizers",
+      "title": "Nitrogen Base Nutrients",
+      "description": "Large-scale supply of foundational agricultural chemicals, including Urea and Ammonium Nitrate. Our multi-modal logistics network integrates rail, maritime, and road freight to ensure on-time delivery for the global agricultural sector.",
+      "items": {
+        "urea": {
+          "name": "Urea",
+          "grade": "Prilled / Granular 46% N",
+          "packaging": "Bulk / 50kg Bags / Jumbo",
+          "spec": "UREA-46"
+        },
+        "ammoniumNitrate": {
+          "name": "Ammonium Nitrate",
+          "grade": "Agricultural Grade 34% N",
+          "packaging": "Bulk / 50kg Bags",
+          "spec": "AN-34"
+        },
+        "ammonia": {
+          "name": "Ammonia",
+          "grade": "Anhydrous 99.5%",
+          "packaging": "Pressurized Vessel",
+          "spec": "NH3-ANH"
+        }
+      }
+    },
+    "fertilizerPhosphate": {
+      "category": "Fertilizers",
+      "title": "Phosphates & Sulphur",
+      "description": "Distribution of essential granular and crushed minerals vital for crop yield optimization and industrial acid production. We manage extensive dry bulk freight operations capable of executing high-tonnage contracts globally.",
+      "items": {
+        "dap": {
+          "name": "Diammonium Phosphate",
+          "grade": "18-46-0 (DAP)",
+          "packaging": "Bulk Vessel",
+          "spec": "DAP-18"
+        },
+        "map": {
+          "name": "Monoammonium Phosphate",
+          "grade": "11-52-0 (MAP)",
+          "packaging": "Bulk Vessel",
+          "spec": "MAP-11"
+        },
+        "sulphur": {
+          "name": "Sulphur",
+          "grade": "Granular / Crushed",
+          "packaging": "Bulk Vessel",
+          "spec": "SUL-99"
+        }
+      }
+    }
+  },
+  "productsNavBlock": {
+    "quickNavigate": "Quick Navigate:",
+    "links": {
+      "petroleum": "Petroleum products",
+      "chemicals": "Chemicals",
+      "fertilizers": "Fertilizers"
+    }
+  },
+  "productCategoryBlock": {
+    "tableHeaders": {
+      "product": "Product",
+      "grade": "Grade",
+      "packaging": "Packaging",
+      "spec": "Spec"
+    }
+  }
+}

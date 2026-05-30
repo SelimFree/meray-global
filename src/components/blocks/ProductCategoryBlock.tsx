@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
+import { Image } from '../ui/Image';
 import { cn } from '../../lib/utils';
 
 export interface ProductItem {
@@ -29,6 +31,7 @@ export const ProductCategoryBlock = ({
     products,
     isReversed = false
 }: ProductCategoryBlockProps) => {
+    const { t } = useTranslation("products");
     const imgRef = useRef<HTMLImageElement>(null);
     const sectionRef = useRef<HTMLElement>(null);
 
@@ -84,7 +87,7 @@ export const ProductCategoryBlock = ({
                                 {title}
                             </Heading>
 
-                            <Text className="text-gray-600 text-sm md:text-base leading-relaxed">
+                            <Text className="text-gray-600 text-sm md:text-base leading-relaxed text-justify">
                                 {description}
                             </Text>
                         </div>
@@ -92,10 +95,18 @@ export const ProductCategoryBlock = ({
                         <div className="w-full overflow-x-auto border border-gray-200 bg-white">
                             <div className="min-w-150">
                                 <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                    <span className="col-span-4 text-[10px] font-bold tracking-widest text-gray-500 uppercase">Product</span>
-                                    <span className="col-span-3 text-[10px] font-bold tracking-widest text-gray-500 uppercase">Grade</span>
-                                    <span className="col-span-3 text-[10px] font-bold tracking-widest text-gray-500 uppercase">Packaging</span>
-                                    <span className="col-span-2 text-[10px] font-bold tracking-widest text-gray-500 uppercase text-right">Spec</span>
+                                    <span className="col-span-4 text-[10px] font-bold tracking-widest text-gray-500 uppercase">
+                                        {t("productCategoryBlock.tableHeaders.product")}
+                                    </span>
+                                    <span className="col-span-3 text-[10px] font-bold tracking-widest text-gray-500 uppercase">
+                                        {t("productCategoryBlock.tableHeaders.grade")}
+                                    </span>
+                                    <span className="col-span-3 text-[10px] font-bold tracking-widest text-gray-500 uppercase">
+                                        {t("productCategoryBlock.tableHeaders.packaging")}
+                                    </span>
+                                    <span className="col-span-2 text-[10px] font-bold tracking-widest text-gray-500 uppercase text-right">
+                                        {t("productCategoryBlock.tableHeaders.spec")}
+                                    </span>
                                 </div>
 
                                 <div className="flex flex-col">
@@ -137,10 +148,11 @@ export const ProductCategoryBlock = ({
                         isReversed ? "lg:order-2" : "lg:order-1"
                     )}>
                         <div className="relative w-full h-100 lg:h-full lg:min-h-150 overflow-hidden bg-primary-900 border border-gray-200 shadow-sm">
-                            <img
+                            <Image
                                 ref={imgRef}
                                 src={image}
                                 alt={title}
+                                containerClassName="absolute inset-0 w-full h-full"
                                 className="absolute top-[-15%] left-0 w-full h-[130%] object-cover will-change-transform"
                             />
                             <div className="absolute inset-0 bg-primary-900/10 mix-blend-multiply pointer-events-none" />

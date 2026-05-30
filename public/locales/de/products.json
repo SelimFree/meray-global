@@ -1,0 +1,210 @@
+{
+  "heroBlock": {
+    "title": "Rohstoffportfolio",
+    "description": "Globale Beschaffung und weltweiter Vertrieb von Petrochemikalien, Thermoplasten und lebenswichtigen Rohstoffen. Wir bieten unseren Partnern ununterbrochene Stabilität der Lieferkette und präzise Qualitätskontrollen."
+  },
+  "categories": {
+    "petroleumFuels": {
+      "category": "Erdölprodukte",
+      "title": "Raffinierte Kraftstoffe & Destillate",
+      "description": "Zuverlässiger Vertrieb von stark nachgefragten raffinierten Erdölprodukten, einschließlich ultra-schwefelarmem Diesel, Gasöl und Flugzeugtreibstoff. Wir sichern konsistente Energieversorgungsketten für Industriezentren in ganz Eurasien und der MENA-Region.",
+      "items": {
+        "ulsd": {
+          "name": "Ultra-schwefelarmer Diesel",
+          "grade": "ULSD 10ppm (EN 590)",
+          "packaging": "Massengutschiff / Kesselwagen",
+          "spec": "EN-590"
+        },
+        "diesel": {
+          "name": "Diesel",
+          "grade": "Automobil- / Industriequalität",
+          "packaging": "Massengutschiff / Pipeline",
+          "spec": "D-2 / GOST"
+        },
+        "jetFuel": {
+          "name": "Flugzeugtreibstoff (A1)",
+          "grade": "Aviation-Qualität",
+          "packaging": "Pipeline / Massengutschiff",
+          "spec": "DEF STAN 91-091"
+        },
+        "gasoil": {
+          "name": "Gasöl",
+          "grade": "0.1% Schwefel",
+          "packaging": "Massengutschiff",
+          "spec": "GAS-01"
+        }
+      }
+    },
+    "petroleumHeavy": {
+      "category": "Erdölprodukte",
+      "title": "Schwere Einsatzstoffe & Rückstände",
+      "description": "Beschaffung und maritimer Transport von schweren Downstream-Rückständen, einschließlich Schweröl und Bitumen, ausgelegt für die Unterstützung schwerer ziviler Infrastrukturen, der Schiffsbebunkerung und spezieller industrieller Fertigungen.",
+      "items": {
+        "mazut": {
+          "name": "Schweröl (Mazut)",
+          "grade": "CST 180 / 380",
+          "packaging": "Massengutschiff",
+          "spec": "GOST-10585"
+        },
+        "bitumen": {
+          "name": "Bitumen",
+          "grade": "Penetration 60/70",
+          "packaging": "Massengutschiff / Fässer",
+          "spec": "BIT-6070"
+        },
+        "petcoke": {
+          "name": "Petrolkoks",
+          "grade": "Brennstoffqualität / Kalziniert",
+          "packaging": "Massengutschiff",
+          "spec": "PETCOKE-F"
+        }
+      }
+    },
+    "chemicalPolymers": {
+      "category": "Chemikalien",
+      "title": "Polymere & Industriekunststoffe",
+      "description": "Lieferung von hochwertigen Harzen einschließlich Polyethylen (PE) und Polypropylen (PP) für fortschrittliche Industrie- und Konsumgüterproduktion. Wir halten strategische Pufferbestände, um durch volatile Marktanforderungen zu navigieren und eine nahtlose Produktion sicherzustellen.",
+      "items": {
+        "pp": {
+          "name": "Polypropylen (PP)",
+          "grade": "Homopolymer / Copolymer",
+          "packaging": "25kg Säcke / Jumbo",
+          "spec": "PP-H / PP-C"
+        },
+        "peStd": {
+          "name": "Polyethylen",
+          "grade": "Standard Thermoplast",
+          "packaging": "25kg Säcke / Oktabins",
+          "spec": "PE-STD"
+        },
+        "hdpe": {
+          "name": "High-Density PE (HDPE)",
+          "grade": "Blasformen / Extrusion",
+          "packaging": "25kg Säcke / Schüttgut",
+          "spec": "PE-HD"
+        },
+        "ldpe": {
+          "name": "Low-Density PE (LDPE)",
+          "grade": "Folienqualität",
+          "packaging": "25kg Säcke",
+          "spec": "PE-LD"
+        },
+        "pvc": {
+          "name": "Polyvinylchlorid (PVC)",
+          "grade": "Suspensionsqualität (K67)",
+          "packaging": "25kg Säcke / Jumbo",
+          "spec": "PVC-S"
+        },
+        "pet": {
+          "name": "PET-Harz",
+          "grade": "Flaschenqualität (IV 0.80)",
+          "packaging": "Jumbo Säcke",
+          "spec": "PET-BG"
+        }
+      }
+    },
+    "chemicalAromatics": {
+      "category": "Chemikalien",
+      "title": "Aromaten & Lösungsmittel",
+      "description": "Beschaffung hochreiner Industriechemikalien für globale Agrar- und Chemiesynthesesektoren. Unser spezialisiertes Logistiknetzwerk für flüssige Massengüter gewährleistet einen kontaminationsfreien Transport vom Terminal zum Bestimmungsort.",
+      "items": {
+        "methanol": {
+          "name": "Methanol",
+          "grade": "99.85% IMPCA",
+          "packaging": "Massengutschiff / Iso-Tank",
+          "spec": "METH-99"
+        },
+        "toluene": {
+          "name": "Toluol",
+          "grade": "Nitrierqualität",
+          "packaging": "Massengutschiff",
+          "spec": "TOL-NG"
+        },
+        "xylene": {
+          "name": "Xylol (Gemischt)",
+          "grade": "Isomerqualität",
+          "packaging": "Massengutschiff",
+          "spec": "XYL-MIX"
+        },
+        "styrene": {
+          "name": "Styrolmonomer",
+          "grade": "Min. 99.8%",
+          "packaging": "Massengutschiff",
+          "spec": "SM-998"
+        },
+        "meg": {
+          "name": "Monoethylenglykol",
+          "grade": "Faserqualität",
+          "packaging": "Schüttgut / Fässer",
+          "spec": "MEG-FG"
+        }
+      }
+    },
+    "fertilizerNitrogen": {
+      "category": "Düngemittel",
+      "title": "Stickstoffbasierte Nährstoffe",
+      "description": "Großflächige Lieferung von landwirtschaftlichen Basis-Chemikalien, einschließlich Harnstoff und Ammoniumnitrat. Unser multimodales Logistiknetzwerk integriert Schienen-, See- und Straßenfracht, um eine pünktliche Lieferung für den globalen Agrarsektor zu gewährleisten.",
+      "items": {
+        "urea": {
+          "name": "Harnstoff (Urea)",
+          "grade": "Geprillt / Granuliert 46% N",
+          "packaging": "Schüttgut / 50kg Säcke / Jumbo",
+          "spec": "UREA-46"
+        },
+        "ammoniumNitrate": {
+          "name": "Ammoniumnitrat",
+          "grade": "Agrarqualität 34% N",
+          "packaging": "Schüttgut / 50kg Säcke",
+          "spec": "AN-34"
+        },
+        "ammonia": {
+          "name": "Ammoniak",
+          "grade": "Wasserfrei 99.5%",
+          "packaging": "Druckbehälter",
+          "spec": "NH3-ANH"
+        }
+      }
+    },
+    "fertilizerPhosphate": {
+      "category": "Düngemittel",
+      "title": "Phosphate & Schwefel",
+      "description": "Vertrieb essentieller granulierter und gebrochener Mineralien, die für die Optimierung von Ernteerträgen und die industrielle Säureproduktion unerlässlich sind. Wir leiten umfangreiche Trockenschüttgut-Frachtoperationen, die in der Lage sind, Verträge mit hoher Tonnage weltweit auszuführen.",
+      "items": {
+        "dap": {
+          "name": "Diammoniumphosphat (DAP)",
+          "grade": "18-46-0",
+          "packaging": "Massengutschiff",
+          "spec": "DAP-18"
+        },
+        "map": {
+          "name": "Monoammoniumphosphat (MAP)",
+          "grade": "11-52-0",
+          "packaging": "Massengutschiff",
+          "spec": "MAP-11"
+        },
+        "sulphur": {
+          "name": "Schwefel",
+          "grade": "Granuliert / Gebrochen",
+          "packaging": "Massengutschiff",
+          "spec": "SUL-99"
+        }
+      }
+    }
+  },
+  "productsNavBlock": {
+    "quickNavigate": "Schnellnavigation:",
+    "links": {
+      "petroleum": "Erdölprodukte",
+      "chemicals": "Chemikalien",
+      "fertilizers": "Düngemittel"
+    }
+  },
+  "productCategoryBlock": {
+    "tableHeaders": {
+      "product": "Produkt",
+      "grade": "Güteklasse",
+      "packaging": "Verpackung",
+      "spec": "Spezifikation"
+    }
+  }
+}

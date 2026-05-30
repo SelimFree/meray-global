@@ -1,20 +1,22 @@
+import { useTranslation } from 'react-i18next';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { Image } from '../ui/Image';
 import AboutBanner from "../../assets/about/about_banner.png";
 
 interface MissionStat {
-  value: string;
-  label: string;
+  tKey: string;
 }
 
 const stats: MissionStat[] = [
-  { value: '15+', label: 'Years Active' },
-  { value: '40+', label: 'Countries Served' },
-  { value: '2k+', label: 'Products Shipped' },
+  { tKey: 'years' },
+  { tKey: 'countries' },
+  { tKey: 'products' },
 ];
 
 export const MissionBlock = () => {
+  const { t } = useTranslation("about");
+
   return (
     <section className="w-full py-24 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +26,7 @@ export const MissionBlock = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="h-0.5 w-8 bg-secondary" />
               <Text className="text-xs font-bold tracking-[0.2em] text-gray-500 uppercase">
-                Our Mission
+                {t("missionBlock.subtitle")}
               </Text>
             </div>
 
@@ -32,25 +34,19 @@ export const MissionBlock = () => {
               level={2}
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-900 tracking-tight leading-[1.2] mb-8"
             >
-              We do not just trade markets.{' '}
+              {t("missionBlock.titleLine1")}{' '}
               <br className="hidden md:block" />
               <span className="text-gray-400">
-                We optimize the physical flow of global energy.
+                {t("missionBlock.titleLine2")}
               </span>
             </Heading>
 
             <div className="flex flex-col gap-6">
               <Text className="text-gray-600 text-base leading-relaxed text-justify">
-                Founded on the principles of precision, risk management, and operational
-                excellence, Meray Global operates at the critical intersection of producers
-                and industrial consumers. We manage physical supply chains with zero
-                tolerance for inefficiency.
+                {t("missionBlock.paragraph1")}
               </Text>
               <Text className="text-gray-600 text-base leading-relaxed text-justify">
-                By integrating proprietary market intelligence with vast logistical
-                capabilities—including maritime chartering, rail networks, and strategic
-                storage—we guarantee supply continuity regardless of geopolitical
-                volatility.
+                {t("missionBlock.paragraph2")}
               </Text>
             </div>
           </div>
@@ -59,7 +55,7 @@ export const MissionBlock = () => {
 
             <Image
               src={AboutBanner}
-              alt="Industrial port at dusk"
+              alt={t("missionBlock.imageAlt")}
               aspectRatio="auto"
               containerClassName="absolute inset-0 w-full h-full"
               className="w-full h-full object-cover opacity-35"
@@ -71,13 +67,13 @@ export const MissionBlock = () => {
 
             <div className="absolute top-6 right-6 flex flex-col items-end gap-0.5 pointer-events-none select-none">
               <span className="text-[9px] font-bold tracking-[0.22em] text-white/30 uppercase">
-                Est.
+                {t("missionBlock.established")}
               </span>
               <span
                 className="font-extrabold text-white/[0.07] leading-none tracking-tight"
                 style={{ fontSize: 'clamp(48px, 6vw, 64px)' }}
               >
-                2015
+                {t("missionBlock.establishedYear")}
               </span>
             </div>
 
@@ -86,21 +82,21 @@ export const MissionBlock = () => {
               <div className="h-px w-8 bg-secondary mb-5" />
 
               <Text className="text-[9px] font-bold tracking-[0.22em] text-secondary uppercase mb-3">
-                Founding Principle
+                {t("missionBlock.foundingSubtitle")}
               </Text>
 
               <blockquote className="font-serif italic text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-sm">
-                "Where complexity meets the market,&nbsp;we&nbsp;build&nbsp;the&nbsp;bridge."
+                {t("missionBlock.foundingQuote")}
               </blockquote>
 
               <div className="flex gap-8 border-t border-white/10 pt-6">
                 {stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-col gap-1">
+                  <div key={stat.tKey} className="flex flex-col gap-1">
                     <span className="text-xl font-extrabold text-white/85 tracking-tight tabular-nums">
-                      {stat.value}
+                      {t(`missionBlock.stats.${stat.tKey}.value`)}
                     </span>
                     <span className="text-[9px] font-bold tracking-[0.18em] text-white/35 uppercase">
-                      {stat.label}
+                      {t(`missionBlock.stats.${stat.tKey}.label`)}
                     </span>
                   </div>
                 ))}

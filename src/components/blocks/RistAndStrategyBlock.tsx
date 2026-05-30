@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { LineChart, Shield, Scale } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
@@ -6,24 +7,23 @@ const strategies = [
   {
     icon: LineChart,
     id: "01",
-    title: "Market Intelligence",
-    description: "Leveraging proprietary analytics and real-time terminal data to identify global arbitrage opportunities and optimize physical trading routes before market shifts occur."
+    tKey: "intelligence"
   },
   {
     icon: Shield,
     id: "02",
-    title: "Financial Hedging",
-    description: "Protecting physical cargoes against severe price volatility using sophisticated derivative structures, backed by robust institutional credit facilities."
+    tKey: "hedging"
   },
   {
     icon: Scale,
     id: "03",
-    title: "Regulatory Compliance",
-    description: "Navigating complex international trade jurisdictions, maritime laws, and global customs requirements with an uncompromising, zero-tolerance legal framework."
+    tKey: "compliance"
   }
 ];
 
 export const RiskAndStrategyBlock = () => {
+  const { t } = useTranslation("about");
+
   return (
     <section className="w-full py-24 bg-primary-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,14 +33,14 @@ export const RiskAndStrategyBlock = () => {
             <div className="flex items-center gap-4 mb-4">
               <div className="h-0.5 w-8 bg-secondary" />
               <Text className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase">
-                Corporate Security
+                {t("riskAndStrategyBlock.subtitle")}
               </Text>
             </div>
             <Heading level={2} className="text-white text-3xl md:text-4xl font-extrabold tracking-tight mb-6">
-              Risk Management
+              {t("riskAndStrategyBlock.title")}
             </Heading>
-            <Text className="text-white/70 text-sm md:text-base leading-relaxed">
-              Global trade is inherently volatile. We secure our supply chains and protect our partners through rigorous financial, operational, and legal risk mitigation protocols.
+            <Text className="text-white/70 text-sm md:text-base leading-relaxed text-justify">
+              {t("riskAndStrategyBlock.description")}
             </Text>
           </div>
         </div>
@@ -60,11 +60,11 @@ export const RiskAndStrategyBlock = () => {
                 <Icon className="h-8 w-8 text-secondary mb-8" strokeWidth={1.5} />
 
                 <Heading level={3} className="text-white text-lg font-bold uppercase tracking-widest mb-4">
-                  {strategy.title}
+                  {t(`riskAndStrategyBlock.strategies.${strategy.tKey}.title`)}
                 </Heading>
 
-                <Text className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors">
-                  {strategy.description}
+                <Text className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors text-justify">
+                  {t(`riskAndStrategyBlock.strategies.${strategy.tKey}.description`)}
                 </Text>
 
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-secondary transition-all duration-500 group-hover:w-full" />

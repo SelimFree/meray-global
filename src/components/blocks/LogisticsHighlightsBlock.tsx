@@ -7,18 +7,15 @@ import WorldMap from '../../assets/world_map.svg';
 const capabilities = [
   {
     icon: Anchor,
-    title: "Maritime Chartering",
-    description: "Operating a dynamic fleet of specialized chemical and product tankers with real-time route optimization.",
+    tKey: "maritime"
   },
   {
     icon: TrainFront,
-    title: "Rail & Tank Storage",
-    description: "Secured throughput at major global terminals, connected via dedicated rail and pipeline infrastructure.",
+    tKey: "rail"
   },
   {
     icon: ShieldCheck,
-    title: "Risk & Compliance",
-    description: "Strict adherence to international trade laws, maritime regulations, and ESG environmental standards.",
+    tKey: "compliance"
   },
 ];
 
@@ -53,7 +50,7 @@ const routes = [
 
 
 export const LogisticsHighlightsBlock = () => {
-  const { t } = useTranslation("about");
+  const { t } = useTranslation("home");
 
   return (
     <section className="w-full bg-white py-24 border-b border-gray-200">
@@ -64,19 +61,17 @@ export const LogisticsHighlightsBlock = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="h-0.5 w-8 bg-secondary" />
               <Text className="text-xs font-bold tracking-[0.2em] text-gray-500 uppercase">
-                Global Infrastructure
+                {t("logisticsBlock.subtitle")}
               </Text>
             </div>
 
             <Heading level={2} className="text-4xl md:text-5xl font-extrabold text-primary-900 tracking-tight mb-6">
-              Global Reach. <br />
-              <span className="text-gray-400">Precision Delivery.</span>
+              {t("logisticsBlock.titleLine1")} <br />
+              <span className="text-gray-400">{t("logisticsBlock.titleLine2")}</span>
             </Heading>
 
             <Text className="text-gray-600 text-sm md:text-base leading-relaxed mb-12 max-w-lg text-justify">
-              Our integrated logistics network bridges the gap between producers and consumers.
-              We manage complex physical movements across oceans, rails, and pipelines with
-              absolute terminal precision.
+              {t("logisticsBlock.description")}
             </Text>
 
             <div className="flex flex-col gap-8 mb-12">
@@ -92,10 +87,10 @@ export const LogisticsHighlightsBlock = () => {
                     </div>
                     <div>
                       <Heading level={3} className="text-sm font-bold text-primary-900 uppercase tracking-widest mb-2">
-                        {cap.title}
+                        {t(`logisticsBlock.capabilities.${cap.tKey}.title`)}
                       </Heading>
                       <Text className="text-sm text-gray-600 leading-relaxed max-w-md text-justify">
-                        {cap.description}
+                        {t(`logisticsBlock.capabilities.${cap.tKey}.description`)}
                       </Text>
                     </div>
                   </div>
@@ -226,7 +221,7 @@ export const LogisticsHighlightsBlock = () => {
                       letterSpacing="0.08em"
                       style={{ textTransform: 'uppercase' }}
                     >
-                      {t(`logisticsMapBlock.${loc.label}`, loc.label)}
+                      {t(`logisticsBlock.cities.${loc.label}`)}
                     </text>
                   </g>
                 ))}

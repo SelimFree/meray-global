@@ -53,7 +53,7 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
                 src="/android-chrome-512x512.png"
                 aspectRatio="auto"
                 alt={t("navbar.logoAlt")}
-                className="h-20 object-contain md:h-22"
+                className="h-20 object-contain md:h-30"
                 containerClassName="bg-transparent"
               />
             </div>

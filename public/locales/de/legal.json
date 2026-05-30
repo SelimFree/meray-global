@@ -1,0 +1,104 @@
+{
+  "custom": {
+    "lastUpdatedLabel": "Zuletzt aktualisiert: "
+  },
+
+  "privacyPolicy": {
+    "title": "Datenschutzbestimmungen",
+    "lastUpdated": "10. April 2026",
+
+    "section1": {
+      "title": "1. Einleitung",
+      "text": "Wir bei {{company}} respektieren Ihre Privatsphäre und verpflichten uns zum Schutz Ihrer personenbezogenen Daten. Diese Datenschutzrichtlinie informiert Sie darüber, wie wir mit Ihren personenbezogenen Daten umgehen, wenn Sie unsere Website besuchen."
+    },
+
+    "section2": {
+      "title": "2. Die Daten, die wir erfassen",
+      "text": "Wir können verschiedene Arten von personenbezogenen Daten über Sie erfassen, verwenden, speichern und übertragen, die wir wie folgt gruppiert haben:",
+      "dataList": [
+        {
+          "label": "Identitätsdaten:",
+          "desc": "Umfasst Vorname, Nachname und Titel."
+        },
+        {
+          "label": "Kontaktdaten:",
+          "desc": "Umfasst E-Mail-Adresse und Telefonnummern."
+        },
+        {
+          "label": "Technische Daten:",
+          "desc": "Umfasst IP-Adresse, Browsertyp und Zeitzoneneinstellung."
+        },
+        {
+          "label": "Nutzungsdaten:",
+          "desc": "Umfasst Informationen darüber, wie Sie unsere Website nutzen."
+        }
+      ]
+    },
+
+    "section3": {
+      "title": "3. Datensicherheit",
+      "text": "Wir haben angemessene Sicherheitsvorkehrungen getroffen, um zu verhindern, dass Ihre personenbezogenen Daten versehentlich verloren gehen, unbefugt verwendet oder abgerufen werden."
+    }
+  },
+
+  "termsOfService": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "10. April 2026",
+
+    "section1": {
+      "title": "1. Akzeptanz der Bedingungen",
+      "text": "Durch den Zugriff auf oder die Nutzung der Website von {{company}} erklären Sie sich mit diesen Nutzungsbedingungen sowie allen geltenden Gesetzen und Vorschriften einverstanden."
+    },
+
+    "section2": {
+      "title": "2. Nutzungslizenz",
+      "text": "Unter dieser Lizenz ist es Ihnen nicht gestattet:",
+      "list": [
+        "Die Materialien für kommerzielle Zwecke zu modifizieren oder zu kopieren;",
+        "Zu versuchen, auf der Website enthaltene Software zu dekompilieren oder per Reverse Engineering zurückzuentwickeln;",
+        "Jegliche Urheberrechts- oder andere Eigentumsvermerke zu entfernen;",
+        "Die Materialien an eine andere Person zu übertragen oder sie zu 'spiegeln'."
+      ]
+    },
+
+    "section3": {
+      "title": "3. Geltendes Recht",
+      "text": "Diese Geschäftsbedingungen unterliegen den Gesetzen von {{country}} und werden in Übereinstimmung mit diesen ausgelegt."
+    }
+  },
+
+  "cookiePolicy": {
+    "title": "Cookie-Richtlinie",
+    "lastUpdated": "10. April 2026",
+
+    "section1": {
+      "title": "1. Was sind Cookies?",
+      "text": "Cookies sind kleine Textdateien, die auf Ihrem Computer oder Mobilgerät abgelegt werden, wenn Sie eine Website besuchen. Sie sind weit verbreitet, um Websites effizienter arbeiten zu lassen und den Eigentümern der Website Informationen zur Verfügung zu stellen."
+    },
+
+    "section2": {
+      "title": "2. Wie wir Cookies verwenden",
+      "text": "Wir verwenden Cookies aus verschiedenen Gründen, darunter:",
+      "list": [
+        {
+          "label": "Unbedingt erforderliche Cookies:",
+          "desc": "Notwendig für die Funktion der Website (z. B. Sicherheit und Zugänglichkeit)."
+        },
+        {
+          "label": "Leistungs-Cookies:",
+          "desc": "Helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden."
+        },
+        {
+          "label": "Funktionale Cookies:",
+          "desc": "Ermöglichen es der Website, sich an von Ihnen getroffene Entscheidungen (wie Ihre Sprache) zu erinnern, um erweiterte Funktionen bereitzustellen."
+        }
+      ]
+    },
+
+    "section3": {
+      "title": "3. Verwaltung Ihrer Präferenzen",
+      "textBefore": "Die meisten Webbrowser erlauben eine gewisse Kontrolle der meisten Cookies über die Browsereinstellungen. Um mehr über Cookies zu erfahren, einschließlich der Möglichkeiten, zu sehen, welche Cookies gesetzt wurden, und wie man sie verwaltet und löscht, besuchen Sie ",
+      "linkText": "allaboutcookies.org"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "privacy": "Datenschutzbestimmungen",
+    "terms": "Nutzungsbedingungen",
+    "cookie": "Cookie-Richtlinie"
+  },
+
+  "footer": {
+    "quickLinks": "Schnelle Links",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzbestimmungen",
+    "terms": "Nutzungsbedingungen",
+    "cookie": "Cookie-Richtlinie",
+    "slogan": "Meray Global widmet sich der Gewährleistung einer kontinuierlichen Stabilität der Lieferketten im Bereich physischer Rohstoffe und liefert unseren globalen Partnern konsequent strategischen Mehrwert und reibungslose Logistik.",
+    "rights": "© {{year}} {{company}}. Alle Rechte vorbehalten."
+  },
+
+  "cookieBanner": {
+    "title": "Cookie-Richtlinie",
+    "body": "Wir verwenden Cookies, um den Datenverkehr zu analysieren und Ihr Erlebnis zu optimieren. Wenn Sie auf „Akzeptieren“ klicken, stimmen Sie unserer Verwendung von Cookies zu.",
+    "accept": "Akzeptieren",
+    "more": "Mehr erfahren"
+  },
+
+  "notFoundPage": {
+    "title": "404",
+    "subtitle": "Seite nicht gefunden",
+    "body": "Entschuldigung, wir konnten die gesuchte Seite nicht finden.\n Möglicherweise wurde sie verschoben oder gelöscht.",
+    "returnBtn": "Zurück zur Startseite"
+  },
+
+  "errorPage": {
+    "title": "Etwas ist schiefgelaufen",
+    "subtitle": "Auf unserer Seite ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie, die Seite zu aktualisieren, oder kontaktieren Sie den Support, falls das Problem bestehen bleibt.",
+    "refreshBtn": "Seite aktualisieren"
+  }
+}

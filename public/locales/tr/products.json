@@ -1,0 +1,210 @@
+{
+  "heroBlock": {
+    "title": "Emtia Portföyü",
+    "description": "Petrokimyasallar, termoplastikler ve hayati hammaddelerin küresel tedariki ve dağıtımı. Ortaklarımıza kesintisiz tedarik zinciri istikrarı ve hassas kalite kontrol sağlıyoruz."
+  },
+  "categories": {
+    "petroleumFuels": {
+      "category": "Petrol ürünleri",
+      "title": "Rafine Yakıtlar ve Distilatlar",
+      "description": "Ultra Düşük Kükürtlü Dizel, Motorin ve Havacılık Jet Yakıtı dahil olmak üzere yüksek talep gören rafine petrol ürünlerinin güvenilir dağıtımı. Avrasya ve MENA bölgesi genelindeki sanayi merkezleri için tutarlı enerji tedarik zincirleri sağlıyoruz.",
+      "items": {
+        "ulsd": {
+          "name": "Ultra Düşük Kükürtlü Dizel",
+          "grade": "ULSD 10ppm (EN 590)",
+          "packaging": "Dökme Yük Gemisi / Demiryolu Tankeri",
+          "spec": "EN-590"
+        },
+        "diesel": {
+          "name": "Dizel",
+          "grade": "Otomotiv / Endüstriyel Kalite",
+          "packaging": "Dökme Yük Gemisi / Boru Hattı",
+          "spec": "D-2 / GOST"
+        },
+        "jetFuel": {
+          "name": "Jet Yakıtı (A1)",
+          "grade": "Havacılık Kalitesi",
+          "packaging": "Boru Hattı / Dökme Yük Gemisi",
+          "spec": "DEF STAN 91-091"
+        },
+        "gasoil": {
+          "name": "Motorin (Gasoil)",
+          "grade": "%0.1 Kükürt",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "GAS-01"
+        }
+      }
+    },
+    "petroleumHeavy": {
+      "category": "Petrol ürünleri",
+      "title": "Ağır Hammaddeler ve Kalıntılar",
+      "description": "Ağır sivil altyapıyı, deniz yakıt ikmalini ve özel endüstriyel üretimi desteklemek üzere tasarlanmış Fuel Oil ve Bitüm dahil olmak üzere alt akım (downstream) ağır kalıntıların tedariki ve deniz taşımacılığı.",
+      "items": {
+        "mazut": {
+          "name": "Fuel Oil (Mazut)",
+          "grade": "CST 180 / 380",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "GOST-10585"
+        },
+        "bitumen": {
+          "name": "Bitüm",
+          "grade": "Penetrasyon 60/70",
+          "packaging": "Dökme Yük Gemisi / Varil",
+          "spec": "BIT-6070"
+        },
+        "petcoke": {
+          "name": "Petrol Koku",
+          "grade": "Yakıt Kalitesi / Kalsine Edilmiş",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "PETCOKE-F"
+        }
+      }
+    },
+    "chemicalPolymers": {
+      "category": "Kimyasallar",
+      "title": "Polimerler ve Endüstriyel Plastikler",
+      "description": "Gelişmiş endüstriyel ve tüketici üretimi için Polietilen (PE) ve Polipropilen (PP) dahil olmak üzere yüksek kaliteli reçinelerin tedariki. Dalgalı pazar taleplerini yönetmek ve sorunsuz üretim sağlamak için stratejik tampon stok tutuyoruz.",
+      "items": {
+        "pp": {
+          "name": "Polipropilen (PP)",
+          "grade": "Homopolimer / Kopolimer",
+          "packaging": "25kg Torba / Jumbo",
+          "spec": "PP-H / PP-C"
+        },
+        "peStd": {
+          "name": "Polietilen",
+          "grade": "Standart Termoplastik",
+          "packaging": "25kg Torba / Oktabin",
+          "spec": "PE-STD"
+        },
+        "hdpe": {
+          "name": "Yüksek Yoğunluklu PE (YYPE)",
+          "grade": "Şişirme Kalıplama / Ekstrüzyon",
+          "packaging": "25kg Torba / Dökme",
+          "spec": "PE-HD"
+        },
+        "ldpe": {
+          "name": "Alçak Yoğunluklu PE (AYPE)",
+          "grade": "Film Kalitesi",
+          "packaging": "25kg Torba",
+          "spec": "PE-LD"
+        },
+        "pvc": {
+          "name": "Polivinil Klorür (PVC)",
+          "grade": "Süspansiyon Kalitesi (K67)",
+          "packaging": "25kg Torba / Jumbo",
+          "spec": "PVC-S"
+        },
+        "pet": {
+          "name": "PET Reçine",
+          "grade": "Şişe Kalitesi (IV 0.80)",
+          "packaging": "Jumbo Torba",
+          "spec": "PET-BG"
+        }
+      }
+    },
+    "chemicalAromatics": {
+      "category": "Kimyasallar",
+      "title": "Aromatikler ve Çözücüler",
+      "description": "Küresel tarım ve kimyasal sentez sektörleri için yüksek saflıkta endüstriyel kimyasalların tedariki. Özel dökme sıvı lojistik ağımız, terminalden hedefe sıfır kontaminasyon geçişi sağlar.",
+      "items": {
+        "methanol": {
+          "name": "Metanol",
+          "grade": "%99.85 IMPCA",
+          "packaging": "Dökme Yük Gemisi / Iso-Tank",
+          "spec": "METH-99"
+        },
+        "toluene": {
+          "name": "Toluen",
+          "grade": "Nitrasyon Kalitesi",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "TOL-NG"
+        },
+        "xylene": {
+          "name": "Ksilen (Karışık)",
+          "grade": "İzomer Kalitesi",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "XYL-MIX"
+        },
+        "styrene": {
+          "name": "Stiren Monomer",
+          "grade": "Min %99.8",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "SM-998"
+        },
+        "meg": {
+          "name": "Monoetilen Glikol",
+          "grade": "Elyaf Kalitesi",
+          "packaging": "Dökme / Varil",
+          "spec": "MEG-FG"
+        }
+      }
+    },
+    "fertilizerNitrogen": {
+      "category": "Gübreler",
+      "title": "Azot Bazlı Besinler",
+      "description": "Üre ve Amonyum Nitrat dahil olmak üzere temel tarım kimyasallarının büyük ölçekli tedariki. Çok modlu lojistik ağımız, küresel tarım sektörü için zamanında teslimat sağlamak amacıyla demiryolu, denizcilik ve karayolu taşımacılığını entegre eder.",
+      "items": {
+        "urea": {
+          "name": "Üre",
+          "grade": "Pril / Granül %46 N",
+          "packaging": "Dökme / 50kg Torba / Jumbo",
+          "spec": "UREA-46"
+        },
+        "ammoniumNitrate": {
+          "name": "Amonyum Nitrat",
+          "grade": "Tarım Kalitesi %34 N",
+          "packaging": "Dökme / 50kg Torba",
+          "spec": "AN-34"
+        },
+        "ammonia": {
+          "name": "Amonyak",
+          "grade": "Susuz %99.5",
+          "packaging": "Basınçlı Tank",
+          "spec": "NH3-ANH"
+        }
+      }
+    },
+    "fertilizerPhosphate": {
+      "category": "Gübreler",
+      "title": "Fosfatlar ve Kükürt",
+      "description": "Mahsul verimi optimizasyonu ve endüstriyel asit üretimi için hayati önem taşıyan temel granül ve kırılmış minerallerin dağıtımı. Dünya çapında yüksek tonajlı sözleşmeleri yürütebilecek kapsamlı kuru dökme yük operasyonlarını yönetiyoruz.",
+      "items": {
+        "dap": {
+          "name": "Diamonyum Fosfat (DAP)",
+          "grade": "18-46-0",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "DAP-18"
+        },
+        "map": {
+          "name": "Monoamonyum Fosfat (MAP)",
+          "grade": "11-52-0",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "MAP-11"
+        },
+        "sulphur": {
+          "name": "Kükürt",
+          "grade": "Granül / Kırılmış",
+          "packaging": "Dökme Yük Gemisi",
+          "spec": "SUL-99"
+        }
+      }
+    }
+  },
+  "productsNavBlock": {
+    "quickNavigate": "Hızlı Gezinme:",
+    "links": {
+      "petroleum": "Petrol ürünleri",
+      "chemicals": "Kimyasallar",
+      "fertilizers": "Gübreler"
+    }
+  },
+  "productCategoryBlock": {
+    "tableHeaders": {
+      "product": "Ürün",
+      "grade": "Kalite (Sınıf)",
+      "packaging": "Ambalaj",
+      "spec": "Özellikler (Spec)"
+    }
+  }
+}
