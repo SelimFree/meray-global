@@ -1,6 +1,6 @@
-const LOGO_URL = "https://www.smg-kimya.com/logo.png";
-const WEBSITE_URL = "https://www.smg-kimya.com";
-const COMPANY_NAME = "SM Group Kimya A.Ş.";
+const WEBSITE_URL = "https://www.merayglobal.com"; // Update to your domain
+const COMPANY_NAME = "Meray Global";
+const LOGO_URL = "https://www.merayglobal.com/logo.png"; // Update to your hosted logo URL
 
 interface AutoReplyTranslation {
   subject: string;
@@ -15,135 +15,149 @@ interface AutoReplyTranslation {
   links: {
     about: string;
     products: string;
-    logistics: string;
+    contact: string;
   };
   legal: {
     privacy: string;
     terms: string;
-    cookies: string;
   };
 }
 
 export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
   en: {
-    subject: "Message Received - SM Group",
-    title: "Message Received",
-    greeting: "Dear",
+    subject: "Inquiry Acknowledgment - Meray Global",
+    title: "Transmission Logged",
+    greeting: "Attention:",
     body1:
-      "Thank you for reaching out to SM Group. We have successfully received your inquiry and a member of our team is currently reviewing it.",
+      "Your trade inquiry has been securely received by the Meray Global server network. A preliminary compliance check is currently underway.",
     body2:
-      "We prioritize clear communication and aim to respond to all inquiries within 24 hours. If your request is urgent, please do not hesitate to contact our office directly.",
-    regards: "Best regards",
-    contactTitle: "Contact Us",
-    linksTitle: "Quick Links",
-    legalTitle: "Legal",
-    links: { about: "About Us", products: "Products", logistics: "Logistics" },
-    legal: {
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      cookies: "Cookie Policy",
+      "Our regional trading desk will review your requirements. You can expect direct communication from an authorized representative within one standard business day.",
+    regards: "Authorized by",
+    contactTitle: "Global Headquarters",
+    linksTitle: "Corporate Index",
+    legalTitle: "Compliance",
+    links: {
+      about: "Corporate Overview",
+      products: "Commodities Portfolio",
+      contact: "Global Desks",
     },
+    legal: { privacy: "Data Privacy Standard", terms: "Terms of Trade" },
   },
   tr: {
-    subject: "Mesajınız Alındı - SM Group",
-    title: "Mesajınız Alındı",
-    greeting: "Sayın",
+    subject: "Talep Onayı - Meray Global",
+    title: "İletim Kaydedildi",
+    greeting: "Dikkatine:",
     body1:
-      "SM Group'a ulaştığınız için teşekkür ederiz. Talebinizi başarıyla aldık ve ekibimiz şu anda inceliyor.",
+      "Ticari talebiniz Meray Global sunucu ağı tarafından güvenli bir şekilde alınmıştır. Ön uyumluluk kontrolü şu anda devam etmektedir.",
     body2:
-      "Tüm taleplere 24 saat içinde yanıt vermeyi hedefliyoruz. Talebiniz acilse, lütfen doğrudan ofisimizle iletişime geçmekten çekinmeyin.",
-    regards: "Saygılarımızla",
-    contactTitle: "Bize Ulaşın",
-    linksTitle: "Hızlı Bağlantılar",
-    legalTitle: "Yasal",
-    links: { about: "Hakkımızda", products: "Ürünler", logistics: "Lojistik" },
-    legal: {
-      privacy: "Gizlilik Politikası",
-      terms: "Kullanım Şartları",
-      cookies: "Çerez Politikası",
+      "Bölgesel ticaret masamız gereksinimlerinizi inceleyecektir. Yetkili bir temsilcimiz bir iş günü içerisinde sizinle doğrudan iletişime geçecektir.",
+    regards: "Onaylayan",
+    contactTitle: "Küresel Merkez",
+    linksTitle: "Kurumsal Dizin",
+    legalTitle: "Uyumluluk",
+    links: {
+      about: "Kurumsal Genel Bakış",
+      products: "Emtia Portföyü",
+      contact: "Küresel Masalar",
     },
+    legal: { privacy: "Veri Gizliliği Standardı", terms: "Ticaret Şartları" },
   },
   de: {
-    subject: "Nachricht erhalten - SM Group",
-    title: "Nachricht erhalten",
-    greeting: "Sehr geehrte(r)",
+    subject: "Anfragebestätigung - Meray Global",
+    title: "Übertragung Protokolliert",
+    greeting: "Zu Händen von:",
     body1:
-      "Vielen Dank für Ihre Kontaktaufnahme mit der SM Group. Wir haben Ihre Anfrage erfolgreich erhalten und unser Team prüft sie derzeit.",
+      "Ihre Handelsanfrage wurde vom Meray Global-Servernetzwerk sicher empfangen. Eine vorläufige Compliance-Prüfung ist derzeit im Gange.",
     body2:
-      "Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten. Wenn Ihr Anliegen dringend ist, zögern Sie bitte nicht, unser Büro direkt zu kontaktieren.",
-    regards: "Mit freundlichen Grüßen",
-    contactTitle: "Kontaktiere uns",
-    linksTitle: "Schnelllinks",
-    legalTitle: "Rechtliches",
-    links: { about: "Über uns", products: "Produkte", logistics: "Logistik" },
-    legal: {
-      privacy: "Datenschutzrichtlinie",
-      terms: "Nutzungsbedingungen",
-      cookies: "Cookie-Richtlinie",
+      "Unser regionales Trading Desk wird Ihre Anforderungen prüfen. Sie können innerhalb eines Standardarbeitstages mit einer direkten Kommunikation von einem autorisierten Vertreter rechnen.",
+    regards: "Autorisiert durch",
+    contactTitle: "Globaler Hauptsitz",
+    linksTitle: "Unternehmensindex",
+    legalTitle: "Compliance",
+    links: {
+      about: "Unternehmensübersicht",
+      products: "Rohstoffportfolio",
+      contact: "Globale Desks",
     },
+    legal: { privacy: "Datenschutzstandard", terms: "Handelsbedingungen" },
   },
   ru: {
-    subject: "Сообщение получено - SM Group",
-    title: "Сообщение получено",
-    greeting: "Уважаемый(ая)",
+    subject: "Подтверждение запроса - Meray Global",
+    title: "Передача Зарегистрирована",
+    greeting: "Вниманию:",
     body1:
-      "Спасибо за обращение в SM Group. Мы успешно получили ваш запрос, и наша команда в настоящее время его рассматривает.",
+      "Ваш торговый запрос был безопасно получен серверной сетью Meray Global. В настоящее время проводится предварительная проверка на соответствие.",
     body2:
-      "Мы стремимся отвечать на все запросы в течение 24 часов. Если ваш запрос срочный, пожалуйста, не стесняйтесь обращаться в наш офис напрямую.",
-    regards: "С уважением",
-    contactTitle: "Связаться с нами",
-    linksTitle: "Быстрые ссылки",
-    legalTitle: "Правовая информация",
-    links: { about: "О нас", products: "Продукция", logistics: "Логистика" },
+      "Наш региональный торговый отдел рассмотрит ваши требования. Ожидайте прямого сообщения от уполномоченного представителя в течение одного рабочего дня.",
+    regards: "Утверждено",
+    contactTitle: "Глобальная Штаб-квартира",
+    linksTitle: "Корпоративный Индекс",
+    legalTitle: "Соответствие",
+    links: {
+      about: "Обзор компании",
+      products: "Сырьевой портфель",
+      contact: "Глобальные отделы",
+    },
     legal: {
-      privacy: "Политика конфиденциальности",
-      terms: "Условия использования",
-      cookies: "Политика использования файлов cookie",
+      privacy: "Стандарт конфиденциальности",
+      terms: "Условия торговли",
     },
   },
 };
 
 export const getOwnerEmailHtml = (
-  name: string,
+  fullName: string,
+  company: string,
   email: string,
+  department: string,
   message: string,
 ) => `
 <!DOCTYPE html>
 <html>
 <head><meta charset="UTF-8"></head>
-<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: Arial, Helvetica, sans-serif;">
-  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border-top: 6px solid #2A71AA; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden;">
+<body style="margin: 0; padding: 0; background-color: #f9fafb; font-family: Arial, Helvetica, sans-serif;">
+  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
     
-    <div style="padding: 30px 40px; background-color: #ffffff; border-bottom: 1px solid #e5e7eb;">
-      <h2 style="margin: 0; color: #2A71AA; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">
-        New Website Lead
+    <!-- Header -->
+    <div style="padding: 24px 40px; background-color: #0f172a; border-bottom: 4px solid #d97706;">
+      <img src="${LOGO_URL}" alt="${COMPANY_NAME}" height="32" style="display: block; border: none; outline: none; margin-bottom: 24px;" />
+      <p style="margin: 0 0 4px 0; color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-family: monospace;">Internal System Alert</p>
+      <h2 style="margin: 0; color: #ffffff; font-size: 18px; text-transform: uppercase; letter-spacing: 1px;">
+        Incoming Trade Inquiry
       </h2>
-      <p style="margin: 5px 0 0 0; color: #6b7280; font-size: 14px;">
-        Action required: A new prospect has reached out.
-      </p>
     </div>
 
+    <!-- Data Grid -->
     <div style="padding: 40px;">
-      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px; border-collapse: collapse;">
         <tr>
-          <td style="padding-bottom: 15px; border-bottom: 1px solid #f3f4f6;">
-            <p style="margin: 0; font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">Full Name</p>
-            <p style="margin: 4px 0 0 0; font-size: 16px; color: #111827; font-weight: bold;">${name}</p>
+          <td width="50%" style="padding: 16px; border: 1px solid #e5e7eb; background-color: #f8fafc;">
+            <p style="margin: 0; font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Entity</p>
+            <p style="margin: 4px 0 0 0; font-size: 14px; color: #0f172a; font-weight: bold;">${company}</p>
+          </td>
+          <td width="50%" style="padding: 16px; border: 1px solid #e5e7eb; background-color: #ffffff;">
+            <p style="margin: 0; font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Contact Name</p>
+            <p style="margin: 4px 0 0 0; font-size: 14px; color: #0f172a; font-weight: bold;">${fullName}</p>
           </td>
         </tr>
         <tr>
-          <td style="padding: 15px 0; border-bottom: 1px solid #f3f4f6;">
-            <p style="margin: 0; font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">Email Address</p>
-            <p style="margin: 4px 0 0 0; font-size: 16px;">
-              <a href="mailto:${email}" style="color: #2A71AA; text-decoration: none; font-weight: bold;">${email}</a>
+          <td width="50%" style="padding: 16px; border: 1px solid #e5e7eb; background-color: #ffffff;">
+            <p style="margin: 0; font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Email Authorization</p>
+            <p style="margin: 4px 0 0 0; font-size: 14px;">
+              <a href="mailto:${email}" style="color: #d97706; text-decoration: none; font-weight: bold;">${email}</a>
             </p>
+          </td>
+          <td width="50%" style="padding: 16px; border: 1px solid #e5e7eb; background-color: #f8fafc;">
+            <p style="margin: 0; font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Routing Target</p>
+            <p style="margin: 4px 0 0 0; font-size: 14px; color: #0f172a; font-weight: bold; text-transform: uppercase;">${department}</p>
           </td>
         </tr>
       </table>
 
-      <div style="background-color: #f9fafb; border-left: 4px solid #F0DF3D; padding: 20px;">
-        <p style="margin: 0 0 10px 0; font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">Message</p>
-        <p style="margin: 0; color: #374151; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+      <!-- Message Block -->
+      <div style="background-color: #f1f5f9; border-left: 4px solid #0f172a; padding: 24px;">
+        <p style="margin: 0 0 12px 0; font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">Transmission Details</p>
+        <p style="margin: 0; color: #334155; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
       </div>
     </div>
 
@@ -152,9 +166,8 @@ export const getOwnerEmailHtml = (
 </html>
 `;
 
-export const getAutoReplyHtml = (name: string, lang: string = "en") => {
+export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
   const t = autoReplyTranslations[lang] || autoReplyTranslations["en"];
-
   const currentYear = new Date().getFullYear();
 
   return `
@@ -162,70 +175,68 @@ export const getAutoReplyHtml = (name: string, lang: string = "en") => {
 <html>
 <head><meta charset="UTF-8"></head>
 <body style="margin: 0; padding: 0; background-color: #f9fafb; font-family: Arial, Helvetica, sans-serif;">
-  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border: 1px solid #e5e7eb;">
     
-    <div style="padding: 30px 40px; background-color: #ffffff; text-align: left;">
-      <img src="${LOGO_URL}" alt="SM Group Logo" width="80" height="80" style="display: block; border: none; outline: none; background-color: #f3f4f6;" />
+    <div style="padding: 32px 40px; background-color: #ffffff; border-bottom: 2px solid #0f172a; text-align: left;">
+      <img src="${LOGO_URL}" alt="${COMPANY_NAME} Logo" width="140" style="display: block; border: none; outline: none; margin-bottom: 8px;" />
+      <!-- Text fallback in case images are disabled by the email client -->
+      <h1 style="margin: 0; color: #0f172a; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">
+        ${COMPANY_NAME}
+      </h1>
     </div>
 
-    <div style="height: 4px; width: 100%; background: linear-gradient(to right, #2A71AA 50%, #F0DF3D 50%);"></div>
-
     <div style="padding: 40px;">
-      <h2 style="margin: 0 0 20px 0; color: #2A71AA; font-size: 24px; text-transform: uppercase;">
+      <h2 style="margin: 0 0 24px 0; color: #0f172a; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #e5e7eb; padding-bottom: 12px;">
         ${t.title}
       </h2>
-      <p style="margin: 0 0 16px 0; color: #374151; font-size: 16px; line-height: 1.6;">
-        ${t.greeting} ${name},
+      
+      <p style="margin: 0 0 16px 0; color: #64748b; font-size: 12px; text-transform: uppercase; font-family: monospace;">
+        ${t.greeting} ${firstName}
       </p>
-      <p style="margin: 0 0 16px 0; color: #374151; font-size: 16px; line-height: 1.6;">
+      
+      <p style="margin: 0 0 16px 0; color: #334155; font-size: 14px; line-height: 1.7;">
         ${t.body1}
       </p>
-      <p style="margin: 0 0 24px 0; color: #374151; font-size: 16px; line-height: 1.6;">
+      <p style="margin: 0 0 32px 0; color: #334155; font-size: 14px; line-height: 1.7;">
         ${t.body2}
       </p>
       
-      <p style="margin: 0; color: #6b7280; font-size: 15px; line-height: 1.5;">
+      <p style="margin: 0; color: #64748b; font-size: 12px; line-height: 1.6; text-transform: uppercase; letter-spacing: 1px;">
         ${t.regards},<br/>
-        <strong style="color: #2A71AA;">The SM Group Team</strong>
+        <strong style="color: #0f172a;">Corporate Logistics & Trading</strong>
       </p>
     </div>
 
-    <div style="background-color: #f3f4f6; padding: 40px; border-top: 1px solid #e5e7eb;">
-      <table width="100%" cellpadding="0" cellspacing="0">
+    <!-- Footer -->
+    <div style="background-color: #0f172a; padding: 40px; color: #ffffff;">
+      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
         <tr>
-          <td valign="top" style="padding-bottom: 20px; display: block; width: 100%;">
-            <p style="margin: 0 0 10px 0; font-weight: bold; color: #2A71AA; text-transform: uppercase;">${t.contactTitle}</p>
-            <p style="margin: 0 0 4px 0; color: #6b7280; font-size: 14px;">info@smg-kimya.com</p>
-            <p style="margin: 0 0 4px 0; color: #6b7280; font-size: 14px;">+1 (555) 123-4567</p>
-            <p style="margin: 0 0 4px 0; color: #6b7280; font-size: 14px; line-height: 1.4;">
-              Ayazağa Mah. Azerbay Cad. 2B Blok<br/>
-              No:3 K, İç Kapi No:13<br/>
-              Sariyer, İstanbul, Türkiye
-            </p>
+          <td valign="top">
+            <p style="margin: 0 0 12px 0; font-size: 10px; font-weight: bold; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px;">${t.contactTitle}</p>
+            <p style="margin: 0 0 4px 0; color: #f8fafc; font-size: 12px; font-family: monospace;">operations@merayglobal.com</p>
+            <p style="margin: 0 0 4px 0; color: #f8fafc; font-size: 12px; font-family: monospace;">+41 22 123 45 67 (Geneva Desk)</p>
           </td>
         </tr>
       </table>
 
-      <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 20px; border-top: 1px solid #d1d5db; padding-top: 20px;">
+      <table width="100%" cellpadding="0" cellspacing="0" style="border-top: 1px solid #334155; padding-top: 24px;">
         <tr>
           <td valign="top" width="50%">
-            <p style="margin: 0 0 10px 0; font-weight: bold; color: #2A71AA; text-transform: uppercase; font-size: 12px;">${t.linksTitle}</p>
-            <a href="${WEBSITE_URL}/about" style="display: block; color: #4b5563; text-decoration: none; font-size: 13px; margin-bottom: 6px;">${t.links.about}</a>
-            <a href="${WEBSITE_URL}/products" style="display: block; color: #4b5563; text-decoration: none; font-size: 13px; margin-bottom: 6px;">${t.links.products}</a>
-            <a href="${WEBSITE_URL}/logistics" style="display: block; color: #4b5563; text-decoration: none; font-size: 13px; margin-bottom: 6px;">${t.links.logistics}</a>
+            <p style="margin: 0 0 12px 0; font-size: 10px; font-weight: bold; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px;">${t.linksTitle}</p>
+            <a href="${WEBSITE_URL}/about" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 12px; margin-bottom: 8px;">${t.links.about}</a>
+            <a href="${WEBSITE_URL}/products" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 12px; margin-bottom: 8px;">${t.links.products}</a>
           </td>
           <td valign="top" width="50%">
-            <p style="margin: 0 0 10px 0; font-weight: bold; color: #2A71AA; text-transform: uppercase; font-size: 12px;">${t.legalTitle}</p>
-            <a href="${WEBSITE_URL}/privacy" style="display: block; color: #4b5563; text-decoration: none; font-size: 13px; margin-bottom: 6px;">${t.legal.privacy}</a>
-            <a href="${WEBSITE_URL}/terms" style="display: block; color: #4b5563; text-decoration: none; font-size: 13px; margin-bottom: 6px;">${t.legal.terms}</a>
-            <a href="${WEBSITE_URL}/cookies" style="display: block; color: #4b5563; text-decoration: none; font-size: 13px; margin-bottom: 6px;">${t.legal.cookies}</a>
+            <p style="margin: 0 0 12px 0; font-size: 10px; font-weight: bold; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px;">${t.legalTitle}</p>
+            <a href="${WEBSITE_URL}/privacy" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 12px; margin-bottom: 8px;">${t.legal.privacy}</a>
+            <a href="${WEBSITE_URL}/terms" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 12px; margin-bottom: 8px;">${t.legal.terms}</a>
           </td>
         </tr>
       </table>
 
-      <div style="margin-top: 30px; text-align: left;">
-        <p style="margin: 0; color: #9ca3af; font-size: 11px; text-transform: uppercase;">
-          &copy; ${currentYear} ${COMPANY_NAME} All rights reserved.
+      <div style="margin-top: 32px; text-align: left;">
+        <p style="margin: 0; color: #64748b; font-size: 10px; font-family: monospace; text-transform: uppercase;">
+          &copy; ${currentYear} ${COMPANY_NAME}. All rights reserved.
         </p>
       </div>
     </div>

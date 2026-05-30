@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Home, FlaskConical, Package, Leaf } from "lucide-react";
 import { cn } from "../../lib/utils";
@@ -56,6 +56,35 @@ export const HeroBlock = () => {
   const [currentSlide, setCurrentSlide] = useState(2);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+  const sectionRef = useRef<HTMLElement>(null);
+  const imgRefs = useRef<(HTMLImageElement | null)[]>([]);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const handleScroll = () => {
+      const { top, height } = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      if (top > viewportHeight || top + height < 0) return;
+
+      const progress = -top / (height + viewportHeight);
+      const shift = progress * height * 0.35;
+
+      imgRefs.current.forEach((img, i) => {
+        if (!img) return;
+        img.style.transform = i === currentSlide
+          ? `translateY(${shift}px)`
+          : 'translateY(0px)';
+      });
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [currentSlide]);
+
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   }, []);
@@ -78,19 +107,24 @@ export const HeroBlock = () => {
   }, [nextSlide, isAutoPlaying]);
 
   return (
-    <section className="relative w-full h-[80vh] min-h-125 md:min-h-150 overflow-hidden bg-primary-950">
-
+    <section
+      ref={sectionRef}
+      className="relative w-full h-[80vh] min-h-125 md:min-h-150 overflow-hidden bg-primary-950"
+    >
       <div
         className="flex w-full h-full transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <div key={slide.id} className="relative w-full h-full shrink-0">
+
             <img
+              ref={(el) => { imgRefs.current[index] = el; }}
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
             />
+
             <div className="absolute inset-0 z-10 bg-primary-950/85 md:bg-transparent md:bg-linear-to-r md:from-primary-950 md:via-primary-950/80 md:to-transparent" />
             <div className="absolute inset-0 z-10 mix-blend-multiply bg-black/40 md:bg-transparent md:bg-linear-to-r md:from-black/80 md:via-black/20 md:to-transparent" />
             <div className="absolute inset-0 z-10 bg-black/20 md:bg-black/10" />
@@ -162,18 +196,19 @@ export const HeroBlock = () => {
                   isActive ? "bg-white/5" : "hover:bg-white/5"
                 )}
               >
-                <Icon className={cn(
-                  "h-6 w-6 mb-2 transition-colors",
-                  isActive ? "text-white" : "text-white/50 group-hover:text-white/80"
-                )} strokeWidth={isActive ? 2 : 1.5} />
-
+                <Icon
+                  className={cn(
+                    "h-6 w-6 mb-2 transition-colors",
+                    isActive ? "text-white" : "text-white/50 group-hover:text-white/80"
+                  )}
+                  strokeWidth={isActive ? 2 : 1.5}
+                />
                 <span className={cn(
                   "text-[10px] font-bold tracking-widest uppercase text-center transition-colors",
                   isActive ? "text-white" : "text-white/50 group-hover:text-white/80"
                 )}>
                   {slide.navLabel}
                 </span>
-
                 {isActive && (
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-secondary" />
                 )}

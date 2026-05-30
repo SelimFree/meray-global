@@ -5,10 +5,20 @@ interface Env {
   RESEND_OWNER_EMAIL: string;
 }
 
+interface InquiryPayload {
+  firstName: string;
+  lastName: string;
+  company: string;
+  email: string;
+  department: string;
+  message: string;
+  user_lang: string;
+}
+
 export async function onRequestPost(context: { request: Request; env: Env }) {
   try {
-    const body = await context.request.json() as { user_name: string; user_email: string; message: string; user_lang: string };
-    const { user_name, user_email, message, user_lang } = body;
+    const body = await context.request.json() as InquiryPayload;
+    const { firstName, lastName, company, email, department, message, user_lang } = body;
 
     const resendHeaders = {
       'Content-Type': 'application/json',
@@ -16,16 +26,17 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
     };
 
     const localizedSubject = autoReplyTranslations[user_lang]?.subject || autoReplyTranslations['en'].subject;
+    const fullName = `${firstName} ${lastName}`;
 
     const ownerEmailPayload = fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: resendHeaders,
       body: JSON.stringify({
-        from: `Contact Form <${context.env.RESEND_OWNER_EMAIL}>`,
+        from: `Corporate Portal <${context.env.RESEND_OWNER_EMAIL}>`,
         to: [context.env.RESEND_OWNER_EMAIL], 
-        reply_to: user_email,
-        subject: `New Lead: ${user_name}`,
-        html: getOwnerEmailHtml(user_name, user_email, message)
+        reply_to: email,
+        subject: `Trade Inquiry: ${company} (${department})`,
+        html: getOwnerEmailHtml(fullName, company, email, department, message)
       })
     });
 
@@ -33,10 +44,10 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
       method: 'POST',
       headers: resendHeaders,
       body: JSON.stringify({
-        from: `Contact Form <${context.env.RESEND_OWNER_EMAIL}>`,
-        to: [user_email], 
+        from: `Meray Global <${context.env.RESEND_OWNER_EMAIL}>`,
+        to: [email], 
         subject: localizedSubject,
-        html: getAutoReplyHtml(user_name, user_lang)
+        html: getAutoReplyHtml(firstName, user_lang)
       })
     });
 
@@ -45,11 +56,11 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
     if (ownerRes.ok && autoReplyRes.ok) {
       return new Response(JSON.stringify({ success: true }), { status: 200 });
     } else {
-      throw new Error("One or more emails failed to send");
+      throw new Error("Transmission failure: One or more routing protocols failed.");
     }
 
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Server error';
-    return new Response(JSON.stringify({ error: errorMessage }), { status: 500 });
+    return new Response(JSON.stringify({ success: false, error: errorMessage }), { status: 500 });
   }
 }
