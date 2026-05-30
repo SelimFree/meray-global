@@ -1,0 +1,103 @@
+{
+  "heroBlock": {
+    "controls": {
+      "prev": "Önceki slayt",
+      "next": "Sonraki slayt",
+      "goTo": "{{label}} slaytına git"
+    },
+    "slides": {
+      "petroleum": {
+        "title": "Petrol ürünleri",
+        "description": "Küresel endüstriyel ve ticari sektörler için güvenilir ve sürekli enerji tedarik zincirleri sağlayarak, birinci sınıf rafine petrol ürünlerinin tedariki ve dağıtımı.",
+        "buttonText": "Petrol ürünleri",
+        "navLabel": "Petrol ürünleri"
+      },
+      "chemicals": {
+        "title": "Kimyasallar",
+        "description": "Optimize edilmiş bir dökme sıvı lojistik ağı aracılığıyla küresel çapta üretim ve rafinaj sektörlerini desteklemek için yüksek saflıkta endüstriyel kimyasallar, aromatikler ve çözücülerin tedariki.",
+        "buttonText": "Kimyasallar",
+        "navLabel": "Kimyasallar"
+      },
+      "fertilizers": {
+        "title": "Gübreler",
+        "description": "Son derece optimize edilmiş kuru dökme yük operasyonları ile yönetilen, büyük ölçekli tarım altyapısını desteklemek için temel tarımsal besin maddeleri ve dökme gübrelerin teslimatı.",
+        "buttonText": "Gübreler",
+        "navLabel": "Gübreler"
+      }
+    }
+  },
+
+  "statsBlock": {
+    "title": "Küresel Altyapı Metrikleri",
+    "items": {
+      "partners": "Kurumsal Ortaklar",
+      "executions": "Yıllık Ticari İşlemler",
+      "fulfillment": "Teslimat Oranı",
+      "jurisdictions": "Faaliyet Gösterilen Yargı Bölgeleri"
+    }
+  },
+
+  "productPreviewBlock": {
+    "subtitle": "Emtia Portföyü",
+    "title": "Temel Emtialar",
+    "description": "Enerji ürünlerini dünya çapında tedarik etmek, depolamak ve teslim etmek için fiziksel altyapımızdan yararlanıyoruz. İstihbarata dayalı lojistik ağımız, kesintisiz küresel tedarik sağlar.",
+    "buttonViewAll": "Tüm Ürünleri Görüntüle",
+    "buttonExplore": "Kategoriyi İncele",
+    "products": {
+      "petroleum": {
+        "title": "Dizel",
+        "description": "Küresel pazarlarda kesintisiz güç ve ulaşım operasyonları sağlayarak ultra düşük kükürtlü ve birinci sınıf endüstriyel dizel kaliteleri tedarik ediyoruz.",
+        "tag": "Petrol Ürünü"
+      },
+      "fertilizers": {
+        "title": "Karbamid (Üre)",
+        "description": "Büyük ölçekli tarımsal verimi ve kimyasal üretim süreçlerini desteklemek üzere optimize edilmiş, yüksek saflıkta tarımsal ve endüstriyel sınıf azotlu gübreler.",
+        "tag": "Gübre"
+      },
+      "chemicals": {
+        "title": "Polietilen",
+        "description": "Yüksek dayanıklılıklı enjeksiyon kalıplama, boru ekstrüzyonu ve gelişmiş endüstriyel paketleme çözümleri için tasarlanmış birinci sınıf termoplastik polimerler.",
+        "tag": "Kimyasal"
+      }
+    }
+  },
+  "logisticsBlock": {
+    "subtitle": "Küresel Altyapı",
+    "titleLine1": "Küresel Erişim.",
+    "titleLine2": "Hassas Teslimat.",
+    "description": "Entegre lojistik ağımız üreticiler ve tüketiciler arasındaki boşluğu doldurur. Okyanuslar, demiryolları ve boru hatları boyunca karmaşık fiziksel hareketleri mutlak terminal hassasiyetiyle yönetiyoruz.",
+    "capabilities": {
+      "maritime": {
+        "title": "Deniz Taşımacılığı",
+        "description": "Gerçek zamanlı rota optimizasyonuna sahip özelleşmiş kimyasal ve ürün tankerlerinden oluşan dinamik bir filonun yönetimi."
+      },
+      "rail": {
+        "title": "Demiryolu ve Tank Depolama",
+        "description": "Özel demiryolu ve boru hattı altyapısıyla birbirine bağlanan, önemli küresel terminallerde güvenli işlem hacmi."
+      },
+      "compliance": {
+        "title": "Risk ve Mevzuata Uyum",
+        "description": "Uluslararası ticaret yasalarına, denizcilik düzenlemelerine ve ESG çevre standartlarına sıkı sıkıya bağlılık."
+      }
+    },
+    "cities": {
+      "houston": "Houston",
+      "london": "Londra",
+      "dubai": "Dubai",
+      "singapore": "Singapur",
+      "tokyo": "Tokyo",
+      "istanbul": "İstanbul",
+      "ashgabat": "Aşkabat",
+      "moscow": "Moskova",
+      "almaty": "Almatı",
+      "beijing": "Pekin"
+    }
+  },
+  "contactTeaserBlock": {
+    "subtitle": "Bize Ulaşın",
+    "titleLine1": "Bir sonraki stratejik fiziksel",
+    "titleLine2": "ticaretinizi yapılandırın.",
+    "description": "Tedariki güvence altına almak, aşağı yönlü lojistiği optimize etmek veya özel emtia çözümlerini görüşmek için doğrudan küresel uzmanlarımızla iletişime geçin.",
+    "button": "Talep Oluştur"
+  }
+}

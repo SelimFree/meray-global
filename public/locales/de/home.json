@@ -1,0 +1,103 @@
+{
+  "heroBlock": {
+    "controls": {
+      "prev": "Vorherige Folie",
+      "next": "Nächste Folie",
+      "goTo": "Gehe zu {{label}}"
+    },
+    "slides": {
+      "petroleum": {
+        "title": "Erdölprodukte",
+        "description": "Beschaffung und Vertrieb von raffinierten Premium-Erdölprodukten zur Gewährleistung zuverlässiger und kontinuierlicher Energieversorgungsketten für globale Industrie- und Handelssektoren.",
+        "buttonText": "Erdölprodukte",
+        "navLabel": "Erdölprodukte"
+      },
+      "chemicals": {
+        "title": "Chemikalien",
+        "description": "Beschaffung von hochreinen Industriechemikalien, Aromaten und Lösungsmitteln zur weltweiten Unterstützung von Produktions- und Raffineriesektoren durch ein optimiertes Logistiknetzwerk für flüssige Massengüter.",
+        "buttonText": "Chemikalien",
+        "navLabel": "Chemikalien"
+      },
+      "fertilizers": {
+        "title": "Düngemittel",
+        "description": "Lieferung von essentiellen landwirtschaftlichen Nährstoffen und Schüttgutdüngern zur Unterstützung groß angelegter landwirtschaftlicher Infrastrukturen, gesteuert über hochoptimierte Trockenschüttgut-Frachtoperationen.",
+        "buttonText": "Düngemittel",
+        "navLabel": "Düngemittel"
+      }
+    }
+  },
+
+  "statsBlock": {
+    "title": "Globale Infrastrukturkennzahlen",
+    "items": {
+      "partners": "Institutionelle Partner",
+      "executions": "Jährliche Handelsausführungen",
+      "fulfillment": "Erfüllungsquote",
+      "jurisdictions": "Operative Gerichtsbarkeiten"
+    }
+  },
+
+  "productPreviewBlock": {
+    "subtitle": "Rohstoffportfolio",
+    "title": "Kernrohstoffe",
+    "description": "Wir nutzen unsere physische Infrastruktur, um Energieprodukte weltweit zu beschaffen, zu lagern und zu liefern. Unser intelligenzgesteuertes Logistiknetzwerk sorgt für eine ununterbrochene globale Versorgung.",
+    "buttonViewAll": "Alle Produkte ansehen",
+    "buttonExplore": "Kategorie erkunden",
+    "products": {
+      "petroleum": {
+        "title": "Diesel",
+        "description": "Lieferung von ultra-schwefelarmen und erstklassigen Industrie-Dieselqualitäten, um eine ununterbrochene Strom- und Transportversorgung auf den globalen Märkten zu gewährleisten.",
+        "tag": "Erdölprodukt"
+      },
+      "fertilizers": {
+        "title": "Carbamid (Harnstoff)",
+        "description": "Hochreine Stickstoffdünger in Agrar- und Industriequalität, optimiert zur Unterstützung großflächiger Ernteerträge und chemischer Produktionsprozesse.",
+        "tag": "Düngemittel"
+      },
+      "chemicals": {
+        "title": "Polyethylen",
+        "description": "Premium-Thermoplast-Polymere, entwickelt für hochbelastbaren Spritzguss, Rohrextrusion und fortschrittliche industrielle Verpackungslösungen.",
+        "tag": "Chemikalie"
+      }
+    }
+  },
+  "logisticsBlock": {
+    "subtitle": "Globale Infrastruktur",
+    "titleLine1": "Globale Reichweite.",
+    "titleLine2": "Präzise Lieferung.",
+    "description": "Unser integriertes Logistiknetzwerk überbrückt die Lücke zwischen Produzenten und Verbrauchern. Wir steuern komplexe physische Bewegungen über Ozeane, Schienen und Pipelines mit absoluter Terminalpräzision.",
+    "capabilities": {
+      "maritime": {
+        "title": "Maritime Befrachtung",
+        "description": "Betrieb einer dynamischen Flotte von spezialisierten Chemie- und Produkttankern mit Echtzeit-Routenoptimierung."
+      },
+      "rail": {
+        "title": "Schiene & Tanklagerung",
+        "description": "Gesicherter Durchsatz an wichtigen globalen Terminals, angebunden über dedizierte Schienen- und Pipeline-Infrastruktur."
+      },
+      "compliance": {
+        "title": "Risiko & Compliance",
+        "description": "Strikte Einhaltung internationaler Handelsgesetze, maritimer Vorschriften und ESG-Umweltstandards."
+      }
+    },
+    "cities": {
+      "houston": "Houston",
+      "london": "London",
+      "dubai": "Dubai",
+      "singapore": "Singapur",
+      "tokyo": "Tokio",
+      "istanbul": "Istanbul",
+      "ashgabat": "Aschgabat",
+      "moscow": "Moskau",
+      "almaty": "Almaty",
+      "beijing": "Peking"
+    }
+  },
+  "contactTeaserBlock": {
+    "subtitle": "Kontaktieren Sie uns",
+    "titleLine1": "Strukturieren Sie Ihren nächsten",
+    "titleLine2": "strategischen physischen Handel.",
+    "description": "Treten Sie direkt mit unseren globalen Spezialisten in Verbindung, um Lieferungen zu sichern, die nachgelagerte Logistik zu optimieren oder maßgeschneiderte Rohstofflösungen zu besprechen.",
+    "button": "Anfrage stellen"
+  }
+}

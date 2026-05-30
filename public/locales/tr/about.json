@@ -1,0 +1,76 @@
+{
+  "heroBlock": {
+    "title": "Kurumsal Genel Bakış",
+    "description": "Meray Global, önde gelen bağımsız bir emtia ticaret şirketidir. Hayati enerji kaynaklarını güvence altına almak ve teslim etmek için karmaşık küresel piyasalarda yön buluyoruz."
+  },
+  "missionBlock": {
+    "subtitle": "Misyonumuz",
+    "titleLine1": "Sadece piyasalarda ticaret yapmıyoruz.",
+    "titleLine2": "Küresel enerjinin fiziksel akışını optimize ediyoruz.",
+    "paragraph1": "Hassasiyet, risk yönetimi ve operasyonel mükemmellik ilkeleri üzerine kurulan Meray Global, üreticiler ve endüstriyel tüketicilerin kritik kesişim noktasında faaliyet göstermektedir. Fiziksel tedarik zincirlerini verimsizliğe karşı sıfır toleransla yönetiyoruz.",
+    "paragraph2": "Özel piyasa istihbaratını, deniz taşımacılığı, demiryolu ağları ve stratejik depolama dahil olmak üzere geniş lojistik yeteneklerle entegre ederek, jeopolitik dalgalanmalara bakılmaksızın tedarik sürekliliğini garanti ediyoruz.",
+    "imageAlt": "Alacakaranlıkta sanayi limanı",
+    "established": "Kur.",
+    "establishedYear": "2015",
+    "foundingSubtitle": "Kuruluş İlkesi",
+    "foundingQuote": "\"Karmaşıklığın piyasayla buluştuğu yerde, köprüyü biz kurarız.\"",
+    "stats": {
+      "years": {
+        "value": "10+",
+        "label": "Aktif Yıl"
+      },
+      "countries": {
+        "value": "40+",
+        "label": "Hizmet Verilen Ülke"
+      },
+      "products": {
+        "value": "2k+",
+        "label": "Sevk Edilen Ürün"
+      }
+    }
+  },
+  "timelineBlock": {
+    "title": "Kurumsal Gelişim",
+    "events": {
+      "y2015": {
+        "year": "2015",
+        "title": "Kuruluş ve Bölgesel Başlangıç",
+        "description": "Türkmenistan emtia piyasalarına odaklı ilk operasyonların kurulması, yerel fiziksel ticaret ve tedarik zinciri yönetiminde temel yetkinliğin oluşturulması."
+      },
+      "y2021": {
+        "year": "2021",
+        "title": "Uluslararası Pazara Giriş",
+        "description": "Dubai'de ana küresel ticaret merkezimizin açılışı, fiziksel hacimlerin hızla büyütülmesi ve daha geniş EMEA sektöründe kurumsal düzeyde sözleşmelerin yürütülmesi."
+      },
+      "y2024": {
+        "year": "2024",
+        "title": "Altyapı ve Lojistik Entegrasyonu",
+        "description": "Hızlanan bölgesel büyümeden yararlanarak, özel deniz taşımacılığı ağları ve stratejik depolama kapasiteleri güvence altına alınarak fiziksel tedarik zincirimiz sağlamlaştırıldı."
+      },
+      "y2026": {
+        "year": "2026",
+        "title": "Kıtalararası Büyüme",
+        "description": "Kesintisiz küresel kapsama alanı ve çok uluslu tedarik zinciri istikrarı sağlayarak, önemli Avrupa ve Asya lojistik merkezlerine gelişmiş genişleme protokollerinin uygulanması."
+      }
+    }
+  },
+  "riskAndStrategyBlock": {
+    "subtitle": "Kurumsal Güvenlik",
+    "title": "Risk Yönetimi",
+    "description": "Küresel ticaret doğası gereği değişkendir. Tedarik zincirlerimizi güvence altına alıyor ve titiz finansal, operasyonel ve yasal risk azaltma protokolleri aracılığıyla ortaklarımızı koruyoruz.",
+    "strategies": {
+      "intelligence": {
+        "title": "Piyasa İstihbaratı",
+        "description": "Piyasa değişimleri gerçekleşmeden önce küresel arbitraj fırsatlarını belirlemek ve fiziksel ticaret rotalarını optimize etmek için tescilli analitik ve gerçek zamanlı terminal verilerinden yararlanma."
+      },
+      "hedging": {
+        "title": "Finansal Riskten Korunma",
+        "description": "Güçlü kurumsal kredi olanaklarıyla desteklenen gelişmiş türev yapıları kullanarak fiziksel kargoları şiddetli fiyat dalgalanmalarına karşı koruma."
+      },
+      "compliance": {
+        "title": "Mevzuata Uyum",
+        "description": "Karmaşık uluslararası ticaret yargı yetkileri, deniz hukuku ve küresel gümrük gerekliliklerinde tavizsiz, sıfır toleranslı bir yasal çerçeveyle gezinmek."
+      }
+    }
+  }
+}

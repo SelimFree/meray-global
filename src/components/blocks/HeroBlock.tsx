@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight, FlaskConical, Leaf, Droplet } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { Heading } from "../ui/Heading";
@@ -12,37 +13,29 @@ import SliderImg3 from "../../assets/slider/slider_img_3.png";
 const slides = [
   {
     id: 1,
-    title: "Petroleum products",
-    description: "Sourcing and distributing premium refined petroleum products, ensuring reliable and continuous energy supply chains for global industrial and commercial sectors.",
-    buttonText: "Petroleum products",
+    tKey: "petroleum",
     buttonLink: "/products#petroleum-products",
     image: SliderImg1,
     navIcon: Droplet,
-    navLabel: "Petroleum products"
   },
   {
     id: 2,
-    title: "Chemicals",
-    description: "Sourcing high-purity industrial chemicals, aromatics, and solvents to support manufacturing and refining sectors globally through an optimized bulk liquid logistics network.",
-    buttonText: "Chemicals",
+    tKey: "chemicals",
     buttonLink: "/products#chemicals",
     image: SliderImg2,
     navIcon: FlaskConical,
-    navLabel: "Chemicals"
   },
   {
     id: 3,
-    title: "Fertilizers",
-    description: "Delivering essential agricultural nutrients and bulk fertilizers to support large-scale farming infrastructure, managed via highly optimized dry bulk freight operations.",
-    buttonText: "Fertilizers",
+    tKey: "fertilizers",
     buttonLink: "/products#fertilizers",
     image: SliderImg3,
     navIcon: Leaf,
-    navLabel: "Fertilizers"
   }
 ];
 
 export const HeroBlock = () => {
+  const { t } = useTranslation("home");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
@@ -119,11 +112,10 @@ export const HeroBlock = () => {
 
           return (
             <div key={slide.id} className="relative w-full h-full shrink-0">
-
               <Image
                 ref={(el) => { imgRefs.current[index] = el; }}
                 src={slide.image}
-                alt={slide.title}
+                alt={t(`heroBlock.slides.${slide.tKey}.title`)}
                 containerClassName="absolute inset-0 z-0 bg-primary-950"
                 className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
               />
@@ -134,7 +126,6 @@ export const HeroBlock = () => {
 
               <div className="absolute inset-0 z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pb-24 md:pb-32">
                 <div className="max-w-2xl">
-
                   <Heading
                     level={1}
                     className={cn(
@@ -142,7 +133,7 @@ export const HeroBlock = () => {
                       isAnimatedIn ? "opacity-100 translate-x-0 delay-300" : "opacity-0 -translate-x-12"
                     )}
                   >
-                    {slide.title}
+                    {t(`heroBlock.slides.${slide.tKey}.title`)}
                   </Heading>
 
                   <Text
@@ -151,7 +142,7 @@ export const HeroBlock = () => {
                       isAnimatedIn ? "opacity-100 translate-x-0 delay-500" : "opacity-0 -translate-x-12"
                     )}
                   >
-                    {slide.description}
+                    {t(`heroBlock.slides.${slide.tKey}.description`)}
                   </Text>
 
                   <div className={cn(
@@ -160,11 +151,10 @@ export const HeroBlock = () => {
                   )}>
                     <Link to={slide.buttonLink} tabIndex={-1}>
                       <button className="bg-secondary hover:bg-secondary-600 transition-colors duration-300 text-white px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-none border border-transparent">
-                        {slide.buttonText}
+                        {t(`heroBlock.slides.${slide.tKey}.buttonText`)}
                       </button>
                     </Link>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -180,7 +170,6 @@ export const HeroBlock = () => {
       </div>
 
       <div className="absolute bottom-0 left-0 w-full z-40 bg-primary-950/75 backdrop-blur-md border-t border-white/10 h-16 md:h-24 flex items-center">
-
         <div className="flex md:hidden flex-1 items-center justify-center gap-5 h-full pl-4">
           {slides.map((slide, index) => (
             <button
@@ -190,7 +179,7 @@ export const HeroBlock = () => {
                 "h-2.5 w-2.5 transition-all duration-300 rounded-none",
                 index === currentSlide ? "bg-secondary scale-110 shadow-[0_0_8px_rgba(255,255,255,0.3)]" : "bg-white/30 hover:bg-white/50"
               )}
-              aria-label={`Go to ${slide.navLabel}`}
+              aria-label={t('heroBlock.controls.goTo', { label: t(`heroBlock.slides.${slide.tKey}.navLabel`) })}
             />
           ))}
         </div>
@@ -220,7 +209,7 @@ export const HeroBlock = () => {
                   "text-[10px] font-bold tracking-widest uppercase text-center transition-colors",
                   isActive ? "text-white" : "text-white/50 group-hover:text-white/80"
                 )}>
-                  {slide.navLabel}
+                  {t(`heroBlock.slides.${slide.tKey}.navLabel`)}
                 </span>
                 {isActive && (
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-secondary" />
@@ -234,19 +223,18 @@ export const HeroBlock = () => {
           <button
             onClick={() => handleManualChange('prev')}
             className="p-3 md:p-4 text-white/50 hover:text-white transition-colors"
-            aria-label="Previous slide"
+            aria-label={t("heroBlock.controls.prev")}
           >
             <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
           </button>
           <button
             onClick={() => handleManualChange('next')}
             className="p-3 md:p-4 text-white/50 hover:text-white transition-colors"
-            aria-label="Next slide"
+            aria-label={t("heroBlock.controls.next")}
           >
             <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
           </button>
         </div>
-
       </div>
     </section>
   );

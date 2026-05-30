@@ -1,0 +1,40 @@
+{
+  "heroBlock": {
+    "title": "Corporate Communications",
+    "description": "Connect directly with our specialized logistics teams and corporate trading desks. We maintain continuous operational readiness across all major maritime and financial time zones."
+  },
+  "contactBlock": {
+    "subtitle": "Corporate Communications",
+    "title": "Initiate a Trade Inquiry",
+    "description": "Please provide specific details regarding your supply chain requirements. Inquiries regarding physical commodities, maritime chartering, and terminal logistics will be routed directly to the appropriate regional trading desk.",
+    "securityTitle": "Secure Transmission",
+    "securityDescription": "All submitted data is encrypted and processed in strict adherence to international corporate privacy standards. We do not engage with unverified third-party brokers.",
+    "form": {
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "Doe",
+      "companyLabel": "Corporate Entity",
+      "companyPlaceholder": "e.g. Global Energy Corp",
+      "emailLabel": "Business Email",
+      "emailPlaceholder": "john.doe@company.com",
+      "departmentLabel": "Routing Destination",
+      "departmentOptions": {
+        "default": "Select Department...",
+        "trading": "Commodity Trading Desk",
+        "logistics": "Maritime & Terminal Logistics",
+        "compliance": "Risk & Compliance",
+        "media": "Press & Media Relations"
+      },
+      "messageLabel": "Inquiry Details",
+      "messagePlaceholder": "Specify target commodities, required volumes, or destination ports..."
+    },
+    "errorMessage": "Failed to send message",
+    "errorTitle": "Transmission Error",
+    "buttonSending": "Transmitting...",
+    "buttonSubmit": "Transmit Inquiry",
+    "successTitle": "Transmission Successful",
+    "successMessage": "Your inquiry has been securely routed to the appropriate global desk. A representative will contact you shortly.",
+    "successButton": "Initiate Another Inquiry"
+  }
+}

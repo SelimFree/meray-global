@@ -1,0 +1,76 @@
+{
+  "heroBlock": {
+    "title": "Unternehmensüberblick",
+    "description": "Meray Global ist ein führendes unabhängiges Rohstoffhandelsunternehmen. Wir navigieren durch komplexe globale Märkte, um lebenswichtige Energieressourcen zu sichern und zu liefern."
+  },
+  "missionBlock": {
+    "subtitle": "Unsere Mission",
+    "titleLine1": "Wir handeln nicht nur an Märkten.",
+    "titleLine2": "Wir optimieren den physischen Fluss globaler Energie.",
+    "paragraph1": "Gegründet auf den Prinzipien von Präzision, Risikomanagement und operativer Exzellenz, agiert Meray Global an der entscheidenden Schnittstelle zwischen Produzenten und industriellen Verbrauchern. Wir managen physische Lieferketten mit null Toleranz für Ineffizienz.",
+    "paragraph2": "Durch die Integration firmeneigener Marktinformationen mit enormen logistischen Kapazitäten – einschließlich maritimer Befrachtung, Eisenbahnnetzen und strategischer Lagerung – garantieren wir Versorgungskontinuität unabhängig von geopolitischer Volatilität.",
+    "imageAlt": "Industriehafen in der Dämmerung",
+    "established": "Gegr.",
+    "establishedYear": "2015",
+    "foundingSubtitle": "Gründungsprinzip",
+    "foundingQuote": "\"Wo Komplexität auf den Markt trifft, bauen wir die Brücke.\"",
+    "stats": {
+      "years": {
+        "value": "10+",
+        "label": "Jahre aktiv"
+      },
+      "countries": {
+        "value": "40+",
+        "label": "Belieferte Länder"
+      },
+      "products": {
+        "value": "2k+",
+        "label": "Versendete Produkte"
+      }
+    }
+  },
+  "timelineBlock": {
+    "title": "Unternehmensentwicklung",
+    "events": {
+      "y2015": {
+        "year": "2015",
+        "title": "Gründung & Regionale Anfänge",
+        "description": "Gründung erster Niederlassungen mit gezieltem Fokus auf turkmenische Rohstoffmärkte, Aufbau von Grundkompetenzen im lokalen physischen Handel und der Ausführung von Lieferketten."
+      },
+      "y2021": {
+        "year": "2021",
+        "title": "Internationaler Markteintritt",
+        "description": "Eröffnung unseres globalen Haupthandelszentrums in Dubai, schnelle Skalierung physischer Volumina und Ausführung institutioneller Verträge im gesamten EMEA-Sektor."
+      },
+      "y2024": {
+        "year": "2024",
+        "title": "Integration von Infrastruktur & Logistik",
+        "description": "Nutzung des beschleunigten regionalen Wachstums zur Festigung unserer physischen Lieferkette durch die Sicherung spezieller maritimer Befrachtungsnetzwerke und strategischer Lagerkapazitäten."
+      },
+      "y2026": {
+        "year": "2026",
+        "title": "Interkontinentale Skalierung",
+        "description": "Umsetzung fortgeschrittener Expansionsprotokolle in wichtige europäische und asiatische Logistikzentren, um eine ununterbrochene globale Abdeckung und länderübergreifende Stabilität der Lieferkette zu gewährleisten."
+      }
+    }
+  },
+  "riskAndStrategyBlock": {
+    "subtitle": "Unternehmenssicherheit",
+    "title": "Risikomanagement",
+    "description": "Der globale Handel ist von Natur aus volatil. Wir sichern unsere Lieferketten und schützen unsere Partner durch strenge finanzielle, operative und rechtliche Risikominderungsprotokolle.",
+    "strategies": {
+      "intelligence": {
+        "title": "Marktintelligenz",
+        "description": "Nutzung firmeneigener Analysen und Echtzeit-Terminaldaten, um globale Arbitrage-Möglichkeiten zu identifizieren und physische Handelsrouten zu optimieren, bevor Marktverschiebungen eintreten."
+      },
+      "hedging": {
+        "title": "Finanzielle Absicherung",
+        "description": "Schutz physischer Ladungen vor starken Preisschwankungen durch komplexe derivative Strukturen, unterstützt durch solide institutionelle Kreditfazilitäten."
+      },
+      "compliance": {
+        "title": "Einhaltung von Vorschriften",
+        "description": "Navigation durch komplexe internationale Handelsgerichtsbarkeiten, Seerecht und globale Zollanforderungen mit einem kompromisslosen, null-toleranten rechtlichen Rahmen."
+      }
+    }
+  }
+}

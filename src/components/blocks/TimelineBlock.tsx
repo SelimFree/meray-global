@@ -1,38 +1,25 @@
+import { useTranslation } from 'react-i18next';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { cn } from '../../lib/utils';
 
 const timelineEvents = [
-  { 
-    year: "2015", 
-    title: "Foundation & Regional Inception", 
-    description: "Established initial operations with a targeted focus on the Turkmenistan commodity markets, building foundational competence in localized physical trade and supply chain execution." 
-  },
-  { 
-    year: "2021", 
-    title: "International Market Entry", 
-    description: "Inaugurated our primary global trading hub in Dubai, rapidly scaling physical volumes and executing institutional-grade contracts across the broader EMEA sector." 
-  },
-  { 
-    year: "2024", 
-    title: "Infrastructure & Logistics Integration", 
-    description: "Capitalizing on accelerated regional growth, we solidified our physical supply chain by securing dedicated maritime chartering networks and strategic storage capabilities." 
-  },
-  { 
-    year: "2026", 
-    title: "Intercontinental Scaling", 
-    description: "Executing advanced expansion protocols into prime European and Asian logistical hubs, ensuring uninterrupted global coverage and multi-jurisdictional supply chain stability." 
-  }
+  { tKey: "y2015" },
+  { tKey: "y2021" },
+  { tKey: "y2024" },
+  { tKey: "y2026" }
 ];
 
 export const TimelineBlock = () => {
+  const { t } = useTranslation("about");
+
   return (
     <section className="w-full py-24 border-b border-gray-200 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-20">
           <Heading level={2} className="text-3xl md:text-4xl font-extrabold text-primary-900 tracking-tight">
-            Corporate Evolution
+            {t("timelineBlock.title")}
           </Heading>
         </div>
 
@@ -45,7 +32,7 @@ export const TimelineBlock = () => {
 
               return (
                 <div
-                  key={event.year}
+                  key={event.tKey}
                   className={cn(
                     "relative flex w-full",
                     isEven ? "md:justify-start" : "md:justify-end"
@@ -59,13 +46,13 @@ export const TimelineBlock = () => {
                       isEven ? "md:items-end md:text-right" : "md:items-start md:text-left"
                     )}>
                       <span className="text-3xl font-mono font-bold text-gray-300 tracking-tighter block mb-2">
-                        {event.year}
+                        {t(`timelineBlock.events.${event.tKey}.year`)}
                       </span>
                       <Heading level={3} className="text-lg font-bold text-primary-900 mb-2">
-                        {event.title}
+                        {t(`timelineBlock.events.${event.tKey}.title`)}
                       </Heading>
                       <Text className="text-sm text-gray-600 text-justify">
-                        {event.description}
+                        {t(`timelineBlock.events.${event.tKey}.description`)}
                       </Text>
                     </div>
                   </div>

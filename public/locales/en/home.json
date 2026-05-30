@@ -1,0 +1,103 @@
+{
+  "heroBlock": {
+    "controls": {
+      "prev": "Previous slide",
+      "next": "Next slide",
+      "goTo": "Go to {{label}}"
+    },
+    "slides": {
+      "petroleum": {
+        "title": "Petroleum products",
+        "description": "Sourcing and distributing premium refined petroleum products, ensuring reliable and continuous energy supply chains for global industrial and commercial sectors.",
+        "buttonText": "Petroleum products",
+        "navLabel": "Petroleum products"
+      },
+      "chemicals": {
+        "title": "Chemicals",
+        "description": "Sourcing high-purity industrial chemicals, aromatics, and solvents to support manufacturing and refining sectors globally through an optimized bulk liquid logistics network.",
+        "buttonText": "Chemicals",
+        "navLabel": "Chemicals"
+      },
+      "fertilizers": {
+        "title": "Fertilizers",
+        "description": "Delivering essential agricultural nutrients and bulk fertilizers to support large-scale farming infrastructure, managed via highly optimized dry bulk freight operations.",
+        "buttonText": "Fertilizers",
+        "navLabel": "Fertilizers"
+      }
+    }
+  },
+
+  "statsBlock": {
+    "title": "Global Infrastructure Metrics",
+    "items": {
+      "partners": "Institutional Partners",
+      "executions": "Annual Trade Executions",
+      "fulfillment": "Fulfillment Rate",
+      "jurisdictions": "Operating Jurisdictions"
+    }
+  },
+
+  "productPreviewBlock": {
+    "subtitle": "Commodities Portfolio",
+    "title": "Core Commodities",
+    "description": "We leverage our physical infrastructure to source, store, and deliver energy products worldwide. Our intelligence-driven logistics network ensures uninterrupted global supply.",
+    "buttonViewAll": "View All Products",
+    "buttonExplore": "Explore Category",
+    "products": {
+      "petroleum": {
+        "title": "Diesel",
+        "description": "Supplying ultra-low sulfur and premium industrial diesel grades, ensuring uninterrupted power and transport operations across global markets.",
+        "tag": "Petroleum Product"
+      },
+      "fertilizers": {
+        "title": "Carbamide (Urea)",
+        "description": "High-purity agricultural and industrial-grade nitrogen fertilizers, optimized to support large-scale farming yields and chemical manufacturing processes.",
+        "tag": "Fertilizer"
+      },
+      "chemicals": {
+        "title": "Polyethylene",
+        "description": "Premium thermoplastic polymer grades engineered for high-durability injection molding, pipe extrusion, and advanced industrial packaging solutions.",
+        "tag": "Chemical"
+      }
+    }
+  },
+  "logisticsBlock": {
+    "subtitle": "Global Infrastructure",
+    "titleLine1": "Global Reach.",
+    "titleLine2": "Precision Delivery.",
+    "description": "Our integrated logistics network bridges the gap between producers and consumers. We manage complex physical movements across oceans, rails, and pipelines with absolute terminal precision.",
+    "capabilities": {
+      "maritime": {
+        "title": "Maritime Chartering",
+        "description": "Operating a dynamic fleet of specialized chemical and product tankers with real-time route optimization."
+      },
+      "rail": {
+        "title": "Rail & Tank Storage",
+        "description": "Secured throughput at major global terminals, connected via dedicated rail and pipeline infrastructure."
+      },
+      "compliance": {
+        "title": "Risk & Compliance",
+        "description": "Strict adherence to international trade laws, maritime regulations, and ESG environmental standards."
+      }
+    },
+    "cities": {
+      "houston": "Houston",
+      "london": "London",
+      "dubai": "Dubai",
+      "singapore": "Singapore",
+      "tokyo": "Tokyo",
+      "istanbul": "Istanbul",
+      "ashgabat": "Ashgabat",
+      "moscow": "Moscow",
+      "almaty": "Almaty",
+      "beijing": "Beijing"
+    }
+  },
+  "contactTeaserBlock": {
+    "subtitle": "Contact Us",
+    "titleLine1": "Structure your next",
+    "titleLine2": "strategic physical trade.",
+    "description": "Connect directly with our global specialists to secure supply, optimize downstream logistics, or discuss custom commodity solutions.",
+    "button": "Make a request"
+  }
+}

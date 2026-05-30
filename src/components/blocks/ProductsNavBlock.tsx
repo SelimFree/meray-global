@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 
 export const ProductsNavBlock = () => {
+    const { t } = useTranslation("products");
+
     const links = [
-        { label: "Petroleum products", href: "#petroleum-products" },
-        { label: "Chemicals", href: "#chemicals" },
-        { label: "Fertilizers", href: "#fertilizers" }
+        { tKey: "petroleum", href: "#petroleum-products" },
+        { tKey: "chemicals", href: "#chemicals" },
+        { tKey: "fertilizers", href: "#fertilizers" }
     ];
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -20,7 +23,7 @@ export const ProductsNavBlock = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center gap-8 h-16">
                     <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mr-4">
-                        Quick Navigate:
+                        {t("productsNavBlock.quickNavigate")}
                     </span>
                     {links.map((link) => (
                         <a
@@ -29,7 +32,7 @@ export const ProductsNavBlock = () => {
                             onClick={(e) => scrollToSection(e, link.href)}
                             className="relative h-full flex items-center text-xs font-bold tracking-widest uppercase text-primary-900 hover:text-secondary transition-colors group"
                         >
-                            {link.label}
+                            {t(`productsNavBlock.links.${link.tKey}`)}
                             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                         </a>
                     ))}

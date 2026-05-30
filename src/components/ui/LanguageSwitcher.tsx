@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Globe, ChevronDown } from "lucide-react";
 import { Button } from "../ui/Button";
@@ -7,11 +7,14 @@ import { Text } from "../ui/Text";
 const languages = [
     { code: "en", label: "EN" },
     { code: "ru", label: "RU" },
+    { code: "tr", label: "TR" },
+    { code: "de", label: "DE" },
 ];
 
 export function LanguageSwitcher() {
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     const currentLang = languages.find((lang) => i18n.language?.startsWith(lang.code)) || languages[0];
     
@@ -20,12 +23,28 @@ export function LanguageSwitcher() {
         setIsOpen(false);
     };
 
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        }
+
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+        
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen]);
+
     if (languages.length <= 1) {
         return null;
     }
 
     return (
-        <div className="relative inline-block text-left">
+        <div className="relative inline-block text-left" ref={dropdownRef}>
             <Button
                 type="button"
                 variant="ghost"
@@ -41,14 +60,6 @@ export function LanguageSwitcher() {
                 </Text>
                 <ChevronDown className={`h-3 w-3 text-white/70 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
             </Button>
-
-            {isOpen && (
-                <div
-                    className="fixed inset-0 z-40"
-                    onClick={() => setIsOpen(false)}
-                    aria-hidden="true"
-                ></div>
-            )}
 
             {isOpen && (
                 <div
