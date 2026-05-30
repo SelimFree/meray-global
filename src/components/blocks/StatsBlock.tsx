@@ -4,10 +4,10 @@ import { Text } from '../ui/Text';
 import { cn } from '../../lib/utils';
 
 const stats = [
-  { id: 1, prefix: "", value: 5.5, suffix: "M+", decimals: 1, description: "Barrels Traded Daily" },
-  { id: 2, prefix: "", value: 150, suffix: "+", decimals: 0, description: "Active Global Ports" },
-  { id: 3, prefix: "$", value: 80, suffix: "B+", decimals: 0, description: "Annual Revenue" },
-  { id: 4, prefix: "", value: 250, suffix: "+", decimals: 0, description: "Vessels on Water" }
+  { id: 1, prefix: "", value: 450, suffix: "+", decimals: 0, description: "Institutional Partners" },
+  { id: 2, prefix: "", value: 12.5, suffix: "k+", decimals: 1, description: "Annual Trade Executions" },
+  { id: 3, prefix: "", value: 99.8, suffix: "%", decimals: 1, description: "Fulfillment Rate" },
+  { id: 4, prefix: "", value: 65, suffix: "+", decimals: 0, description: "Operating Jurisdictions" }
 ];
 
 function useCountUp(end: number, decimals: number = 0, duration: number = 2000) {

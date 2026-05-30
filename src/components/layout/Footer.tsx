@@ -26,20 +26,20 @@ export function Footer({ links, className, ref, ...props }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 lg:gap-8">
 
           <div className="md:col-span-2">
-            <Link to="/" className="group flex cursor-pointer items-center gap-3 py-2 outline-none">
+            <Link to="/" className="group flex cursor-pointer items-center outline-none">
               <div className="shrink-0 transition-opacity duration-300 group-hover:opacity-90">
                 <Image
                   src="/android-chrome-512x512.png"
                   aspectRatio="auto"
                   alt={t("navbar.logoAlt")}
-                  className="h-16 object-contain md:h-20 brightness-0 invert"
+                  className="h-24 object-contain md:h-40 brightness-0 invert"
                   containerClassName="bg-transparent"
                 />
               </div>
             </Link>
             <Text 
               variant="muted" 
-              className="mt-6 max-w-sm text-sm leading-relaxed text-white/70"
+              className="max-w-sm text-sm leading-relaxed text-white/70"
             >
               {t("footer.slogan")}
             </Text>

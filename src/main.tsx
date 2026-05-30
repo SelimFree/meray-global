@@ -6,6 +6,6 @@ import './i18n';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App companyName="Landing Template" country="Hungary"/>
+    <App companyName="Meray Global FZE" country="United Arab Emirates"/>
   </StrictMode>,
 )

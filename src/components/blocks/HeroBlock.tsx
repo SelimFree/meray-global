@@ -1,54 +1,43 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Home, FlaskConical, Package, Leaf } from "lucide-react";
+import { ChevronLeft, ChevronRight, FlaskConical, Leaf, Droplet } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { Heading } from "../ui/Heading";
 import { Text } from "../ui/Text";
+import SliderImg1 from "../../assets/slider/slider_img_1.png";
+import SliderImg2 from "../../assets/slider/slider_img_2.png";
+import SliderImg3 from "../../assets/slider/slider_img_3.png";
 
 const slides = [
-  {
-    id: 0,
-    overline: "Adding a world of value",
-    title: "Welcome",
-    description: "Connecting producers and consumers of vital petrochemicals reliably, efficiently, and responsibly across global markets. We manage the physical movement of energy worldwide.",
-    buttonText: "Discover More",
-    buttonLink: "/about",
-    image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2000&auto=format&fit=crop",
-    navIcon: Home,
-    navLabel: "Welcome"
+{
+    id: 1,
+    title: "Petroleum products",
+    description: "Sourcing and distributing premium refined petroleum products, ensuring reliable and continuous energy supply chains for global industrial and commercial sectors.",
+    buttonText: "Petroleum products",
+    buttonLink: "/products#petroleum-products",
+    image: SliderImg1,
+    navIcon: Droplet,
+    navLabel: "Petroleum products"
   },
   {
-    id: 1,
-    overline: "Adding a world of value",
+    id: 2,
     title: "Chemicals",
-    description: "Global sourcing and distribution of aromatics, intermediates, and industrial solvents, ensuring supply chain stability for our partners.",
+    description: "Sourcing high-purity industrial chemicals, aromatics, and solvents to support manufacturing and refining sectors globally through an optimized bulk liquid logistics network.",
     buttonText: "Chemicals",
-    buttonLink: "/products/chemicals",
-    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=2000&auto=format&fit=crop",
+    buttonLink: "/products#chemicals",
+    image: SliderImg2,
     navIcon: FlaskConical,
     navLabel: "Chemicals"
   },
   {
-    id: 2,
-    overline: "Adding a world of value",
-    title: "Plastics",
-    description: "Through our commitment to provide our customers and suppliers with the best services, Meray Global has grown to be a leading and preferred thermoplastics' resin provider.",
-    buttonText: "Plastics",
-    buttonLink: "/products/plastics",
-    image: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?q=80&w=2000&auto=format&fit=crop",
-    navIcon: Package,
-    navLabel: "Plastics"
-  },
-  {
     id: 3,
-    overline: "Adding a world of value",
-    title: "Raw Materials",
-    description: "Delivering essential raw materials and fertilizers to support global agriculture and foundational manufacturing sectors.",
-    buttonText: "Raw Materials",
-    buttonLink: "/products/materials",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2000&auto=format&fit=crop",
+    title: "Fertilizers",
+    description: "Delivering essential agricultural nutrients and bulk fertilizers to support large-scale farming infrastructure, managed via highly optimized dry bulk freight operations.",
+    buttonText: "Fertilizers",
+    buttonLink: "/products#fertilizers",
+    image: SliderImg3,
     navIcon: Leaf,
-    navLabel: "Raw Materials & Fertilizers"
+    navLabel: "Fertilizers"
   }
 ];
 
@@ -131,13 +120,6 @@ export const HeroBlock = () => {
 
             <div className="absolute inset-0 z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pb-24 md:pb-32">
               <div className="max-w-2xl">
-
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="h-0.5 w-12 bg-secondary" />
-                  <Text className="text-xs font-bold tracking-[0.2em] text-white uppercase">
-                    {slide.overline}
-                  </Text>
-                </div>
 
                 <Heading level={1} className="text-white text-5xl sm:text-7xl lg:text-[5.5rem] font-extrabold tracking-tighter mb-6">
                   {slide.title}

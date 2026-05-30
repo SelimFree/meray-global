@@ -16,7 +16,7 @@ export const ContactTeaserBlock = () => {
             <div className="flex items-center gap-4 mb-8">
               <div className="h-0.5 w-12 bg-secondary" />
               <Text className="text-xs font-bold tracking-[0.2em] text-white/60 uppercase">
-                Corporate Trading Desk
+                Contact Us
               </Text>
             </div>
 
@@ -35,7 +35,7 @@ export const ContactTeaserBlock = () => {
           <div className="flex flex-col gap-6 shrink-0 lg:pb-2">
             <Link to="/contact" className="group">
               <button className="flex w-full sm:w-auto items-center justify-center gap-4 bg-secondary px-8 py-5 text-xs font-bold tracking-[0.2em] text-primary-900 uppercase transition-all duration-300 hover:bg-white shadow-[0_0_20px_rgba(var(--color-secondary),0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] border border-transparent rounded-none">
-                Initiate Inquiry
+                Make a request
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
             </Link>
@@ -43,7 +43,7 @@ export const ContactTeaserBlock = () => {
             <div className="flex items-center justify-center sm:justify-start gap-3 opacity-60">
               <Globe className="h-4 w-4 text-white" />
               <Text className="text-[10px] font-bold tracking-widest text-white uppercase">
-                Geneva • Houston • Singapore • Dubai
+                Dubai • Ashgabat • Singapore • Astana
               </Text>
             </div>
           </div>

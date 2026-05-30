@@ -73,12 +73,8 @@ export default {
       }
     }
 
-    // 2. Serve the React Frontend for all other routes
     try {
       let response = await env.ASSETS.fetch(request);
-      
-      // SPA Fallback: If React Router is on a sub-page (e.g., /contact) and refreshes,
-      // the static file doesn't exist. Serve the index.html instead.
       if (response.status === 404) {
         const indexRequest = new Request(new URL("/", request.url), request);
         response = await env.ASSETS.fetch(indexRequest);

@@ -12,8 +12,8 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookie": "Cookie Policy",
-    "slogan": "Your Slogan can be written here",
-    "rights": "© {{year}} {{company}} All rights reserved."
+    "slogan": "Meray Global is dedicated to ensuring continuous supply chain stability across the physical commodity sector, consistently delivering strategic value and uninterrupted logistics to our global partners.",
+    "rights": "© {{year}} {{company}}. All rights reserved."
   },
 
   "cookieBanner": {
@@ -21,12 +21,6 @@
     "body": "We use cookies to analyze traffic and optimize your experience. By clicking \"Accept\", you agree to our use of cookies.",
     "accept": "Accept",
     "more": "Learn More"
-  },
-
-  "finalCtaBlock": {
-    "title": "Ready to Elevate Your Operations?",
-    "subtitle": "Contact us today to discover how our process instrumentation and laboratory solutions can drive your success.",
-    "reachBtn": "Contact Us"
   },
 
   "notFoundPage": {
