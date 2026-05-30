@@ -18,7 +18,7 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
 
   const navItemClasses = ({ isActive }: { isActive: boolean }) =>
     cn(
-      "relative py-2 text-xs font-bold tracking-widest uppercase transition-colors duration-300",
+      "group relative py-2 text-xs font-bold tracking-widest uppercase transition-colors duration-300",
       isActive ? "text-white" : "text-white/80 hover:text-white"
     );
 
@@ -34,16 +34,16 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
     <header
       ref={ref}
       className={cn(
-        "sticky top-0 z-50 w-full bg-primary/85 backdrop-blur-md transition-all h-18 md:h-22.5",
+        "sticky top-0 z-90 w-full bg-primary/85 backdrop-blur-md transition-all h-18 md:h-22.5",
         className
       )}
       {...props}
     >
       <div className="flex h-full w-full items-center justify-between">
-        
-        <div className="relative h-full flex items-center w-55">
-          <div className="absolute inset-0 bg-white [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] shadow-[4px_0_15px_rgba(0,0,0,0.1)]" />
-          
+
+        <div className="relative h-full flex items-center w-30 md:w-50">
+          <div className="absolute inset-0 scale-110 bg-white [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] shadow-[4px_0_15px_rgba(0,0,0,0.1)]" />
+
           <Link
             to="/"
             className="relative z-10 flex h-full w-full items-center px-4 sm:px-6 md:px-8 outline-none group"
@@ -63,7 +63,17 @@ export function Navbar({ links, className, ref, ...props }: NavbarProps) {
         <nav className="hidden flex-1 items-center justify-end gap-6 px-4 md:flex lg:gap-8 lg:px-8">
           {links.map((link) => (
             <NavLink key={link.href} to={link.href} className={navItemClasses}>
-              {t(`navbar.${link.label}`)}
+              {({ isActive }) => (
+                <>
+                  {t(`navbar.${link.label}`)}
+                  <span
+                    className={cn(
+                      "absolute bottom-0 left-0 h-0.5 w-full bg-secondary transition-all duration-300 origin-left",
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    )}
+                  />
+                </>
+              )}
             </NavLink>
           ))}
         </nav>

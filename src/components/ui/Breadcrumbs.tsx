@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import { ChevronRight, Home } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { cn } from "../../lib/utils";
 
@@ -14,20 +14,16 @@ export function Breadcrumbs({ className }: { className?: string }) {
     return (
         <nav
             aria-label="Breadcrumb"
-            className={cn("absolute z-10 w-full py-6 pointer-events-none", className)}
+            className={cn("absolute z-50 w-full py-6", className)}
         >
             <div className="w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <ol className="inline-flex items-center space-x-2 text-xs font-bold tracking-widest uppercase text-gray-500 pointer-events-auto">
-
-                    <li>
-                        <Link
-                            to="/"
-                            className="flex items-center hover:text-primary-800 transition-colors duration-200"
-                        >
-                            <Home className="h-4 w-4" aria-hidden="true" />
-                            <span className="sr-only">{t("navbar.home", "Home")}</span>
-                        </Link>
-                    </li>
+                <div className="flex items-center gap-2">
+                    <Link
+                        to="/"
+                        className="text-[10px] font-bold tracking-widest text-white/50 hover:text-white uppercase transition-colors"
+                    >
+                        {t("navbar.home", "Home")}
+                    </Link>
 
                     {pathnames.map((value, index) => {
                         const isLast = index === pathnames.length - 1;
@@ -37,25 +33,25 @@ export function Breadcrumbs({ className }: { className?: string }) {
                         const label = t(`navbar.${value}`, defaultLabel);
 
                         return (
-                            <li key={to} className="flex items-center space-x-2">
-                                <ChevronRight className="h-4 w-4 text-gray-300 shrink-0" aria-hidden="true" />
+                            <div key={to} className="flex items-center gap-2">
+                                <ChevronRight className="h-3 w-3 text-white/30" aria-hidden="true" />
+
                                 {isLast ? (
-                                    <span className="text-primary-900" aria-current="page">
+                                    <span className="text-[10px] font-bold tracking-widest text-secondary uppercase" aria-current="page">
                                         {label}
                                     </span>
                                 ) : (
                                     <Link
                                         to={to}
-                                        className="hover:text-primary-800 transition-colors duration-200"
+                                        className="text-[10px] font-bold tracking-widest text-white/50 hover:text-white uppercase transition-colors"
                                     >
                                         {label}
                                     </Link>
                                 )}
-                            </li>
+                            </div>
                         );
                     })}
-
-                </ol>
+                </div>
             </div>
         </nav>
     );

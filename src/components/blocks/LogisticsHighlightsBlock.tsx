@@ -1,66 +1,62 @@
-import { useState, useEffect } from 'react';
-import { Anchor, TrainFront, ShieldCheck, MapPin, ArrowRight } from 'lucide-react';
+import { Anchor, TrainFront, ShieldCheck } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
-import { cn } from '../../lib/utils';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import WorldMap from '../../assets/world_map.svg';
 
 const capabilities = [
   {
     icon: Anchor,
     title: "Maritime Chartering",
-    description: "Operating a dynamic fleet of specialized chemical and product tankers with real-time route optimization."
+    description: "Operating a dynamic fleet of specialized chemical and product tankers with real-time route optimization.",
   },
   {
     icon: TrainFront,
     title: "Rail & Tank Storage",
-    description: "Secured throughput at major global terminals, connected via dedicated rail and pipeline infrastructure."
+    description: "Secured throughput at major global terminals, connected via dedicated rail and pipeline infrastructure.",
   },
   {
     icon: ShieldCheck,
     title: "Risk & Compliance",
-    description: "Strict adherence to international trade laws, maritime regulations, and ESG environmental standards."
-  }
+    description: "Strict adherence to international trade laws, maritime regulations, and ESG environmental standards.",
+  },
 ];
 
-const globalHubs = [
-  { city: "Houston", region: "Americas", coords: "29.7604° N, 95.3698° W" },
-  { city: "Rotterdam", region: "EMEA", coords: "51.9225° N, 4.4791° E" },
-  { city: "Fujairah", region: "Middle East", coords: "25.1288° N, 56.3265° E" },
-  { city: "Singapore", region: "APAC", coords: "1.3521° N, 103.8198° E" }
+const locations = [
+  { id: "hou", label: "houston", cx: 250, cy: 180 },
+  { id: "ldn", label: "london", cx: 480, cy: 125 },
+  { id: "dxb", label: "dubai", cx: 615, cy: 210 },
+  { id: "sin", label: "singapore", cx: 740, cy: 270 },
+  { id: "tyo", label: "tokyo", cx: 820, cy: 150 },
+  { id: "ist", label: "istanbul", cx: 550, cy: 160 },
+  { id: "asb", label: "ashgabat", cx: 620, cy: 165 },
+  { id: "msk", label: "moscow", cx: 560, cy: 100 },
+  { id: "alm", label: "almaty", cx: 655, cy: 145 },
+  { id: "bjn", label: "beijing", cx: 750, cy: 145 },
 ];
+
+const routes = [
+  { id: "r1", d: "M 250 180 A 300 300 0 0 1 480 125", duration: 3, startOffset: -1 },
+  { id: "r2", d: "M 480 125 A 250 250 0 0 1 615 210", duration: 2.5, startOffset: -1.5 },
+  { id: "r3", d: "M 615 210 A 300 300 0 0 1 740 270", duration: 3, startOffset: -2 },
+  { id: "r4", d: "M 740 270 A 250 250 0 0 0 820 150", duration: 3.5, startOffset: -0.5 },
+  { id: "r5", d: "M 820 150 A 700 500 0 0 0 250 180", duration: 5, startOffset: -3 },
+  { id: "r6", d: "M 480 125 A 200 200 0 0 1 560 100", duration: 2, startOffset: -0.5 },
+  { id: "r7", d: "M 480 125 A 250 250 0 0 1 550 160", duration: 2, startOffset: -1 },
+  { id: "r8", d: "M 550 160 A 150 150 0 0 1 620 165", duration: 1.5, startOffset: -0.2 },
+  { id: "r9", d: "M 560 100 A 300 300 0 0 1 655 145", duration: 2.5, startOffset: -1.2 },
+  { id: "r11", d: "M 620 165 A 150 150 0 0 1 615 210", duration: 1.5, startOffset: -1.8 },
+  { id: "r10", d: "M 655 145 A 150 150 0 0 1 750 145", duration: 2, startOffset: -1.5 },
+  { id: "r12", d: "M 750 145 A 100 100 0 0 1 820 150", duration: 1.5, startOffset: -0.5 },
+  { id: "r13", d: "M 740 270 A 200 200 0 0 0 750 145", duration: 2.5, startOffset: -2 },
+];
+
 
 export const LogisticsHighlightsBlock = () => {
-  const [pingIndex, setPingIndex] = useState<number | null>(null);
-  const [vesselCount, setVesselCount] = useState(254);
-
-  useEffect(() => {
-    // 1. Telemetry Ping Simulator: Flashes a random row every 2.5 seconds
-    const pingInterval = setInterval(() => {
-      const random = Math.floor(Math.random() * globalHubs.length);
-      setPingIndex(random);
-
-      // Clear the flash after 800ms
-      setTimeout(() => setPingIndex(null), 800);
-    }, 2500);
-
-    const countInterval = setInterval(() => {
-      setVesselCount(prev => {
-        if (prev > 260) return prev - 1;
-        if (prev < 250) return prev + 1;
-        return prev + (Math.random() > 0.5 ? 1 : -1);
-      });
-    }, 4500);
-
-    return () => {
-      clearInterval(pingInterval);
-      clearInterval(countInterval);
-    };
-  }, []);
+  const { t } = useTranslation("about");
 
   return (
     <section className="w-full bg-white py-24 border-b border-gray-200">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -78,7 +74,9 @@ export const LogisticsHighlightsBlock = () => {
             </Heading>
 
             <Text className="text-gray-600 text-sm md:text-base leading-relaxed mb-12 max-w-lg">
-              Our integrated logistics network bridges the gap between producers and consumers. We manage complex physical movements across oceans, rails, and pipelines with absolute terminal precision.
+              Our integrated logistics network bridges the gap between producers and consumers.
+              We manage complex physical movements across oceans, rails, and pipelines with
+              absolute terminal precision.
             </Text>
 
             <div className="flex flex-col gap-8 mb-12">
@@ -87,7 +85,10 @@ export const LogisticsHighlightsBlock = () => {
                 return (
                   <div key={index} className="flex items-start gap-5 group">
                     <div className="p-3 bg-gray-50 border border-gray-200 transition-colors group-hover:border-primary-900 group-hover:bg-primary-900">
-                      <Icon className="h-6 w-6 text-primary-900 transition-colors group-hover:text-white" strokeWidth={1.5} />
+                      <Icon
+                        className="h-6 w-6 text-primary-900 transition-colors group-hover:text-white"
+                        strokeWidth={1.5}
+                      />
                     </div>
                     <div>
                       <Heading level={3} className="text-sm font-bold text-primary-900 uppercase tracking-widest mb-2">
@@ -102,100 +103,136 @@ export const LogisticsHighlightsBlock = () => {
               })}
             </div>
 
-            <Link to="/logistics" className="group flex w-fit items-center gap-3 border-b-2 border-primary-900 pb-1 text-xs font-bold tracking-widest text-primary-900 uppercase transition-colors hover:text-secondary hover:border-secondary">
-              Explore Our Supply Chain
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
 
-          <div className="relative w-full h-full min-h-125 lg:min-h-150 bg-primary-900 border border-gray-200 shadow-2xl overflow-hidden flex flex-col">
+          <div className="relative w-full overflow-hidden flex flex-col min-h-60 lg:min-h-100">
+            <div className="relative flex-1 overflow-hidden">
 
-            <div className="flex items-center justify-between border-b border-white/10 px-6 md:px-8 py-5 md:py-6 bg-black/20">
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-secondary" />
-                <span className="text-[10px] sm:text-xs font-bold tracking-widest text-white uppercase">
-                  Network Routing Status
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-none bg-secondary animate-pulse" />
-                <span className="text-[10px] font-bold tracking-widest text-white/50 uppercase">
-                  Live
-                </span>
-              </div>
-            </div>
-
-            <div
-              className="absolute inset-0 z-0 opacity-10 pointer-events-none animate-pan-grid"
-              style={{
-                backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)`,
-                backgroundSize: '40px 40px'
-              }}
-            />
-
-            <div className="relative z-10 flex flex-col grow justify-center px-4 md:px-8 py-10 gap-2">
-
-              <div className="grid grid-cols-12 gap-2 md:gap-4 pb-4 border-b border-white/10 mb-4 px-2 md:px-4">
-                <span className="col-span-5 md:col-span-4 text-[10px] font-bold tracking-widest text-white/40 uppercase">Terminal</span>
-                <span className="hidden md:block col-span-3 text-[10px] font-bold tracking-widest text-white/40 uppercase">Region</span>
-                <span className="col-span-7 md:col-span-5 text-[10px] font-bold tracking-widest text-white/40 uppercase text-right">Coordinates</span>
+              <div className="absolute inset-0 w-full h-full pointer-events-none">
+                <img src={WorldMap} className="w-full h-full object-contain opacity-15 grayscale" />
               </div>
 
-              {globalHubs.map((hub, index) => {
-                const isPinged = pingIndex === index;
+              <svg
+                viewBox="0 0 1000 500"
+                className="absolute inset-0 w-full h-full z-10 overflow-visible"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <defs>
+                  <filter id="lh-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
 
-                return (
-                  <div
-                    key={index}
-                    className={cn(
-                      "grid grid-cols-12 gap-2 md:gap-4 items-center px-2 md:px-4 py-4 md:py-5 border transition-all duration-300 cursor-default group",
-                      isPinged
-                        ? "border-secondary/40 bg-secondary/10 shadow-[inset_0_0_20px_rgba(var(--color-secondary),0.1)]"
-                        : "border-transparent hover:border-white/10 hover:bg-black/10"
-                    )}
-                  >
-                    <div className="col-span-5 md:col-span-4 flex items-center gap-3">
-                      <div className={cn(
-                        "hidden sm:block h-1.5 w-1.5 transition-all duration-200 shrink-0",
-                        isPinged ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" : "bg-secondary opacity-50 group-hover:opacity-100"
-                      )} />
-                      <span className={cn(
-                        "text-xs sm:text-sm font-bold tracking-wider uppercase truncate transition-colors duration-200",
-                        isPinged ? "text-white" : "text-white/80"
-                      )}>
-                        {hub.city}
-                      </span>
-                    </div>
-                    <div className="hidden md:block col-span-3">
-                      <span className={cn(
-                        "text-xs font-medium transition-colors duration-200",
-                        isPinged ? "text-white/90" : "text-white/60"
-                      )}>
-                        {hub.region}
-                      </span>
-                    </div>
-                    <div className="col-span-7 md:col-span-5 text-right flex justify-end">
-                      <span className={cn(
-                        "text-[10px] sm:text-xs font-mono tracking-wider transition-colors duration-200",
-                        isPinged ? "text-secondary font-bold" : "text-white/40 group-hover:text-white/80"
-                      )}>
-                        {hub.coords}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
+                {routes.map((route) => (
+                  <path
+                    key={`track-${route.id}`}
+                    d={route.d}
+                    fill="none"
+                    stroke="rgba(255,255,255,0.18)"
+                    strokeWidth="1.5"
+                    strokeDasharray="4 9"
+                  />
+                ))}
+
+                {routes.map((route) => (
+                  <g key={`fwd-${route.id}`} filter="url(#lh-glow)">
+                    <circle r="4" fill="var(--color-secondary)">
+                      <animateMotion
+                        dur={`${route.duration}s`}
+                        repeatCount="indefinite"
+                        path={route.d}
+                        begin={`${route.startOffset}s`}
+                      />
+                    </circle>
+                    <circle r="2.5" fill="var(--color-secondary)" opacity="0.55">
+                      <animateMotion
+                        dur={`${route.duration}s`}
+                        repeatCount="indefinite"
+                        path={route.d}
+                        begin={`${route.startOffset + 0.06}s`}
+                      />
+                    </circle>
+                    <circle r="1.5" fill="var(--color-secondary)" opacity="0.28">
+                      <animateMotion
+                        dur={`${route.duration}s`}
+                        repeatCount="indefinite"
+                        path={route.d}
+                        begin={`${route.startOffset + 0.12}s`}
+                      />
+                    </circle>
+                  </g>
+                ))}
+
+                {routes.map((route) => (
+                  <g key={`rev-${route.id}`} filter="url(#lh-glow)">
+                    <circle r="4" fill="var(--color-secondary)">
+                      <animateMotion
+                        dur={`${route.duration}s`}
+                        repeatCount="indefinite"
+                        path={route.d}
+                        begin={`${route.startOffset - route.duration / 2}s`}
+                        keyPoints="1;0"
+                        keyTimes="0;1"
+                        calcMode="linear"
+                      />
+                    </circle>
+                    <circle r="2.5" fill="var(--color-secondary)" opacity="0.55">
+                      <animateMotion
+                        dur={`${route.duration}s`}
+                        repeatCount="indefinite"
+                        path={route.d}
+                        begin={`${route.startOffset - route.duration / 2 + 0.06}s`}
+                        keyPoints="1;0"
+                        keyTimes="0;1"
+                        calcMode="linear"
+                      />
+                    </circle>
+                    <circle r="1.5" fill="var(--color-secondary)" opacity="0.28">
+                      <animateMotion
+                        dur={`${route.duration}s`}
+                        repeatCount="indefinite"
+                        path={route.d}
+                        begin={`${route.startOffset - route.duration / 2 + 0.12}s`}
+                        keyPoints="1;0"
+                        keyTimes="0;1"
+                        calcMode="linear"
+                      />
+                    </circle>
+                  </g>
+                ))}
+
+                {locations.map((loc) => (
+                  <g key={loc.id}>
+                    <circle cx={loc.cx} cy={loc.cy} r="8" fill="var(--color-secondary)" opacity="0.3">
+                      <animate attributeName="r" values="6;20;6" dur="2.5s" repeatCount="indefinite" />
+                      <animate attributeName="opacity" values="0.45;0;0.45" dur="2.5s" repeatCount="indefinite" />
+                    </circle>
+
+                    <circle cx={loc.cx} cy={loc.cy} r="4" fill="white" filter="url(#lh-glow)" />
+                    <circle cx={loc.cx} cy={loc.cy} r="2" fill="var(--color-secondary)" />
+
+                    <text
+                      x={loc.cx}
+                      y={loc.cy - 12}
+                      fontSize="10"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      fill="rgba(0, 75, 112, 0.7)"
+                      fontFamily="inherit"
+                      letterSpacing="0.08em"
+                      style={{ textTransform: 'uppercase' }}
+                    >
+                      {t(`logisticsMapBlock.${loc.label}`, loc.label)}
+                    </text>
+                  </g>
+                ))}
+              </svg>
             </div>
-
-            <div className="border-t border-white/10 px-6 md:px-8 py-4 bg-black/20 flex items-center gap-2">
-              <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest tabular-nums">
-                System connected. Monitoring {vesselCount} active maritime vessels
-              </span>
-              <div className="h-3 w-1.5 bg-white/50 animate-pulse" />
-            </div>
-
           </div>
-
         </div>
       </div>
     </section>
