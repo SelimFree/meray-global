@@ -3,10 +3,26 @@ import { Text } from '../ui/Text';
 import { cn } from '../../lib/utils';
 
 const timelineEvents = [
-  { year: "2010", title: "Foundation & European Desk", description: "Established initial trading operations in Geneva, focusing exclusively on middle distillates and cross-border European pipeline logistics." },
-  { year: "2015", title: "Global Maritime Expansion", description: "Commissioned our first proprietary fleet of product tankers, expanding operational reach to the Americas and APAC regions." },
-  { year: "2020", title: "Strategic Storage Acquisition", description: "Secured long-term throughput capacity at Rotterdam and Fujairah terminals, granting unprecedented control over physical blending." },
-  { year: "2026", title: "Energy Transition Logistics", description: "Launched our dedicated Natural Gas & LNG chartering division to support the global transition toward lower-carbon industrial fuels." }
+  { 
+    year: "2015", 
+    title: "Foundation & Regional Inception", 
+    description: "Established initial operations with a targeted focus on the Turkmenistan commodity markets, building foundational competence in localized physical trade and supply chain execution." 
+  },
+  { 
+    year: "2021", 
+    title: "International Market Entry", 
+    description: "Inaugurated our primary global trading hub in Dubai, rapidly scaling physical volumes and executing institutional-grade contracts across the broader EMEA sector." 
+  },
+  { 
+    year: "2024", 
+    title: "Infrastructure & Logistics Integration", 
+    description: "Capitalizing on accelerated regional growth, we solidified our physical supply chain by securing dedicated maritime chartering networks and strategic storage capabilities." 
+  },
+  { 
+    year: "2026", 
+    title: "Intercontinental Scaling", 
+    description: "Executing advanced expansion protocols into prime European and Asian logistical hubs, ensuring uninterrupted global coverage and multi-jurisdictional supply chain stability." 
+  }
 ];
 
 export const TimelineBlock = () => {
@@ -48,7 +64,7 @@ export const TimelineBlock = () => {
                       <Heading level={3} className="text-lg font-bold text-primary-900 mb-2">
                         {event.title}
                       </Heading>
-                      <Text className="text-sm text-gray-600">
+                      <Text className="text-sm text-gray-600 text-justify">
                         {event.description}
                       </Text>
                     </div>

@@ -46,7 +46,7 @@ export const ProductPreviewBlock = () => {
             <Heading level={2} className="text-4xl md:text-5xl font-extrabold text-primary-900 tracking-tight">
               Core Commodities
             </Heading>
-            <Text className="text-gray-600 mt-6 text-sm md:text-base leading-relaxed">
+            <Text className="text-gray-600 mt-6 text-sm md:text-base leading-relaxed text-justify">
               We leverage our physical infrastructure to source, store, and deliver energy products worldwide. Our intelligence-driven logistics network ensures uninterrupted global supply.
             </Text>
           </div>
@@ -84,7 +84,7 @@ export const ProductPreviewBlock = () => {
                 <Heading level={3} className="text-2xl font-bold text-primary-900 mb-4 tracking-tight">
                   {product.title}
                 </Heading>
-                <Text className="text-sm text-gray-600 mb-8 leading-relaxed grow">
+                <Text className="text-sm text-gray-600 mb-8 leading-relaxed grow text-justify">
                   {product.description}
                 </Text>
 

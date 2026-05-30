@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 
@@ -27,7 +27,7 @@ export const ContactTeaserBlock = () => {
               </span>
             </Heading>
 
-            <Text className="text-white/70 text-base md:text-lg max-w-xl leading-relaxed">
+            <Text className="text-white/70 text-base md:text-lg max-w-xl leading-relaxed text-justify">
               Connect directly with our global specialists to secure supply, optimize downstream logistics, or discuss custom commodity solutions.
             </Text>
           </div>
@@ -39,13 +39,6 @@ export const ContactTeaserBlock = () => {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
             </Link>
-
-            <div className="flex items-center justify-center sm:justify-start gap-3 opacity-60">
-              <Globe className="h-4 w-4 text-white" />
-              <Text className="text-[10px] font-bold tracking-widest text-white uppercase">
-                Dubai • Ashgabat • Singapore • Astana
-              </Text>
-            </div>
           </div>
 
         </div>

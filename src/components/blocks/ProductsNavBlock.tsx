@@ -1,9 +1,9 @@
 
 export const ProductsNavBlock = () => {
     const links = [
+        { label: "Petroleum products", href: "#petroleum-products" },
         { label: "Chemicals", href: "#chemicals" },
-        { label: "Plastics", href: "#plastics" },
-        { label: "Raw Materials", href: "#materials" }
+        { label: "Fertilizers", href: "#fertilizers" }
     ];
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

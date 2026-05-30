@@ -9,7 +9,7 @@ import SliderImg2 from "../../assets/slider/slider_img_2.png";
 import SliderImg3 from "../../assets/slider/slider_img_3.png";
 
 const slides = [
-{
+  {
     id: 1,
     title: "Petroleum products",
     description: "Sourcing and distributing premium refined petroleum products, ensuring reliable and continuous energy supply chains for global industrial and commercial sectors.",
@@ -42,11 +42,19 @@ const slides = [
 ];
 
 export const HeroBlock = () => {
-  const [currentSlide, setCurrentSlide] = useState(2);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
   const imgRefs = useRef<(HTMLImageElement | null)[]>([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -104,41 +112,62 @@ export const HeroBlock = () => {
         className="flex w-full h-full transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {slides.map((slide, index) => (
-          <div key={slide.id} className="relative w-full h-full shrink-0">
+        {slides.map((slide, index) => {
+          const isActiveSlide = index === currentSlide;
+          const isAnimatedIn = isActiveSlide && isMounted;
 
-            <img
-              ref={(el) => { imgRefs.current[index] = el; }}
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
-            />
+          return (
+            <div key={slide.id} className="relative w-full h-full shrink-0">
 
-            <div className="absolute inset-0 z-10 bg-primary-950/85 md:bg-transparent md:bg-linear-to-r md:from-primary-950 md:via-primary-950/80 md:to-transparent" />
-            <div className="absolute inset-0 z-10 mix-blend-multiply bg-black/40 md:bg-transparent md:bg-linear-to-r md:from-black/80 md:via-black/20 md:to-transparent" />
-            <div className="absolute inset-0 z-10 bg-black/20 md:bg-black/10" />
+              <img
+                ref={(el) => { imgRefs.current[index] = el; }}
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-[130%] object-cover will-change-transform -translate-y-[15%]"
+              />
 
-            <div className="absolute inset-0 z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pb-24 md:pb-32">
-              <div className="max-w-2xl">
+              <div className="absolute inset-0 z-10 bg-primary-950/85 md:bg-transparent md:bg-linear-to-r md:from-primary-950 md:via-primary-950/80 md:to-transparent" />
+              <div className="absolute inset-0 z-10 mix-blend-multiply bg-black/40 md:bg-transparent md:bg-linear-to-r md:from-black/80 md:via-black/20 md:to-transparent" />
+              <div className="absolute inset-0 z-10 bg-black/20 md:bg-black/10" />
 
-                <Heading level={1} className="text-white text-5xl sm:text-7xl lg:text-[5.5rem] font-extrabold tracking-tighter mb-6">
-                  {slide.title}
-                </Heading>
+              <div className="absolute inset-0 z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pb-24 md:pb-32">
+                <div className="max-w-2xl">
 
-                <Text className="text-white/90 text-base sm:text-lg mb-10 leading-relaxed font-medium max-w-xl">
-                  {slide.description}
-                </Text>
+                  <Heading
+                    level={1}
+                    className={cn(
+                      "text-white text-5xl sm:text-7xl lg:text-[5.5rem] font-extrabold tracking-tighter mb-6 transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]",
+                      isAnimatedIn ? "opacity-100 translate-x-0 delay-300" : "opacity-0 -translate-x-12"
+                    )}
+                  >
+                    {slide.title}
+                  </Heading>
 
-                <Link to={slide.buttonLink} tabIndex={-1}>
-                  <button className="bg-secondary hover:bg-secondary-600 transition-colors duration-300 text-white px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-none border border-transparent">
-                    {slide.buttonText}
-                  </button>
-                </Link>
+                  <Text
+                    className={cn(
+                      "text-white/90 text-base sm:text-lg mb-10 leading-relaxed font-medium max-w-xl text-justify transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]",
+                      isAnimatedIn ? "opacity-100 translate-x-0 delay-500" : "opacity-0 -translate-x-12"
+                    )}
+                  >
+                    {slide.description}
+                  </Text>
 
+                  <div className={cn(
+                    "transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]",
+                    isAnimatedIn ? "opacity-100 translate-x-0 delay-700" : "opacity-0 -translate-x-12"
+                  )}>
+                    <Link to={slide.buttonLink} tabIndex={-1}>
+                      <button className="bg-secondary hover:bg-secondary-600 transition-colors duration-300 text-white px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-none border border-transparent">
+                        {slide.buttonText}
+                      </button>
+                    </Link>
+                  </div>
+
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="absolute bottom-0 right-0 z-30 hidden lg:block opacity-20 pointer-events-none w-1/2 h-full">
