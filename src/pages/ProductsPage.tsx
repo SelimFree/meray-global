@@ -11,6 +11,7 @@ import DetailedProducts3 from "../assets/products/detailed_products_3.png";
 import DetailedProducts4 from "../assets/products/detailed_products_4.png";
 import DetailedProducts5 from "../assets/products/detailed_products_5.png";
 import DetailedProducts6 from "../assets/products/detailed_products_6.png";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const petroleumFuelsKeys = ["ulsd", "diesel", "jetFuel", "gasoil"];
 const petroleumHeavyKeys = ["mazut", "bitumen", "petcoke"];
@@ -22,6 +23,10 @@ const fertilizerPhosphateKeys = ["dap", "map", "sulphur"];
 export default function ProductsPage() {
     const location = useLocation();
     const { t } = useTranslation("products");
+
+    const { t: tCommon } = useTranslation("common");
+    useDocumentTitle(tCommon("navbar.products"));
+
 
     const petroleumFuelsData = petroleumFuelsKeys.map(key => ({
         name: t(`categories.petroleumFuels.items.${key}.name`),

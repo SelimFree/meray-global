@@ -3,6 +3,7 @@ import LegalPage from "./LegalPage";
 import { Heading } from "../components/ui/Heading";
 import { Text } from "../components/ui/Text";
 import { List, ListItem } from "../components/ui/List";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 interface CookieDataItem {
   label: string;
@@ -11,6 +12,10 @@ interface CookieDataItem {
 
 export default function CookiePage() {
   const { t } = useTranslation("legal");
+
+    const { t: tCommon } = useTranslation("common");
+    useDocumentTitle(tCommon("navbar.cookie"));
+  
 
   const SharpBullet = <div className="h-1.5 w-1.5 bg-secondary mt-1.5 shrink-0" />;
   const cookieList = t("cookiePolicy.section2.list", { returnObjects: true }) as CookieDataItem[];

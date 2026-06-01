@@ -3,7 +3,10 @@
     "home": "Home",
     "about": "About Us",
     "products": "Products",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookie": "Cookie Policy"
   },
 
   "footer": {
