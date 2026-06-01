@@ -1,5 +1,5 @@
 const WEBSITE_URL = "https://www.merayglobal.com";
-const COMPANY_NAME = "Meray Global";
+const COMPANY_NAME = "Meray Global FZE";
 const LOGO_URL = "https://www.merayglobal.com/logo-white.png";
 
 interface AutoReplyTranslation {
@@ -22,6 +22,7 @@ interface AutoReplyTranslation {
     terms: string;
     cookie: string;
   };
+  rightsReserved: string;
 }
 
 export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
@@ -33,7 +34,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       "Your trade inquiry has been securely received by the Meray Global server network. A preliminary compliance check is currently underway.",
     body2:
       "Our regional trading desk will review your requirements. You can expect direct communication from an authorized representative within one standard business day.",
-    regards: "Authorized by",
+    regards: "With regards",
     contactTitle: "Direct Contact",
     linksTitle: "Quick Links",
     legalTitle: "Legal",
@@ -47,6 +48,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       terms: "Terms of Service",
       cookie: "Cookie Policy",
     },
+    rightsReserved: "All rights reserved.",
   },
   tr: {
     subject: "Talep Onayı - Meray Global",
@@ -56,7 +58,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       "Ticari talebiniz Meray Global sunucu ağı tarafından güvenli bir şekilde alınmıştır. Ön uyumluluk kontrolü şu anda devam etmektedir.",
     body2:
       "Bölgesel ticaret masamız gereksinimlerinizi inceleyecektir. Yetkili bir temsilcimiz bir iş günü içerisinde sizinle doğrudan iletişime geçecektir.",
-    regards: "Onaylayan",
+    regards: "Saygılarımızla",
     contactTitle: "Doğrudan İletişim",
     linksTitle: "Hızlı Bağlantılar",
     legalTitle: "Yasal",
@@ -70,6 +72,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       terms: "Hizmet Şartları",
       cookie: "Çerez Politikası",
     },
+    rightsReserved: "Tüm hakları saklıdır.",
   },
   de: {
     subject: "Anfragebestätigung - Meray Global",
@@ -79,7 +82,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       "Ihre Handelsanfrage wurde vom Meray Global-Servernetzwerk sicher empfangen. Eine vorläufige Compliance-Prüfung ist derzeit im Gange.",
     body2:
       "Unser regionales Trading Desk wird Ihre Anforderungen prüfen. Sie können innerhalb eines Standardarbeitstages mit einer direkten Kommunikation von einem autorisierten Vertreter rechnen.",
-    regards: "Autorisiert durch",
+    regards: "Mit freundlichen Grüßen",
     contactTitle: "Direkter Kontakt",
     linksTitle: "Schnelle Links",
     legalTitle: "Rechtliches",
@@ -93,6 +96,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       terms: "Nutzungsbedingungen",
       cookie: "Cookie-Richtlinie",
     },
+    rightsReserved: "Alle Rechte vorbehalten.",
   },
   ru: {
     subject: "Подтверждение запроса - Meray Global",
@@ -102,7 +106,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       "Ваш торговый запрос был безопасно получен серверной сетью Meray Global. В настоящее время проводится предварительная проверка на соответствие.",
     body2:
       "Наш региональный торговый отдел рассмотрит ваши требования. Ожидайте прямого сообщения от уполномоченного представителя в течение одного рабочего дня.",
-    regards: "Утверждено",
+    regards: "С уважением",
     contactTitle: "Прямой контакт",
     linksTitle: "Быстрые ссылки",
     legalTitle: "Правовая информация",
@@ -116,6 +120,7 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       terms: "Условия использования",
       cookie: "Политика файлов cookie",
     },
+    rightsReserved: "Все права защищены.",
   },
 };
 
@@ -215,7 +220,7 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
       
       <p style="margin: 0; color: #bae6fd; font-size: 12px; line-height: 1.6; text-transform: uppercase; letter-spacing: 1px;">
         ${t.regards},<br/>
-        <strong style="color: #ffffff;">Corporate Logistics & Trading</strong>
+        <strong style="color: #ffffff;">${COMPANY_NAME}</strong>
       </p>
     </div>
 
@@ -254,7 +259,7 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
       <!-- Copyright -->
       <div style="margin-top: 32px; border-top: 1px solid #007AA8; padding-top: 24px; text-align: left;">
         <p style="margin: 0; color: #bae6fd; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
-          &copy; ${currentYear} ${COMPANY_NAME}. All rights reserved.
+          &copy; ${currentYear} ${COMPANY_NAME}. ${t.rightsReserved}
         </p>
       </div>
     </div>
