@@ -9,6 +9,9 @@
     "description": "Bitte geben Sie spezifische Details zu Ihren Anforderungen an die Lieferkette an. Anfragen zu physischen Rohstoffen, maritimer Befrachtung und Terminallogistik werden direkt an die zuständige regionale Handelsabteilung weitergeleitet.",
     "securityTitle": "Sichere Übertragung",
     "securityDescription": "Alle übermittelten Daten werden verschlüsselt und unter strikter Einhaltung internationaler unternehmensinterner Datenschutzstandards verarbeitet. Wir arbeiten nicht mit unbestätigten Drittmaklern zusammen.",
+    "directContactTitle": "Direkter Kontakt",
+    "directContactLabel": "Globales Handelsbüro",
+    "emailAddress": "info@merayglobal.com",
     "form": {
       "firstNameLabel": "Vorname",
       "firstNamePlaceholder": "John",

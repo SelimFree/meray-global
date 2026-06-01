@@ -9,6 +9,9 @@
     "description": "Please provide specific details regarding your supply chain requirements. Inquiries regarding physical commodities, maritime chartering, and terminal logistics will be routed directly to the appropriate regional trading desk.",
     "securityTitle": "Secure Transmission",
     "securityDescription": "All submitted data is encrypted and processed in strict adherence to international corporate privacy standards. We do not engage with unverified third-party brokers.",
+    "directContactTitle": "Direct Contact",
+    "directContactLabel": "Global Trading Desk",
+    "emailAddress": "info@merayglobal.com",
     "form": {
       "firstNameLabel": "First Name",
       "firstNamePlaceholder": "John",
