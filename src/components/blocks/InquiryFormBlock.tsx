@@ -4,7 +4,7 @@ import { Text } from '../ui/Text';
 import { Input } from '../ui/Input';
 import { Label } from '../ui/Label';
 import { Textarea } from '../ui/Textarea';
-import { ArrowRight, ShieldCheck, CheckCircle2, Loader2, AlertCircle, X } from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle2, Loader2, AlertCircle, X, Mail } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 
 export const InquiryFormBlock = () => {
@@ -14,7 +14,7 @@ export const InquiryFormBlock = () => {
     const [error, setError] = useState<string | null>(null);
     const { t, i18n } = useTranslation("contact");
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError(null);
         if (!formRef.current) return;
@@ -74,7 +74,7 @@ export const InquiryFormBlock = () => {
                         {t("contactBlock.description")}
                     </Text>
 
-                    <div className="flex items-start gap-4 p-6 bg-gray-50 border border-gray-200">
+                    <div className="flex items-start gap-4 p-6 bg-gray-50 border border-gray-200 mb-8">
                         <ShieldCheck className="h-6 w-6 text-primary-900 shrink-0" />
                         <div>
                             <Text className="text-xs font-bold tracking-widest text-primary-900 uppercase mb-2">
@@ -84,6 +84,28 @@ export const InquiryFormBlock = () => {
                                 {t("contactBlock.securityDescription")}
                             </Text>
                         </div>
+                    </div>
+
+                    <div className="pt-8 border-t border-gray-200">
+                        <Text className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-4">
+                            {t("contactBlock.directContactTitle")}
+                        </Text>
+                        <a 
+                            href={`mailto:${t("contactBlock.emailAddress")}`}
+                            className="group flex items-center gap-5 text-primary-900 hover:text-secondary transition-colors"
+                        >
+                            <div className="flex items-center justify-center h-12 w-12 bg-gray-50 border border-gray-200 group-hover:border-secondary transition-colors">
+                                <Mail className="h-5 w-5" strokeWidth={1.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-sm font-bold tracking-tight">
+                                    {t("contactBlock.emailAddress")}
+                                </span>
+                                <span className="text-xs text-gray-500 mt-0.5">
+                                    {t("contactBlock.directContactLabel")}
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
 

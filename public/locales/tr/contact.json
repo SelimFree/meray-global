@@ -9,6 +9,9 @@
     "description": "Lütfen tedarik zinciri gereksinimlerinizle ilgili belirli ayrıntıları sağlayın. Fiziksel emtialar, deniz taşımacılığı ve terminal lojistiği ile ilgili talepler doğrudan ilgili bölgesel ticaret masasına yönlendirilecektir.",
     "securityTitle": "Güvenli İletim",
     "securityDescription": "Gönderilen tüm veriler şifrelenir ve uluslararası kurumsal gizlilik standartlarına sıkı sıkıya bağlı kalınarak işlenir. Doğrulanmamış üçüncü taraf brokerlerle çalışmıyoruz.",
+    "directContactTitle": "Doğrudan İletişim",
+    "directContactLabel": "Küresel Ticaret Masası",
+    "emailAddress": "info@merayglobal.com",
     "form": {
       "firstNameLabel": "Ad",
       "firstNamePlaceholder": "John",
