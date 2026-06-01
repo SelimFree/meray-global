@@ -1,4 +1,8 @@
-import { getOwnerEmailHtml, getAutoReplyHtml, autoReplyTranslations } from './templates';
+import {
+  getOwnerEmailHtml,
+  getAutoReplyHtml,
+  autoReplyTranslations,
+} from "./templates";
 
 export interface Env {
   RESEND_API_KEY: string;
@@ -20,56 +24,89 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.pathname === '/api/send' && request.method === 'POST') {
+    if (url.pathname === "/api/send" && request.method === "POST") {
       try {
-        const body = await request.json() as InquiryPayload;
-        const { firstName, lastName, company, email, department, message, user_lang } = body;
+        const body = (await request.json()) as InquiryPayload;
+        const {
+          firstName,
+          lastName,
+          company,
+          email,
+          department,
+          message,
+          user_lang,
+        } = body;
 
         const resendHeaders = {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${env.RESEND_API_KEY}`
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${env.RESEND_API_KEY}`,
         };
 
-        const localizedSubject = autoReplyTranslations[user_lang]?.subject || autoReplyTranslations['en'].subject;
+        const localizedSubject =
+          autoReplyTranslations[user_lang]?.subject ||
+          autoReplyTranslations["en"].subject;
         const fullName = `${firstName} ${lastName}`;
 
-        const ownerEmailPayload = fetch('https://api.resend.com/emails', {
-          method: 'POST',
+        const ownerEmailPayload = fetch("https://api.resend.com/emails", {
+          method: "POST",
           headers: resendHeaders,
           body: JSON.stringify({
             from: `Corporate Portal <${env.RESEND_OWNER_EMAIL}>`,
-            to: [env.RESEND_OWNER_EMAIL], 
+            to: [env.RESEND_OWNER_EMAIL],
             reply_to: email,
             subject: `Trade Inquiry: ${company} (${department})`,
-            html: getOwnerEmailHtml(fullName, company, email, department, message)
-          })
+            html: getOwnerEmailHtml(
+              fullName,
+              company,
+              email,
+              department,
+              message,
+            ),
+          }),
         });
 
-        const autoReplyPayload = fetch('https://api.resend.com/emails', {
-          method: 'POST',
+        const autoReplyPayload = fetch("https://api.resend.com/emails", {
+          method: "POST",
           headers: resendHeaders,
           body: JSON.stringify({
             from: `Meray Global <${env.RESEND_OWNER_EMAIL}>`,
-            to: [email], 
+            to: [email],
             subject: localizedSubject,
-            html: getAutoReplyHtml(firstName, user_lang)
-          })
+            html: getAutoReplyHtml(firstName, user_lang),
+          }),
         });
 
-        const [ownerRes, autoReplyRes] = await Promise.all([ownerEmailPayload, autoReplyPayload]);
+        const [ownerRes, autoReplyRes] = await Promise.all([
+          ownerEmailPayload,
+          autoReplyPayload,
+        ]);
 
         if (ownerRes.ok && autoReplyRes.ok) {
-          return new Response(JSON.stringify({ success: true }), { status: 200 });
+          return new Response(JSON.stringify({ success: true }), {
+            status: 200,
+          });
         } else {
-          throw new Error("Transmission failure: One or more routing protocols failed.");
-        }
+          const ownerErr = !ownerRes.ok ? await ownerRes.text() : "OK";
+          const autoErr = !autoReplyRes.ok ? await autoReplyRes.text() : "OK";
 
+          console.error("Resend API Errors:", {
+            owner: ownerErr,
+            autoReply: autoErr,
+          });
+          throw new Error(
+            "Transmission failure: One or more routing protocols failed.",
+          );
+        }
       } catch (error: unknown) {
-        const errorMessage = error instanceof Error ? error.message : 'Server error';
-        return new Response(JSON.stringify({ success: false, error: errorMessage }), { 
-          status: 500,
-          headers: { 'Content-Type': 'application/json' }
-        });
+        const errorMessage =
+          error instanceof Error ? error.message : "Server error";
+        return new Response(
+          JSON.stringify({ success: false, error: errorMessage }),
+          {
+            status: 500,
+            headers: { "Content-Type": "application/json" },
+          },
+        );
       }
     }
 
@@ -83,5 +120,5 @@ export default {
     } catch (e) {
       return new Response(`Not Found: ${e}`, { status: 404 });
     }
-  }
+  },
 };

@@ -26,7 +26,7 @@ export const InquiryFormBlock = () => {
 
         const payload = {
             ...data,
-            user_lang: i18n.language
+           user_lang: (i18n.language || "en").split('-')[0]
         };
 
         try {
