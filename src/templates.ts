@@ -1,6 +1,6 @@
 const WEBSITE_URL = "https://www.merayglobal.com";
 const COMPANY_NAME = "Meray Global";
-const LOGO_URL = "https://www.merayglobal.com/android-chrome-512x512.png";
+const LOGO_URL = "https://www.merayglobal.com/logo-white.png";
 
 interface AutoReplyTranslation {
   subject: string;
@@ -29,10 +29,12 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
     subject: "Inquiry Acknowledgment - Meray Global",
     title: "Transmission Logged",
     greeting: "Attention:",
-    body1: "Your trade inquiry has been securely received by the Meray Global server network. A preliminary compliance check is currently underway.",
-    body2: "Our regional trading desk will review your requirements. You can expect direct communication from an authorized representative within one standard business day.",
+    body1:
+      "Your trade inquiry has been securely received by the Meray Global server network. A preliminary compliance check is currently underway.",
+    body2:
+      "Our regional trading desk will review your requirements. You can expect direct communication from an authorized representative within one standard business day.",
     regards: "Authorized by",
-    contactTitle: "Global Headquarters",
+    contactTitle: "Direct Contact",
     linksTitle: "Quick Links",
     legalTitle: "Legal",
     links: {
@@ -40,16 +42,22 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       products: "Products",
       contact: "Contact",
     },
-    legal: { privacy: "Privacy Policy", terms: "Terms of Service", cookie: "Cookie Policy" },
+    legal: {
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      cookie: "Cookie Policy",
+    },
   },
   tr: {
     subject: "Talep Onayı - Meray Global",
     title: "İletim Kaydedildi",
     greeting: "Dikkatine:",
-    body1: "Ticari talebiniz Meray Global sunucu ağı tarafından güvenli bir şekilde alınmıştır. Ön uyumluluk kontrolü şu anda devam etmektedir.",
-    body2: "Bölgesel ticaret masamız gereksinimlerinizi inceleyecektir. Yetkili bir temsilcimiz bir iş günü içerisinde sizinle doğrudan iletişime geçecektir.",
+    body1:
+      "Ticari talebiniz Meray Global sunucu ağı tarafından güvenli bir şekilde alınmıştır. Ön uyumluluk kontrolü şu anda devam etmektedir.",
+    body2:
+      "Bölgesel ticaret masamız gereksinimlerinizi inceleyecektir. Yetkili bir temsilcimiz bir iş günü içerisinde sizinle doğrudan iletişime geçecektir.",
     regards: "Onaylayan",
-    contactTitle: "Küresel Merkez",
+    contactTitle: "Doğrudan İletişim",
     linksTitle: "Hızlı Bağlantılar",
     legalTitle: "Yasal",
     links: {
@@ -57,16 +65,22 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       products: "Ürünler",
       contact: "İletişim",
     },
-    legal: { privacy: "Gizlilik Politikası", terms: "Hizmet Şartları", cookie: "Çerez Politikası" },
+    legal: {
+      privacy: "Gizlilik Politikası",
+      terms: "Hizmet Şartları",
+      cookie: "Çerez Politikası",
+    },
   },
   de: {
     subject: "Anfragebestätigung - Meray Global",
     title: "Übertragung Protokolliert",
     greeting: "Zu Händen von:",
-    body1: "Ihre Handelsanfrage wurde vom Meray Global-Servernetzwerk sicher empfangen. Eine vorläufige Compliance-Prüfung ist derzeit im Gange.",
-    body2: "Unser regionales Trading Desk wird Ihre Anforderungen prüfen. Sie können innerhalb eines Standardarbeitstages mit einer direkten Kommunikation von einem autorisierten Vertreter rechnen.",
+    body1:
+      "Ihre Handelsanfrage wurde vom Meray Global-Servernetzwerk sicher empfangen. Eine vorläufige Compliance-Prüfung ist derzeit im Gange.",
+    body2:
+      "Unser regionales Trading Desk wird Ihre Anforderungen prüfen. Sie können innerhalb eines Standardarbeitstages mit einer direkten Kommunikation von einem autorisierten Vertreter rechnen.",
     regards: "Autorisiert durch",
-    contactTitle: "Globaler Hauptsitz",
+    contactTitle: "Direkter Kontakt",
     linksTitle: "Schnelle Links",
     legalTitle: "Rechtliches",
     links: {
@@ -74,16 +88,22 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       products: "Produkte",
       contact: "Kontakt",
     },
-    legal: { privacy: "Datenschutzbestimmungen", terms: "Nutzungsbedingungen", cookie: "Cookie-Richtlinie" },
+    legal: {
+      privacy: "Datenschutzbestimmungen",
+      terms: "Nutzungsbedingungen",
+      cookie: "Cookie-Richtlinie",
+    },
   },
   ru: {
     subject: "Подтверждение запроса - Meray Global",
     title: "Передача Зарегистрирована",
     greeting: "Вниманию:",
-    body1: "Ваш торговый запрос был безопасно получен серверной сетью Meray Global. В настоящее время проводится предварительная проверка на соответствие.",
-    body2: "Наш региональный торговый отдел рассмотрит ваши требования. Ожидайте прямого сообщения от уполномоченного представителя в течение одного рабочего дня.",
+    body1:
+      "Ваш торговый запрос был безопасно получен серверной сетью Meray Global. В настоящее время проводится предварительная проверка на соответствие.",
+    body2:
+      "Наш региональный торговый отдел рассмотрит ваши требования. Ожидайте прямого сообщения от уполномоченного представителя в течение одного рабочего дня.",
     regards: "Утверждено",
-    contactTitle: "Глобальная Штаб-квартира",
+    contactTitle: "Прямой контакт",
     linksTitle: "Быстрые ссылки",
     legalTitle: "Правовая информация",
     links: {
@@ -111,7 +131,7 @@ export const getOwnerEmailHtml = (
 <head><meta charset="UTF-8"></head>
 <body style="margin: 0; padding: 0; background-color: #003B59; font-family: Arial, Helvetica, sans-serif;">
   <div style="max-width: 600px; margin: 40px auto; background-color: #006394; border: 1px solid #007AA8;">
-    
+    <img src="${LOGO_URL}" alt="Meray Global" style="display: block; margin: 0 auto; max-width: 100px; height: auto;">
     <!-- Header -->
     <div style="padding: 32px 40px; border-bottom: 3px solid #ff9900;">
       <p style="margin: 0 0 8px 0; color: #bae6fd; font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Внутреннее системное оповещение</p>
@@ -159,9 +179,8 @@ export const getOwnerEmailHtml = (
 </html>
 `;
 
-
 export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
-  const baseLang = lang.split('-')[0];
+  const baseLang = lang.split("-")[0];
   const t = autoReplyTranslations[baseLang] || autoReplyTranslations["en"];
   const currentYear = new Date().getFullYear();
 
@@ -173,8 +192,8 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
   <div style="max-width: 600px; margin: 40px auto; background-color: #006394; border: 1px solid #007AA8;">
     
     <!-- Header -->
-    <div style="padding: 32px 40px; border-bottom: 1px solid #007AA8; text-align: left;">
-      <img src="${LOGO_URL}" alt="${COMPANY_NAME} Logo" width="140" style="display: block; border: none; outline: none; margin-bottom: 8px;" />
+    <div style="padding: 20px 40px; border-bottom: 1px solid #007AA8; text-align: left;">
+      <img src="${LOGO_URL}" alt="${COMPANY_NAME} Logo" width="140" style="display: block; border: none; outline: none;" />
     </div>
 
     <!-- Body -->
@@ -200,7 +219,6 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
       </p>
     </div>
 
-    <!-- Footer (Mirrors React Component) -->
     <div style="padding: 40px;">
       
       <!-- Top Info -->
@@ -208,8 +226,9 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
         <tr>
           <td valign="top">
             <p style="margin: 0 0 12px 0; font-size: 10px; font-weight: bold; color: #bae6fd; text-transform: uppercase; letter-spacing: 2px;">${t.contactTitle}</p>
-            <p style="margin: 0 0 4px 0; color: #ffffff; font-size: 12px;">operations@merayglobal.com</p>
-            <p style="margin: 0 0 4px 0; color: #ffffff; font-size: 12px;">+41 22 123 45 67 (Geneva Desk)</p>
+            <p style="margin: 0; font-size: 12px;">
+              <a href="mailto:info@merayglobal.com" style="color: #ffffff; text-decoration: none;">info@merayglobal.com</a>
+            </p>
           </td>
         </tr>
       </table>

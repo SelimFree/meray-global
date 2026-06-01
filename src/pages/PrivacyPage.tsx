@@ -4,6 +4,7 @@ import { Heading } from "../components/ui/Heading";
 import { Text } from "../components/ui/Text";
 import { List, ListItem } from "../components/ui/List";
 import { useAppContext } from "../context/AppContext";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 interface PrivacyDataItem {
   label: string;
@@ -13,6 +14,10 @@ interface PrivacyDataItem {
 export default function PrivacyPage() {
   const { t } = useTranslation("legal");
   const { companyName } = useAppContext();
+
+  const { t: tCommon } = useTranslation("common");
+  useDocumentTitle(tCommon("navbar.privacy"));
+
 
   const dataList = t("privacyPolicy.section2.dataList", { returnObjects: true }) as PrivacyDataItem[];
 

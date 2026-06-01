@@ -4,10 +4,15 @@ import { Heading } from "../components/ui/Heading";
 import { Text } from "../components/ui/Text";
 import { List, ListItem } from "../components/ui/List";
 import { useAppContext } from "../context/AppContext";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 export default function TermsPage() {
   const { t } = useTranslation("legal");
   const { companyName, country } = useAppContext();
+
+  const { t: tCommon } = useTranslation("common");
+  useDocumentTitle(tCommon("navbar.terms"));
+
 
   const SharpBullet = <div className="h-1.5 w-1.5 bg-secondary mt-1.5 shrink-0" />;
   const licenseList = t("termsOfService.section2.list", { returnObjects: true }) as string[];
